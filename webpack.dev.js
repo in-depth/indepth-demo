@@ -50,10 +50,12 @@ var webpackconfig = {
       },
       {
         test: /\.css/,
-        loaders: ['style', 'css'],
-        include: PATHS.src,
         exclude: /node_modules/,
-      }
+        loaders: [
+          'style',
+          'css?modules&sourceMap&importLoaders=1&localIdentName=[name]-[local]-[hash:base64:5]',
+        ],
+      },
     ]
   },
   plugins: [
