@@ -1,0 +1,21 @@
+{
+  "extends" : [
+    "airbnb"
+  ],
+  "rules": {
+    "semi" : [2, "never"],
+    "max-len": [2, 140, 2],
+    "arrow-body-style": [0, "as-needed"],
+    "no-use-before-define": 0,
+    "new-cap": 0,
+    "no-case-declarations": 0,
+    "no-underscore-dangle": 0,
+    "newline-per-chained-call": 0,
+    "no-duplicate-imports": 0,
+    "import/no-duplicates": 0,
+    "global-require": 0,
+    "import/prefer-default-export": 0,
+    "react/prefer-stateless-function": 0,
+    "react/jsx-filename-extension": 0
+  }
+}
