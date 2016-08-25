@@ -4,6 +4,11 @@ var WebpackDevServer = require('webpack-dev-server');
 var path = require('path');
 var HtmlWebpackPlugin = require('html-webpack-plugin');
 
+var modulevalues = require('postcss-modules-values')
+var cssnext = require('postcss-cssnext')
+var nested = require('postcss-nested')
+var atImport = require('postcss-import')
+
 const PATHS = {
   src: path.join(__dirname, 'src'),
   app: path.join(__dirname, 'src/app.js'),
@@ -54,8 +59,17 @@ var webpackconfig = {
         loaders: [
           'style',
           'css?modules&sourceMap&importLoaders=1&localIdentName=[name]-[local]-[hash:base64:5]',
+          'postcss',
         ],
       },
+    ]
+  },
+  postcss: function () {
+    return [
+      atImport,
+      nested,
+      cssnext,
+      modulevalues,
     ]
   },
   plugins: [
