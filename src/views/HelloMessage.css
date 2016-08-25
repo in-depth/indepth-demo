@@ -1,3 +1,11 @@
+:root {
+  --mainColor: blue;
+}
+
 .message {
-    color: blue;
+  color: var(--mainColor);
+  background-color: var(--mainColor);
+  p {
+    background-color: var(--mainColor);
+  }
 }
