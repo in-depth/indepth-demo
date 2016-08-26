@@ -2,23 +2,25 @@ import React from 'react'
 import ReactDOM from 'react-dom'
 import { AppContainer } from 'react-hot-loader'
 
-import App from './views/App.js'
+import Routes from './views/Routes.js'
 
-const renderApp = (App) => {
+
+const renderApp = (AppRoutes) => {
   ReactDOM.render(
     <AppContainer>
-      <App />
+      <AppRoutes />
     </AppContainer>
     ,
-    document.getElementById('root')
+    document.getElementById('root') // eslint-disable-line
   )
 }
 
-renderApp(App)
+renderApp(Routes)
 
 if (module.hot) {
-  module.hot.accept('./views/App', () => {
-    const UpdatedRoot = require('./views/App').default
+  module.hot.accept('./views/Routes', () => {
+    const UpdatedRoot = require('./views/Routes').default
+
     renderApp(UpdatedRoot)
   })
 }
