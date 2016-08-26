@@ -2,7 +2,6 @@ import React from 'react'
 import { Router, Route, browserHistory } from 'react-router'
 // import { Provider } from 'react-redux'
 
-
 import AppLayout from './AppLayout'
 import { HomeRoute } from './home'
 import { ObjectRoute } from './objects/object'
