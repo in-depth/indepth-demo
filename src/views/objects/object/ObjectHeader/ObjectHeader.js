@@ -3,7 +3,7 @@ import React from 'react'
 const ObjectHeader = (props) => {
   return (
     <div>
-      <img alt={props.title} src={props.img} />
+      <img alt={props.image.title || props.title} src={props.image.url} />
       <div><b>{props.title}</b></div>
     </div>
   )
@@ -11,7 +11,10 @@ const ObjectHeader = (props) => {
 
 ObjectHeader.propTypes = {
   title: React.PropTypes.string.isRequired,
-  img: React.PropTypes.string.isRequired,
+  image: React.PropTypes.shape({
+    url: React.PropTypes.string.isRequired,
+    title: React.PropTypes.string,
+  }).isRequired,
 }
 
 export default ObjectHeader
