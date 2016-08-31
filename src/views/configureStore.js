@@ -14,7 +14,6 @@ const configureStore = () => {
       loggerMiddleware
     )
   )
-  console.log(store.getState())
 
   return store
 }
