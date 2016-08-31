@@ -5,4 +5,11 @@ import CollectionItemAdd from './CollectionItemAdd/CollectionItemAdd'
 import CollectionItemContainer, { CollectionItem } from './CollectionItemContainer/CollectionItemContainer'
 
 
-export { CollectionItemRoute, CollectionItemStats, CollectionItemHeader, CollectionItemAdd, CollectionItem, CollectionItemContainer }
+export {
+  CollectionItemRoute,
+  CollectionItemStats,
+  CollectionItemHeader,
+  CollectionItemAdd,
+  CollectionItem,
+  CollectionItemContainer,
+}
