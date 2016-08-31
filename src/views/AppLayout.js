@@ -4,14 +4,14 @@ const AppLayout = (props) => {
   return (
     <div>
       <div>Top Menu</div>
-      {props.children}
+        {props.children}
       <div>Bottom menu</div>
     </div>
   )
 }
 
-AppLayout.propTypes = {
-  children: React.PropTypes.element.isRequired,
-}
+// AppLayout.propTypes = {
+//   children: React.PropTypes.element.isRequired,
+// }
 
 export default AppLayout

@@ -1,4 +1,4 @@
-const objectState = {
+const collectionItemState = {
   title: 'Rowan\'s Mohawk',
   mainImage: {
     url: 'https://avatars3.githubusercontent.com/u/9244507?s=250',
@@ -7,11 +7,11 @@ const objectState = {
   date: '1945',
 }
 
-const objectReducer = (state = objectState, action) => {
+const CollectionItemReducer = (state = collectionItemState, action) => {
   switch (action.type) {
     default:
       return state
   }
 }
 
-export default objectReducer
+export default CollectionItemReducer

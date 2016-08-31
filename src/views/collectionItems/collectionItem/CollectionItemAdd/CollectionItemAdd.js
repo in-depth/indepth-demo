@@ -1,6 +1,6 @@
 import React from 'react'
 
-const ObjectAdd = () => {
+const CollectionItemAdd = () => {
   return (
     <div>
       <input />
@@ -8,4 +8,4 @@ const ObjectAdd = () => {
   )
 }
 
-export default ObjectAdd
+export default CollectionItemAdd

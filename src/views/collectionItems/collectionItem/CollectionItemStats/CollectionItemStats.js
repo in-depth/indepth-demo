@@ -1,6 +1,6 @@
 import React from 'react'
 
-const ObjectStats = (props) => {
+const CollectionItemStats = (props) => {
   return (
     <div>
       <span>Date:</span> <span>{props.date}</span><br />
@@ -8,8 +8,8 @@ const ObjectStats = (props) => {
   )
 }
 
-ObjectStats.propTypes = {
+CollectionItemStats.propTypes = {
   date: React.PropTypes.string.isRequired,
 }
 
-export default ObjectStats
+export default CollectionItemStats

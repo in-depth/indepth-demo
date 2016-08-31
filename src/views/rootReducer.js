@@ -1,9 +1,9 @@
 import { combineReducers } from 'redux'
 
-import objectReducer from './objects/object/reducer'
+import CollectionItemReducer from './collectionItems/collectionItem/reducer'
 
 const indepth = combineReducers({
-  object: objectReducer,
+  collectionItem: CollectionItemReducer,
 })
 
 export default indepth

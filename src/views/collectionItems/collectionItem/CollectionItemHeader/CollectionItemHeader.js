@@ -1,6 +1,6 @@
 import React from 'react'
 
-const ObjectHeader = (props) => {
+const CollectionItemHeader = (props) => {
   return (
     <div>
       <img alt={props.image.title || props.title} src={props.image.url} />
@@ -9,7 +9,7 @@ const ObjectHeader = (props) => {
   )
 }
 
-ObjectHeader.propTypes = {
+CollectionItemHeader.propTypes = {
   title: React.PropTypes.string.isRequired,
   image: React.PropTypes.shape({
     url: React.PropTypes.string.isRequired,
@@ -17,4 +17,4 @@ ObjectHeader.propTypes = {
   }).isRequired,
 }
 
-export default ObjectHeader
+export default CollectionItemHeader
