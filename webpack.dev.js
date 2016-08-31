@@ -1,28 +1,29 @@
-/* eslist-disable */
-var webpack = require('webpack');
-var WebpackDevServer = require('webpack-dev-server');
-var path = require('path');
-var HtmlWebpackPlugin = require('html-webpack-plugin');
+/* eslint-disable */
+const webpack = require('webpack')
+const WebpackDevServer = require('webpack-dev-server')
+const path = require('path')
+const HtmlWebpackPlugin = require('html-webpack-plugin')
 
-var modulevalues = require('postcss-modules-values')
-var cssnext = require('postcss-cssnext')
-var nested = require('postcss-nested')
-var atImport = require('postcss-import')
+const modulevalues = require('postcss-modules-values')
+const cssnext = require('postcss-cssnext')
+const nested = require('postcss-nested')
+const atImport = require('postcss-import')
+/* eslint-enable */
 
 const PATHS = {
   src: path.join(__dirname, 'src'),
   app: path.join(__dirname, 'src/app.js'),
-  dist: path.join(__dirname, 'dist')
-};
+  dist: path.join(__dirname, 'dist'),
+}
 
-var webpackconfig = {
+const webpackconfig = {
   entry: {
     app: [
       'react-hot-loader/patch', // Add react hot loader 3
-      'webpack-dev-server/client' + '?/', // Webpack dev server
+      'webpack-dev-server/client', // Webpack dev server
       'webpack/hot/dev-server', // Webpack dev server auto refresh / hot loading
-      PATHS.app
-      ],
+      PATHS.app,
+    ],
     vendor: [
       'react',
       'react-dom',
@@ -31,12 +32,12 @@ var webpackconfig = {
       'react-redux',
       'reselect',
       'lodash',
-    ]
+    ],
   },
   output: {
     path: PATHS.dist,
     filename: '[name].js', // Output name of bundle
-    publicPath: '/'
+    publicPath: '/',
   },
   module: {
     loaders: [
@@ -47,11 +48,11 @@ var webpackconfig = {
         loader: 'babel',
         query: {
           cacheDirectory: true,
-          presets: [ 'modern-browsers', 'react' ],
+          presets: ['modern-browsers', 'react'],
           plugins: [
             'react-hot-loader/babel',
-          ]
-        }
+          ],
+        },
       },
       {
         test: /\.css/,
@@ -62,16 +63,14 @@ var webpackconfig = {
           'postcss',
         ],
       },
-    ]
+    ],
   },
-  postcss: function () {
-    return [
-      atImport,
-      nested,
-      cssnext,
-      modulevalues,
-    ]
-  },
+  postcss: () => ([
+    atImport,
+    nested,
+    cssnext,
+    modulevalues,
+  ]),
   plugins: [
     new HtmlWebpackPlugin({
       template: path.resolve(PATHS.src, 'index.html'), // Use index.html as template for index.html
@@ -80,8 +79,8 @@ var webpackconfig = {
       inject: 'body', // Enject into the end of the body tag
     }),
     new webpack.HotModuleReplacementPlugin(), // Auto refresh page
-  ]
-};
+  ],
+}
 
 new WebpackDevServer(webpack(webpackconfig), {
   historyApiFallback: true, // Allows reloading of any URL
@@ -93,12 +92,11 @@ new WebpackDevServer(webpack(webpackconfig), {
     colors: true, // Colors the output
   },
   watchOptions: {
-    ignored: /node_modules/ // Don't hot reload node modules
-  }
+    ignored: /node_modules/, // Don't hot reload node modules
+  },
 }).listen(3000, (err, result) => {
   if (err) {
-    return console.log(err);
+    console.log(err, result) //eslint-disable-line
   }
-
-  console.log('Starting the development server on port 3000');
-});
+  console.log('Starting the development server on port 3000 👌') //eslint-disable-line
+})
