@@ -5,7 +5,8 @@ import { Provider } from 'react-redux'
 import AppLayout from './AppLayout'
 import { HomeRoute } from './home'
 import { CollectionItemRoute } from './collectionItems/collectionItem'
-import { EventsRoute } from './events'
+import { ShowsRoute } from './shows'
+import { ShowRoute } from './shows/show'
 
 import configureStore from './configureStore'
 
@@ -18,7 +19,8 @@ const Routes = () => {
         <Route component={AppLayout}>
           <Route path="/" component={HomeRoute} />
           <Route path="/collection-item" component={CollectionItemRoute} />
-          <Route path="/events" component={EventsRoute} />
+          <Route path="/shows" component={ShowsRoute} />
+          <Route path="/shows/:show" component={ShowRoute} />
         </Route>
       </Router>
     </Provider>

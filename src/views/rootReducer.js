@@ -1,11 +1,11 @@
 import { combineReducers } from 'redux'
 
 import CollectionItemReducer from './collectionItems/collectionItem/reducer'
-import EventsReducer from './events/reducer'
+import ShowsReducer from './shows/reducer'
 
 const indepth = combineReducers({
   collectionItem: CollectionItemReducer,
-  events: EventsReducer,
+  events: ShowsReducer,
 })
 
 export default indepth
