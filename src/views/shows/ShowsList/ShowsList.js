@@ -7,14 +7,17 @@ const ShowsList = (props) => {
       {props.order.map((showId) => (
         <li key={showId}>
           <Link to={`/shows/${showId}`}>
-            {props.shows[showId].title}
+            <h1>{props.shows[showId].title}</h1>
           </Link>
-          <p>{props.shows[showId].date}</p>
-          <p>{props.shows[showId].description}</p>
+          <i>{props.shows[showId].date}</i>
         </li>
       ))}
     </ul>
   )
 }
+
+// ShowsList.propTypes = {
+//   order: React.PropTypes.object.isRequired,
+// }
 
 export default ShowsList

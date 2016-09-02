@@ -1,13 +1,20 @@
 import React from 'react'
 
-import { ShowDetails } from './index'
+import { ShowContainer } from './index'
 
-const ShowRoute = ({ params }) => {
+const ShowRoute = (props) => {
+  console.log(props.show)
   return (
     <div>
-      <ShowDetails show={params} />
+      <ShowContainer id={props.params.show} />
     </div>
   )
+}
+
+ShowRoute.propTypes = {
+  params: React.PropTypes.shape({
+    id: React.PropTypes.string,
+  }),
 }
 
 export default ShowRoute

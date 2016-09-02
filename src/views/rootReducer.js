@@ -5,7 +5,7 @@ import ShowsReducer from './shows/reducer'
 
 const indepth = combineReducers({
   collectionItem: CollectionItemReducer,
-  events: ShowsReducer,
+  shows: ShowsReducer,
 })
 
 export default indepth

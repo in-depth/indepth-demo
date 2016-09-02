@@ -17,21 +17,13 @@ const PATHS = {
 }
 
 const webpackconfig = {
+  devtool: 'eval-cheap-module-source-map',
   entry: {
     app: [
       'react-hot-loader/patch', // Add react hot loader 3
       'webpack-dev-server/client', // Webpack dev server
       'webpack/hot/dev-server', // Webpack dev server auto refresh / hot loading
       PATHS.app,
-    ],
-    vendor: [
-      'react',
-      'react-dom',
-      'react-router',
-      'redux',
-      'react-redux',
-      'reselect',
-      'lodash',
     ],
   },
   output: {

@@ -1,11 +1,11 @@
 import React from 'react'
 
-import { ShowsContainer } from './index'
+import { ShowsListContainer } from './index'
 
 const ShowsRoute = () => {
   return (
     <div>
-      <ShowsContainer />
+      <ShowsListContainer />
     </div>
   )
 }

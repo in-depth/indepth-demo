@@ -1,7 +1,9 @@
-import ShowDetails from './ShowDetails/ShowDetails'
 import ShowRoute from './ShowRoute'
+import Show from './Show/Show'
+import ShowContainer from './Show/ShowContainer'
 
 export {
-  ShowDetails,
+  Show,
+  ShowContainer,
   ShowRoute,
 }
