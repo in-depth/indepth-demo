@@ -3,7 +3,6 @@ import React from 'react'
 import { ShowContainer } from './index'
 
 const ShowRoute = (props) => {
-  console.log(props.show)
   return (
     <div>
       <ShowContainer id={props.params.show} />
@@ -12,9 +11,7 @@ const ShowRoute = (props) => {
 }
 
 ShowRoute.propTypes = {
-  params: React.PropTypes.shape({
-    id: React.PropTypes.string,
-  }),
+  params: React.PropTypes.object.isRequired,
 }
 
 export default ShowRoute

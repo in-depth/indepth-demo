@@ -16,8 +16,9 @@ const ShowsList = (props) => {
   )
 }
 
-// ShowsList.propTypes = {
-//   order: React.PropTypes.object.isRequired,
-// }
+ShowsList.propTypes = {
+  shows: React.PropTypes.object.isRequired,
+  order: React.PropTypes.array.isRequired,
+}
 
 export default ShowsList

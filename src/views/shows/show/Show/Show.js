@@ -1,13 +1,21 @@
 import React from 'react'
+import { ShowHeader, ShowDetails } from '../index'
 
 const Show = (props) => {
   return (
     <div>
-      <h1>{props.shows[props.id].title}</h1>
-      <i>{props.shows[props.id].date}</i>
-      <p>{props.shows[props.id].description}</p>
+      <ShowHeader title={props.title} />
+      <ShowDetails
+        date={props.date}
+        description={props.description}
+      />
     </div>
   )
 }
 
+Show.propTypes = {
+  title: React.PropTypes.string.isRequired,
+  date: React.PropTypes.string.isRequired,
+  description: React.PropTypes.string.isRequired,
+}
 export default Show
