@@ -8,8 +8,8 @@ const ShowHeader = (props) => {
   )
 }
 
-// ShowHeader.propTypes = {
-//   title: React.PropTypes.sting.isRequired,
-// }
+ShowHeader.propTypes = {
+  title: React.PropTypes.string.isRequired,
+}
 
 export default ShowHeader

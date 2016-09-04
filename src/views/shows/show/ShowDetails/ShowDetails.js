@@ -9,9 +9,9 @@ const ShowDetails = (props) => {
   )
 }
 
-// ShowDetails.propTypes = {
-//   date: React.PropTypes.sting.isRequired,
-//   description: React.PropTypes.sting.isRequired,
-// }
+ShowDetails.propTypes = {
+  date: React.PropTypes.string.isRequired,
+  description: React.PropTypes.string.isRequired,
+}
 
 export default ShowDetails

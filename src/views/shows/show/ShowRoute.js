@@ -11,7 +11,7 @@ const ShowRoute = (props) => {
 }
 
 ShowRoute.propTypes = {
-  params: React.PropTypes.object.isRequired,
+  params: React.PropTypes.object,
 }
 
 export default ShowRoute
