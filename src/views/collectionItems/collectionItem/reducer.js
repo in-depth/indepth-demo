@@ -7,11 +7,9 @@ const collectionItemState = {
   date: '1945',
 }
 
-const CollectionItemReducer = (state = collectionItemState, action) => {
+export const CollectionItemReducer = (state = collectionItemState, action) => {
   switch (action.type) {
     default:
       return state
   }
 }
-
-export default CollectionItemReducer

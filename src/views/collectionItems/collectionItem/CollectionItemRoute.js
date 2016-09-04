@@ -1,14 +1,19 @@
 import React from 'react'
 
-import { CollectionItemAdd, CollectionItemContainer } from './index'
+import { CollectionItemContainer } from './index'
 
-const CollectionItemRoute = () => {
+const CollectionItemRoute = (props) => {
   return (
     <div>
-      <CollectionItemContainer />
-      <CollectionItemAdd />
+      <CollectionItemContainer id={props.params.id} />
     </div>
   )
+}
+
+CollectionItemRoute.propTypes = {
+  params: React.PropTypes.shape({
+    id: React.PropTypes.string,
+  }),
 }
 
 export default CollectionItemRoute
