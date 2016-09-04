@@ -10,4 +10,8 @@ const AppLayout = (props) => {
   )
 }
 
+AppLayout.propTypes = {
+  children: React.PropTypes.element.isRequired,
+}
+
 export default AppLayout

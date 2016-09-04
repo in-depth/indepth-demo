@@ -1,5 +1,4 @@
 import React from 'react'
-import { connect } from 'react-redux'
 
 import { CollectionItemHeader, CollectionItemStats } from '../index'
 
@@ -18,13 +17,4 @@ CollectionItem.propTypes = {
   date: React.PropTypes.string.isRequired,
 }
 
-const mapStateToProps = ({ collectionItem }) => ({
-  image: collectionItem.mainImage,
-  title: collectionItem.title,
-  date: collectionItem.date,
-})
-
-const CollectionItemContainer = connect(mapStateToProps)(CollectionItem)
-
-export default CollectionItemContainer
-export { CollectionItem }
+export default CollectionItem

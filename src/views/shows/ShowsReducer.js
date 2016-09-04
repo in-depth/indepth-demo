@@ -22,11 +22,9 @@ const showsState = {
   defaultOrder: ['1', '2', '3'],
 }
 
-const ShowsReducer = (state = showsState, action) => {
+export const ShowsReducer = (state = showsState, action) => {
   switch (action.type) {
     default:
       return state
   }
 }
-
-export default ShowsReducer
