@@ -20,7 +20,7 @@ const Routes = () => {
           <Route path="/" component={HomeRoute} />
           <Route path="/collection-item" component={CollectionItemRoute} />
           <Route path="/shows" component={ShowsRoute} />
-          <Route path="/shows/:show" component={ShowRoute} />
+          <Route path="/shows/:id" component={ShowRoute} />
         </Route>
       </Router>
     </Provider>
