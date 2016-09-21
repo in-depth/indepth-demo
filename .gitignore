@@ -1,4 +1,8 @@
-# Logs
+# Indepth-core
+babel_cache
+dist
+
+#Logs
 logs
 *.log
 npm-debug.log*

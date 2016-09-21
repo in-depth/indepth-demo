@@ -12,8 +12,9 @@ const atImport = require('postcss-import')
 
 const PATHS = {
   src: path.join(__dirname, 'src'),
-  app: path.join(__dirname, 'src/app.js'),
+  app: path.join(__dirname, 'src/client/app.js'),
   dist: path.join(__dirname, 'dist'),
+  client: path.join(__dirname, 'src', 'client'),
 }
 
 const webpackconfig = {
@@ -65,7 +66,7 @@ const webpackconfig = {
   ]),
   plugins: [
     new HtmlWebpackPlugin({
-      template: path.resolve(PATHS.src, 'index.html'), // Use index.html as template for index.html
+      template: path.resolve(PATHS.client, 'index.html'), // Use index.html as template for index.html
       chunksSortMode: 'dependency', // Order the dependacy so that bundle comes first
       filename: 'index.html', // Output file name
       inject: 'body', // Enject into the end of the body tag
