@@ -10,19 +10,29 @@ import { CollectionItemsRoute } from './collectionItems/collectionItems'
 
 export const navigationLinks = [
   {
-    title: 'Home',
+    title: 'Visit',
     link: '/',
-    icon: 'fa fa-home',
-  },
-  {
-    title: 'Shows',
-    link: '/shows',
-    icon: 'fa fa-calendar-o',
-  },
-  {
-    title: 'Collections',
-    link: '/collection',
     icon: 'fa fa-university',
+  },
+  {
+    title: 'Find',
+    link: '/collection',
+    icon: 'fa fa-search',
+  },
+  {
+    title: 'Map',
+    link: '/map',
+    icon: 'fa fa-map-o',
+  },
+  {
+    title: 'Plan',
+    link: '/plan',
+    icon: 'fa fa-map-signs',
+  },
+  {
+    title: 'More',
+    link: '/more',
+    icon: 'fa fa-ellipsis-h',
   },
 ]
 
