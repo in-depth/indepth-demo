@@ -1,7 +1,6 @@
 .topMenu {
   background-color: #55ACEF;
-  height: 34px;
-  padding: 5px 5px;
+  height: 50px;
   display: flex;
   align-items: center;
 }

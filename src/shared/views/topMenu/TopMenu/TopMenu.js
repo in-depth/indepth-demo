@@ -4,17 +4,22 @@ import { TopMenuHeader, TopMenuLogo, TopMenuSearch } from '../index'
 import styles from './topMenu.css'
 
 const TopMenu = (props) => {
+  const getTitleFromPath = (path) => {
+    const title = path.split('/')
+    if (title[0] === '') { return 'Home' }
+    return title[0].charAt(0).toUpperCase() + title[0].slice(1)
+  }
   return (
     <div className={styles.topMenu}>
       <TopMenuLogo />
-      <TopMenuHeader title={props.title} />
+      <TopMenuHeader title={getTitleFromPath(props.path)} />
       <TopMenuSearch />
     </div>
   )
 }
 
 TopMenu.propTypes = {
-  title: React.PropTypes.string.isRequired,
+  path: React.PropTypes.string.isRequired,
 }
 
 export default TopMenu

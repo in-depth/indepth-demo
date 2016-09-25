@@ -10,7 +10,7 @@ const AppLayout = (props) => {
     <div className={styles.main}>
       <div className={styles.body}>
         <div className={styles.topMenu}>
-          <TopMenu title={props.location.pathname} />
+          <TopMenu path={props.location.pathname} />
         </div>
         <div className={styles.content}>
             {props.children}

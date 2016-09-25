@@ -12,17 +12,17 @@ export const navigationLinks = [
   {
     title: 'Home',
     link: '/',
-    icon: 'fa-home'
+    icon: 'fa fa-home',
   },
   {
     title: 'Shows',
     link: '/shows',
-    icon: 'fa-calendar-o'
+    icon: 'fa fa-calendar-o',
   },
   {
     title: 'Collections',
     link: '/collection',
-    icon: 'fa-university'
+    icon: 'fa fa-university',
   },
 ]
 

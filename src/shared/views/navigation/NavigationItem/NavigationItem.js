@@ -8,7 +8,7 @@ const NavigationItem = (props) => {
     <li>
       <Link to={props.link}>
         <div className={styles.navigationItem}>
-          <i className={`fa ${props.icon} ${styles.icon}`} aria-hidden="true" />
+          <i className={`${props.icon} ${styles.icon}`} aria-hidden="true" />
           <span>{props.title}</span>
         </div>
       </Link>
