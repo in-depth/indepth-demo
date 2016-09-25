@@ -1,0 +1,15 @@
+.navigationItem {
+  display: flex;
+  flex-direction: column;
+  text-decoration: none;
+}
+  span {
+    font-size: 12px;
+    padding-top: 4px;
+  }
+
+.icon {
+  display: flex;
+  justify-content: center;
+  font-size: 25px
+}
