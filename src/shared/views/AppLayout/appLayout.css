@@ -1,4 +1,8 @@
-.main {
+html {
+  overflow-y: hidden;
+}
+
+.appLayout {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
@@ -19,10 +23,20 @@ h2 {
   flex: 1 0 auto;
 }
 
+.content {
+  height: calc(100vh - 100px);
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
 .navigation {
   background-color: #f1f1f1;
   position: fixed;
   bottom: 0;
   left: 0;
   right: 0;
+}
+
+.navigationSpacer {
+  height: 50px;
 }

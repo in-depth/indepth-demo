@@ -7,14 +7,16 @@ import styles from './appLayout.css'
 
 const AppLayout = (props) => {
   return (
-    <div className={styles.main}>
+    <div className={styles.appLayout}>
       <div className={styles.body}>
         <div className={styles.topMenu}>
           <TopMenu path={props.location.pathname} />
         </div>
+        <div className={styles.navigationSpacer} />
         <div className={styles.content}>
-            {props.children}
+          {props.children}
         </div>
+        <div className={styles.navigationSpacer} />
         <div className={styles.navigation}>
           <NavigationList />
         </div>
