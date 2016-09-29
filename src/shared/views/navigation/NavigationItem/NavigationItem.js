@@ -9,7 +9,7 @@ const NavigationItem = (props) => {
       <Link to={props.link}>
         <div className={styles.navigationItem}>
           <i className={`${props.icon} ${styles.icon}`} aria-hidden="true" />
-          <span>{props.title}</span>
+          <span className={styles.title}>{props.title}</span>
         </div>
       </Link>
     </li>

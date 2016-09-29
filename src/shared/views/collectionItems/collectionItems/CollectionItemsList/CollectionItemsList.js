@@ -4,7 +4,7 @@ import { Link } from 'react-router'
 const CollectionItemsList = (props) => {
   return (
     <div>
-      <p><b>Collection items</b></p>
+      <p><b>Collection itemss</b></p>
       Order by: <Link to="/collection?orderBy=id">id</Link> | <Link to="/collection?orderBy=title">title</Link>
       {props.order.map((itemId) => (
         <li key={itemId}><Link to={`/collection/${itemId}`}>{props.collectionItems[itemId].title}</Link></li>

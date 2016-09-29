@@ -21,9 +21,9 @@ const webpackconfig = {
   devtool: 'eval-cheap-module-source-map',
   entry: {
     app: [
-      'react-hot-loader/patch', // Add react hot loader 3
-      'webpack-dev-server/client', // Webpack dev server
+      'webpack-dev-server/client?http://localhost:3000', // Webpack dev server
       'webpack/hot/dev-server', // Webpack dev server auto refresh / hot loading
+      'react-hot-loader/patch', // Add react hot loader 3
       PATHS.app,
     ],
   },
@@ -49,12 +49,17 @@ const webpackconfig = {
       },
       {
         test: /\.css/,
-        exclude: /node_modules/,
+        exclude: 'node_modules',
         loaders: [
           'style',
           'css?modules&sourceMap&importLoaders=1&localIdentName=[name]-[local]-[hash:base64:5]',
           'postcss',
         ],
+      },
+      {
+        test: /\.scss/,
+        include: /react-toolbox/,
+        loader: 'style!css?sourceMap&modules&importLoaders=1&localIdentName=[name]__[local]___[hash:base64:5]!postcss!sass',
       },
     ],
   },
@@ -64,6 +69,10 @@ const webpackconfig = {
     cssnext,
     modulevalues,
   ]),
+  sassLoader: {
+    data: '@import "shared/styles/main.scss";',
+    includePaths: [PATHS.src],
+  },
   plugins: [
     new HtmlWebpackPlugin({
       template: path.resolve(PATHS.client, 'index.html'), // Use index.html as template for index.html
@@ -76,6 +85,7 @@ const webpackconfig = {
 }
 
 new WebpackDevServer(webpack(webpackconfig), {
+  inline: true,
   historyApiFallback: true, // Allows reloading of any URL
   hot: true, // Auto refresh page
   publicPath: webpackconfig.output.publicPath, // Public bath

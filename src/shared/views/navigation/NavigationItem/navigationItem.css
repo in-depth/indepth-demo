@@ -4,10 +4,11 @@
   text-decoration: none;
   align-items: center;
 }
-  span {
-    font-size: 12px;
-    padding-top: 4px;
-  }
+
+.title {
+  font-size: 12px;
+  padding-top: 4px;
+}
 
 .icon {
   display: flex;

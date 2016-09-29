@@ -1,18 +1,18 @@
 /* eslist-disable */
-var path = require('path');
+var path = require('path')
 var HtmlWebpackPlugin = require('html-webpack-plugin')
 
 const PATHS = {
   src: path.join(__dirname, 'src'),
   app: path.join(__dirname, 'src/app.js'),
-  dist: path.join(__dirname, 'dist')
+  dist: path.join(__dirname, 'dist'),
 };
 
 var webpackconfig = {
   devtool: 'source-map',
   entry: {
     app: [
-      PATHS.app
+      PATHS.app,
     ],
     vendor: [
       'react',
@@ -22,7 +22,7 @@ var webpackconfig = {
       'react-redux',
       'reselect',
       'lodash',
-    ]
+    ],
   },
   output: {
     path: PATHS.dist,
@@ -42,16 +42,16 @@ var webpackconfig = {
           plugins: [
             'babel-plugin-transform-object-rest-spread', // Adds ... spread operator for objects
             'babel-plugin-transform-class-properties', // Adds support for React classes
-          ]
-        }
+          ],
+        },
       },
       {
         test: /\.css/,
         loaders: ['style', 'css'],
         include: PATHS.src,
         exclude: /node_modules/,
-      }
-    ]
+      },
+    ],
   },
   plugins: [
     new HtmlWebpackPlugin({
@@ -60,7 +60,7 @@ var webpackconfig = {
       filename: 'index.html', // Output file name
       inject: 'body', // Enject into the end of the body tag
     }),
-  ]
+  ],
 }
 
 module.exports = webpackconfig
