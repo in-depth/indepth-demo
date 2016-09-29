@@ -1,0 +1,18 @@
+.topLinks {
+  display: flex;
+  margin: 20px;
+  justify-content: space-around;
+  align-items: flex-start;
+}
+
+.topLinks h2 {
+  font-size: 14px;
+  margin-top: 0px;
+  margin-bottom: 9px;
+  color: #64b9fa;
+}
+
+.topLinks a {
+  font-size: 14px;
+  color: black;
+}

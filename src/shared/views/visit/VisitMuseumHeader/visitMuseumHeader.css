@@ -1,0 +1,13 @@
+.museumHeader {
+  background-image: url(https://www.tepapa.govt.nz/sites/default/files/styles/hero_image_1800x900/public/our-building_hero.jpg?itok=GJglOtc1);
+  background-size: 100% auto;
+  background-repeat: no-repeat;
+  height: 150px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.museumLogo {
+  height: 120px
+}

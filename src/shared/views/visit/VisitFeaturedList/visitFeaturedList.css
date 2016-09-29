@@ -1,0 +1,19 @@
+.featuredLink {
+  height: 150px;
+  margin-bottom: 2px;
+  background-size: 100% auto;
+}
+
+.featuredLink a {
+  color: white;
+  font-size: 20px;
+}
+
+.overlay {
+  background:rgba(0,0,0,0.2);
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

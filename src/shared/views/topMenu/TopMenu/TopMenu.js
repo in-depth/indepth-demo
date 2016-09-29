@@ -6,7 +6,7 @@ import styles from './topMenu.css'
 const TopMenu = (props) => {
   const getTitleFromPath = (path) => {
     const title = path.split('/')
-    if (title[0] === '') { return 'Home' }
+    if (title[0] === '') { return 'Visit' }
     return title[0].charAt(0).toUpperCase() + title[0].slice(1)
   }
   return (
