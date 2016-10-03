@@ -11,6 +11,11 @@ import routes from '../src/shared/views/routes'
 import NotFoundPage from '../src/shared/views/PageNotFound/PageNotFound'
 import rootReducer from '../src/shared/views/rootReducer'
 
+require('css-modules-require-hook')({
+  // This path should match the localIdentName in your webpack css-loader config.
+  generateScopedName: '[name]-[local]-[hash:base64:5]',
+})
+
 const app = new Express()
 const server = new Server(app)
 
@@ -85,5 +90,5 @@ server.listen(port, err => {
   if (err) {
     return console.error(err)
   }
-    return console.info(`Server running on http://localhost:${port} [${env}]`)
+  return console.info(`Server running on http://localhost:${port} [${env}]`)
 })

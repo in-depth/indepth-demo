@@ -4,6 +4,8 @@ const WebpackDevServer = require('webpack-dev-server')
 const path = require('path')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 
+const ExtractTextPlugin = require('extract-text-webpack-plugin');
+
 const modulevalues = require('postcss-modules-values')
 const cssnext = require('postcss-cssnext')
 const nested = require('postcss-nested')
@@ -43,11 +45,8 @@ const webpackconfig = {
       {
         test: /\.css/,
         exclude: /node_modules/,
-        loaders: [
-          'style',
-          'css?modules&sourceMap&importLoaders=1&localIdentName=[name]-[local]-[hash:base64:5]',
-          'postcss',
-        ],
+        loader: ExtractTextPlugin.extract('style',
+          'css?modules&localIdentName=[name]_[local]__[hash:base64:5]!postcss'),
       },
     ],
   },
@@ -58,6 +57,9 @@ const webpackconfig = {
     modulevalues,
   ]),
   plugins: [
+    new ExtractTextPlugin('common.css', {
+      allChunks: true,
+    }),
   ],
 }
 
