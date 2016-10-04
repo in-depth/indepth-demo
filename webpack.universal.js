@@ -3,7 +3,6 @@ const webpack = require('webpack')
 const WebpackDevServer = require('webpack-dev-server')
 const path = require('path')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
-
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
 
 const modulevalues = require('postcss-modules-values')
@@ -45,8 +44,20 @@ const webpackconfig = {
       {
         test: /\.css/,
         exclude: /node_modules/,
-        loader: ExtractTextPlugin.extract('style',
-          'css?modules&localIdentName=[name]_[local]__[hash:base64:5]!postcss'),
+        loader: ExtractTextPlugin.extract(
+          'style',
+          'css?modules&localIdentName=[name]__[local]___[hash:base64:5]',
+          'postcss'),
+      },
+      {
+        test: /\.scss/,
+        include: /react-toolbox/,
+        loader: ExtractTextPlugin.extract(
+          'style',
+          'css?sourceMap&modules&importLoaders=1&localIdentName=[name]_[local]__[hash:base64:5]',
+          'postcss',
+          'sass'
+        ),
       },
     ],
   },
@@ -56,8 +67,12 @@ const webpackconfig = {
     cssnext,
     modulevalues,
   ]),
+  sassLoader: {
+    data: '@import "shared/styles/main.scss";',
+    includePaths: [PATHS.src],
+  },
   plugins: [
-    new ExtractTextPlugin('common.css', {
+    new ExtractTextPlugin('../common.css', {
       allChunks: true,
     }),
   ],

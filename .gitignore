@@ -1,6 +1,7 @@
 # Indepth-core
 babel_cache
 dist
+dist_static
 
 #Logs
 logs

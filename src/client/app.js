@@ -15,11 +15,21 @@ window.onload = () => {
   renderApp(AppRoutes)
 }
 
-const renderApp = (AppRoutes) => {
+const renderApp = (Routes) => {
+  ReactDOM.render(
+    <Provider store={store}>
+      <Routes />
+    </Provider>
+    ,
+    document.getElementById('root') // eslint-disable-line
+  )
+}
+
+const renderAppHot = (Routes) => {
   ReactDOM.render(
     <AppContainer>
       <Provider store={store}>
-        <AppRoutes />
+        <Routes />
       </Provider>
     </AppContainer>
     ,
@@ -31,6 +41,6 @@ if (module.hot) {
   module.hot.accept('../shared/views/AppRoutes', () => {
     const UpdatedRoot = require('../shared/views/AppRoutes').default
 
-    renderApp(UpdatedRoot)
+    renderAppHot(UpdatedRoot)
   })
 }

@@ -16,6 +16,7 @@ const PATHS = {
   app: path.join(__dirname, 'src/client/app.js'),
   dist: path.join(__dirname, 'dist'),
   client: path.join(__dirname, 'src', 'client'),
+  distStatic: path.join(__dirname, 'dist_static'),
 }
 
 const webpackconfig = {
@@ -26,7 +27,7 @@ const webpackconfig = {
     ],
   },
   output: {
-    path: PATHS.dist,
+    path: PATHS.distStatic,
     filename: '[name].js', // Output name of bundle
     publicPath: '/',
   },
