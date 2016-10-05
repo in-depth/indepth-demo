@@ -1,0 +1,12 @@
+.listItem {
+    background-color: #55acef;
+    border-bottom: 1px solid white;
+}
+
+.listItem .itemText {
+    color: white;
+}
+
+.listItem .itemAction [data-react-toolbox="font-icon"] {
+    color: white;
+}

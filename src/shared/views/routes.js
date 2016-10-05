@@ -14,27 +14,27 @@ export const navigationLinks = [
   {
     title: 'Visit',
     link: '/',
-    icon: 'fa fa-university',
+    icon: 'idf idf-bank',
   },
   {
     title: 'Find',
     link: '/collection',
-    icon: 'fa fa-search',
+    icon: 'idf idf-search',
   },
   {
     title: 'Map',
     link: '/map',
-    icon: 'fa fa-map-o',
+    icon: 'idf idf-map-o',
   },
   {
     title: 'Plan',
     link: '/plan',
-    icon: 'fa fa-map-signs',
+    icon: 'idf idf-map-signs',
   },
   {
     title: 'More',
     link: '/more',
-    icon: 'fa fa-ellipsis-h',
+    icon: 'idf idf-ellipsis',
   },
 ]
 

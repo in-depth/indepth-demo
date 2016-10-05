@@ -1,0 +1,8 @@
+.listItem [data-react-toolbox="avatar"] {
+    border-radius: 0;
+}
+
+.listItem [data-react-toolbox="avatar"] img {
+    border-radius: 0;
+    height: 100%
+}

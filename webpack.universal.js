@@ -46,17 +46,15 @@ const webpackconfig = {
         exclude: /node_modules/,
         loader: ExtractTextPlugin.extract(
           'style',
-          'css?modules&localIdentName=[name]__[local]___[hash:base64:5]',
-          'postcss'),
+          'css?sourceMap&modules&&importLoaders=1&localIdentName=[name]__[local]___[hash:base64:5]!postcss'
+        ),
       },
       {
         test: /\.scss/,
         include: /react-toolbox/,
         loader: ExtractTextPlugin.extract(
           'style',
-          'css?sourceMap&modules&importLoaders=1&localIdentName=[name]_[local]__[hash:base64:5]',
-          'postcss',
-          'sass'
+          'css?sourceMap&modules&importLoaders=1&localIdentName=[name]__[local]___[hash:base64:5]!postcss!sass'
         ),
       },
     ],

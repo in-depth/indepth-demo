@@ -13,6 +13,8 @@ const mapStateToProps = ({ collectionItems }, ownProps) => {
     subType: item.subType,
     classifications: item.classifications,
     assets: item.assets,
+    shortDesc: item.shortDesc,
+    fullDesc: item.fullDesc,
   }
 }
 

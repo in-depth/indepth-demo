@@ -55,7 +55,7 @@
     "extract-text-webpack-plugin": "^1.0.1",
     "html-webpack-plugin": "^2.22.0",
     "immutability-helper": "^2.0.0",
-    "node-sass": "^3.10.0",
+    "node-sass": "^3.10.1",
     "postcss-cssnext": "^2.7.0",
     "postcss-import": "^8.1.2",
     "postcss-loader": "^0.10.1",

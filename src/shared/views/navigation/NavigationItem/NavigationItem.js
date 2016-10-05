@@ -5,7 +5,7 @@ import styles from './navigationItem.css'
 
 const NavigationItem = (props) => {
   return (
-    <li>
+    <li className={styles.navigationLink}>
       <Link to={props.link}>
         <div className={styles.navigationItem}>
           <i className={`${props.icon} ${styles.icon}`} aria-hidden="true" />

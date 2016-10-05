@@ -62,7 +62,7 @@ function renderFullPage(html, preloadedState) {
   <!doctype html>
   <html>
     <head>
-      <title>Indepth Core</title>
+      <title>Indepth Demo</title>
       <base href="/" />
       <meta charset="utf-8">
       <meta http-equiv="cache-control" content="no-cache">

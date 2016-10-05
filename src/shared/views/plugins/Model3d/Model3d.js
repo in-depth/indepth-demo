@@ -2,8 +2,8 @@ import React from 'react'
 
 const Model3d = (props) => {
   return (
-    <div>
-      <iframe width="640" height="480" src={props.url} frameBorder="0" allowFullScreen />
+    <div style={{ height: '75vh' }}>
+      <iframe width="100%" height="100%" src={props.url} frameBorder="0" allowFullScreen />
     </div>
   )
 }

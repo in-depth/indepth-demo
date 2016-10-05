@@ -75,7 +75,7 @@ const webpackconfig = {
   },
   plugins: [
     new HtmlWebpackPlugin({
-      template: path.resolve(PATHS.client, 'index.html'), // Use index.html as template for index.html
+      template: path.resolve(PATHS.src, 'index.html'), // Use index.html as template for index.html
       chunksSortMode: 'dependency', // Order the dependacy so that bundle comes first
       filename: 'index.html', // Output file name
       inject: 'body', // Enject into the end of the body tag
@@ -97,6 +97,7 @@ new WebpackDevServer(webpack(webpackconfig), {
   watchOptions: {
     ignored: /node_modules/, // Don't hot reload node modules
   },
+  contentBase: 'src/',
 }).listen(3000, (err, result) => {
   if (err) {
     console.log(err, result) //eslint-disable-line
