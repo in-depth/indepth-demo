@@ -1,1 +1,20 @@
 @import 'react-toolbox-theme';
+
+html {
+  overflow: hidden;
+}
+
+h1 {
+  font-size: 20px;
+  margin: 20px 20px;
+}
+
+h2 {
+
+  font-size: 20px;
+  margin: 0px;
+}
+
+*, :after, :before {
+  box-sizing: border-box;
+}

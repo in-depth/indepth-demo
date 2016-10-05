@@ -9,6 +9,10 @@ import { ShowRoute } from './shows/show'
 import { CollectionItemsRoute } from './collectionItems/collectionItems'
 import { DeepZoomRoute } from './plugins/DeepZoom'
 import { Model3dRoute } from './plugins/Model3d'
+import { PlansRoute } from './plans/plans'
+import { PlanRoute } from './plans/plan'
+import { PlanMapRoute } from './plans/planMap'
+
 
 export const navigationLinks = [
   {
@@ -47,6 +51,9 @@ const routes = (
     <Route path="/collection/:id" component={CollectionItemRoute} />
     <Route path="/collection/:id/deepzoom" component={DeepZoomRoute} />
     <Route path="/collection/:id/models3d" component={Model3dRoute} />
+    <Route path="/plan" component={PlansRoute} />
+    <Route path="/plan/:id" component={PlanRoute} />
+    <Route path="/plan/:id/map" component={PlanMapRoute} />
     <Route path="/visit" component={VisitRoute} />
   </Route>
 )
