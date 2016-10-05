@@ -8,12 +8,23 @@
 .title {
   font-size: 12px;
   padding-top: 4px;
+  color: #989696;
 }
 
 .icon {
   display: flex;
   justify-content: center;
-  font-size: 25px
+  font-size: 25px;
+  color: #989696;
+}
+
+.linkLi {
+  width: 100%;
+  max-width: 150px;
+}
+
+.linkDiv {
+  width: 100%;
 }
 
 .navigationLink a,

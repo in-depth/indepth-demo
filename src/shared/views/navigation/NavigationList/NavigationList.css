@@ -1,10 +1,12 @@
 .menu {
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
+  width: 100%;
   list-style-type: none;
   padding: 0px;
   margin-top: 4px;
-  margin-bottom: 2px
+  margin-bottom: 2px;
+  max-width: 600px;
 }
   a {
     text-decoration: none;
