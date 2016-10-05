@@ -4,7 +4,7 @@
   ],
   "rules": {
     "semi" : [2, "never"],
-    "max-len": [2, 140, 2],
+    "max-len": [2, 140, {"ignoreStrings": true }],
     "arrow-body-style": [0, "as-needed"],
     "no-use-before-define": 0,
     "new-cap": 0,

@@ -19,6 +19,8 @@
     "dist:copy-static": "cp -r src/static dist/static",
     "dist-static:clean": "rm -rf dist_static && mkdir dist_static",
     "dist-static:copy-static": "cp -r src/static dist_static/static",
+    "lint": "eslint ./src/",
+    "lint:fix": "eslint ./src/ --fix",
     "sourcemapexplorer": "source-map-explorer ./build/app.*.js ./build/app.*.js.map && source-map-explorer ./build/vendor.*.js ./build/vendor.*.js.map"
   },
   "repository": {

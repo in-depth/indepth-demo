@@ -7,6 +7,8 @@ import { ShowsRoute } from './shows'
 import { VisitRoute } from './visit'
 import { ShowRoute } from './shows/show'
 import { CollectionItemsRoute } from './collectionItems/collectionItems'
+import { DeepZoomRoute } from './plugins/DeepZoom'
+import { Model3dRoute } from './plugins/Model3d'
 
 export const navigationLinks = [
   {
@@ -41,8 +43,10 @@ const routes = (
     <IndexRoute component={VisitRoute} />
     <Route path="shows" component={ShowsRoute} />
     <Route path="shows/:id" component={ShowRoute} />
-    <Route path="/collection/:id" component={CollectionItemRoute} />
     <Route path="/collection" component={CollectionItemsRoute} />
+    <Route path="/collection/:id" component={CollectionItemRoute} />
+    <Route path="/collection/:id/deepzoom" component={DeepZoomRoute} />
+    <Route path="/collection/:id/models3d" component={Model3dRoute} />
     <Route path="/visit" component={VisitRoute} />
   </Route>
 )

@@ -5,9 +5,14 @@ import CollectionItem from './CollectionItem'
 const mapStateToProps = ({ collectionItems }, ownProps) => {
   const item = collectionItems.collectionItems[ownProps.id]
   return {
-    image: item.mainImage,
+    itemId: item.id,
+    image: item.image,
     title: item.title,
     date: item.date,
+    type: item.type,
+    subType: item.subType,
+    classifications: item.classifications,
+    assets: item.assets,
   }
 }
 

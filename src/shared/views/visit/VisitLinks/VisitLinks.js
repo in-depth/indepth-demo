@@ -1,8 +1,6 @@
 import React from 'react'
 import { Link } from 'react-router'
 
-import styles from './visitLinks.css'
-
 const VisitLinks = (props) => {
   return (
     <div>
@@ -13,6 +11,10 @@ const VisitLinks = (props) => {
       ))}
     </div>
   )
+}
+
+VisitLinks.propTypes = {
+  topLinks: React.PropTypes.array.isRequired,
 }
 
 export default VisitLinks

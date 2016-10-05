@@ -8,7 +8,7 @@ const VisitFeaturedList = (props) => {
     <div>
       <h1>Featured</h1>
       {props.featuredLinks.map((featuredLink) => (
-        <div key={featuredLink.title} className={styles.featuredLink} style={{backgroundImage: "url(" + featuredLink.backgroundUrl + ")"}}>
+        <div key={featuredLink.title} className={styles.featuredLink} style={{ backgroundImage: `url(${featuredLink.backgroundUrl})` }}>
           <Link to={featuredLink.path}>
             <div className={styles.overlay}>
               <h2>
@@ -20,6 +20,10 @@ const VisitFeaturedList = (props) => {
       ))}
     </div>
   )
+}
+
+VisitFeaturedList.propTypes = {
+  featuredLinks: React.PropTypes.array.isRequired,
 }
 
 export default VisitFeaturedList

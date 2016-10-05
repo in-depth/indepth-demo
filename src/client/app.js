@@ -7,11 +7,11 @@ import { createStore } from 'redux'
 import rootReducer from '../shared/views/rootReducer'
 import AppRoutes from '../shared/views/AppRoutes'
 
-const initialState = window.__INITIAL_STATE__ //eslint-disable
+const initialState = window.__INITIAL_STATE__ // eslint-disable-line
 
 const store = createStore(rootReducer, initialState)
 
-window.onload = () => {
+window.onload = () => { // eslint-disable-line
   renderApp(AppRoutes)
 }
 

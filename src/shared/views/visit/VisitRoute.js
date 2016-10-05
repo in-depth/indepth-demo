@@ -61,11 +61,11 @@ const VisitRoute = () => {
       <div className={styles.topLinks}>
         <div>
           <h2>What's on</h2>
-          <VisitLinks topLinks={whatsOnLinks}/>
+          <VisitLinks topLinks={whatsOnLinks} />
         </div>
         <div>
           <h2>Visitor details</h2>
-          <VisitLinks topLinks={visitorDetailsLinks}/>
+          <VisitLinks topLinks={visitorDetailsLinks} />
         </div>
       </div>
       <VisitFeaturedList featuredLinks={featuredListLinks} />
