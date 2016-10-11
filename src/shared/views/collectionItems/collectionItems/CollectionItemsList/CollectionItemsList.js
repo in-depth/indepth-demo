@@ -26,9 +26,6 @@ const CollectionItemsList = (props) => {
   )
 }
 
-// {/*<li key={itemId}><Link to={`/collection/${itemId}`}>{props.collectionItems[itemId].title}</Link></li>*/}
-
-
 CollectionItemsList.propTypes = {
   collectionItems: React.PropTypes.object.isRequired,
   order: React.PropTypes.array.isRequired,

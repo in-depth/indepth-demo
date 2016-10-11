@@ -44,6 +44,7 @@ const webpackconfig = {
           plugins: [
             'babel-plugin-transform-object-rest-spread', // Adds ... spread operator for objects
             'babel-plugin-transform-class-properties', // Adds support for React classes
+            'transform-class-properties', // Annoymous functions
           ],
         },
       },

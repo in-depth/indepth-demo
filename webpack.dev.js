@@ -44,6 +44,7 @@ const webpackconfig = {
           presets: ['modern-browsers', 'react'],
           plugins: [
             'react-hot-loader/babel',
+            'transform-class-properties',
           ],
         },
       },
