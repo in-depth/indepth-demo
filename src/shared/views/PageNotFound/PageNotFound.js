@@ -1,11 +1,14 @@
 import React from 'react'
 
-const NotFound = () => {
+import styles from './pageNotFound.css'
+
+const PageNotFound = () => {
   return (
-    <div>
-      <h2 style={{ padding: '2rem' }}>Page Not Found</h2>
+    <div className={styles.main}>
+      <h2>Page Not Avaliable</h2>
+      <p>Sorry, this demo page is not yet avaliable.</p>
     </div>
   )
 }
 
-export default NotFound
+export default PageNotFound

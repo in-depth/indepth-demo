@@ -12,22 +12,22 @@ const featuredListLinks = [
   },
   {
     title: 'New Galipoli exhibition',
-    path: '/',
+    path: '/page-unavailable',
     backgroundUrl: 'http://indepth-527d.kxcdn.com/wp-content/uploads/2016/05/tile_0012.jpg',
   },
   {
     title: 'New Audio Tour',
-    path: '/',
+    path: '/page-unavailable',
     backgroundUrl: 'http://indepth-527d.kxcdn.com/wp-content/uploads/2016/05/tile_0005.jpg',
   },
   {
     title: 'This other shit.',
-    path: '/',
+    path: '/page-unavailable',
     backgroundUrl: 'http://indepth-527d.kxcdn.com/wp-content/uploads/2016/05/tile_0010.jpg',
   },
   {
     title: 'More stuff',
-    path: '/',
+    path: '/page-unavailable',
     backgroundUrl: 'http://indepth-527d.kxcdn.com/wp-content/uploads/2016/05/tile_0008.jpg',
   },
 ]
@@ -46,11 +46,11 @@ const whatsOnLinks = [
 const visitorDetailsLinks = [
   {
     title: 'Visitor Info',
-    path: '/',
+    path: '/page-unavailable',
   },
   {
     title: 'Opening Hours',
-    path: '/',
+    path: '/page-unavailable',
   },
 ]
 

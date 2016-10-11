@@ -12,7 +12,7 @@ const CollectionItemsList = (props) => {
       Order by: <Link to="/collection?orderBy=id">id</Link> | <Link to="/collection?orderBy=title">title</Link>
       <List selectable ripple>
         {props.order.map((itemId) => (
-          <Link to={`/collection/${itemId}`}>
+          <Link to={`/collection/${itemId}`} key={itemId}>
             <ListItem
               avatar={props.collectionItems[itemId].image.url}
               caption={props.collectionItems[itemId].title}

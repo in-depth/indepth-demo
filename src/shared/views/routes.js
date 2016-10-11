@@ -13,6 +13,7 @@ import { PlansRoute } from './plans/plans'
 import { PlanRoute } from './plans/plan'
 import { PlanMapRoute } from './plans/planMap'
 import { MapRoute } from './map'
+import PageNotFound from './PageNotFound/PageNotFound'
 
 
 export const navigationLinks = [
@@ -57,6 +58,7 @@ const routes = (
     <Route path="/plan/:id/map" component={PlanMapRoute} />
     <Route path="/visit" component={VisitRoute} />
     <Route path="/map" component={MapRoute} />
+    <Route path="/page-unavailable" component={PageNotFound} />
   </Route>
 )
 

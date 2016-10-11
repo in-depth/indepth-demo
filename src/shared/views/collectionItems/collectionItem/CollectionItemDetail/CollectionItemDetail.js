@@ -4,7 +4,7 @@ const CollectionItemDetail = (props) => {
   return (
     <div>
       {props.fullDesc.map(desc => (
-        <div>
+        <div key={desc.sectionid}>
           <h3>{desc.sectionTitle}</h3>
           <p>{desc.section}</p>
         </div>

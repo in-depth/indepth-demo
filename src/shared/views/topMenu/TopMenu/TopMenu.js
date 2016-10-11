@@ -9,7 +9,8 @@ const TopMenu = (props) => {
     // SSR gives title in in 2nd item of array. Clientside first item
     const pageTitle = title[0] ? title[0] : title[1]
     if (!pageTitle) { return 'Visit' }
-    return pageTitle.charAt(0).toUpperCase() + pageTitle.slice(1)
+    const pageTitleNoSpace = pageTitle.charAt(0).toUpperCase() + pageTitle.slice(1)
+    return pageTitleNoSpace.split('-').join(' ')
   }
   return (
     <div className={styles.topMenu}>
