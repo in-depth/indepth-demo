@@ -35,7 +35,7 @@ const featuredListLinks = [
 const whatsOnLinks = [
   {
     title: 'Events',
-    path: '/shows',
+    path: '/events',
   },
   {
     title: 'Plan',

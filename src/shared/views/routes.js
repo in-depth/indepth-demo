@@ -3,7 +3,7 @@ import { Route, IndexRoute } from 'react-router'
 
 import AppLayout from './AppLayout/AppLayout'
 import { CollectionItemRoute } from './collectionItems/collectionItem'
-import { ShowsRoute } from './shows'
+import { ShowsRoute } from './shows/shows'
 import { VisitRoute } from './visit'
 import { ShowRoute } from './shows/show'
 import { CollectionItemsRoute } from './collectionItems/collectionItems'
@@ -38,17 +38,17 @@ export const navigationLinks = [
     icon: 'idf idf-map-signs',
   },
   {
-    title: 'More',
-    link: '/more',
-    icon: 'idf idf-ellipsis',
+    title: 'Events',
+    link: '/events',
+    icon: 'idf idf-calendar',
   },
 ]
 
 const routes = (
   <Route path="/" component={AppLayout} >
     <IndexRoute component={VisitRoute} />
-    <Route path="shows" component={ShowsRoute} />
-    <Route path="shows/:id" component={ShowRoute} />
+    <Route path="events" component={ShowsRoute} />
+    <Route path="events/:id" component={ShowRoute} />
     <Route path="/collection" component={CollectionItemsRoute} />
     <Route path="/collection/:id" component={CollectionItemRoute} />
     <Route path="/collection/:id/deepzoom" component={DeepZoomRoute} />

@@ -8,6 +8,8 @@ const mapStateToProps = (state, ownProps) => {
     title: show.title,
     date: show.date,
     description: show.description,
+    location: show.location,
+    time: show.time,
   }
 }
 
