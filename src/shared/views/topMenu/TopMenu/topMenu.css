@@ -1,5 +1,9 @@
+/*@value colors: "../../../styles/colors.css";
+
+@value primary from colors;*/
+
 .topMenu {
-  background-color: #55ACEF;
+  background-color: #5CA039;
   height: 50px;
   display: flex;
   align-items: center;

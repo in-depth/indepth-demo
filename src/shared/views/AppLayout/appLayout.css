@@ -1,3 +1,7 @@
+/*@value colors: "../../styles/colors.css";*/
+
+/*@value primary from colors;*/
+
 .appLayout {
   display: flex;
   flex-direction: column;
@@ -16,15 +20,21 @@
 }
 
 .navigation {
-  background-color: #f1f1f1;
+  background-color: #5CA039;
   position: fixed;
   bottom: 0;
   left: 0;
   right: 0;
   display: flex;
   justify-content: center;
+  height: 50px;
+  box-shadow: 2px 2px 3px 2px rgba(0,0,0,0.25);
 }
 
 .navigationSpacer {
   height: 50px;
+}
+
+a {
+  text-decoration: none;
 }

@@ -6,21 +6,27 @@
 }
 
 .title {
-  font-size: 12px;
-  padding-top: 4px;
-  color: #989696;
+  font-size: 10px;
+  padding-top: 2px;
+  color: white;
+  font-weight: lighter;
 }
 
 .icon {
   display: flex;
   justify-content: center;
-  font-size: 25px;
-  color: #989696;
+  font-size: 28px;
+  color: white;
+  max-width: 28px;
 }
 
 .navigationLink {
   width: 100%;
   max-width: 150px;
+  border-left: 1px solid #7db361;
+  border-right: 1px solid #7db361;
+  padding-top: 5px;
+  padding-bottom: 2px;
 }
 
 .navigationItem {

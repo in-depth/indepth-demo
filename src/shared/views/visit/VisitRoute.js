@@ -6,51 +6,47 @@ import styles from './visitRoute.css'
 
 const featuredListLinks = [
   {
-    title: 'Plan your Trip',
+    title: 'GUIDED TOURS',
     path: '/plan',
-    backgroundUrl: 'http://indepth-527d.kxcdn.com/wp-content/uploads/2016/05/tile_0009.jpg',
+    backgroundUrl: '/static/images/guided-tours.jpg',
   },
   {
-    title: 'New Galipoli exhibition',
+    title: 'GALLIPOLI EXHIBITION',
     path: '/page-unavailable',
-    backgroundUrl: 'http://indepth-527d.kxcdn.com/wp-content/uploads/2016/05/tile_0012.jpg',
+    backgroundUrl: '/static/images/gallipoli-westmacott.jpg',
   },
   {
-    title: 'New Audio Tour',
+    title: 'EUROPEAN SPLENDOR',
     path: '/page-unavailable',
-    backgroundUrl: 'http://indepth-527d.kxcdn.com/wp-content/uploads/2016/05/tile_0005.jpg',
+    backgroundUrl: '/static/images/fan.jpg',
   },
   {
-    title: 'This other shit.',
-    path: '/page-unavailable',
-    backgroundUrl: 'http://indepth-527d.kxcdn.com/wp-content/uploads/2016/05/tile_0010.jpg',
-  },
-  {
-    title: 'More stuff',
-    path: '/page-unavailable',
-    backgroundUrl: 'http://indepth-527d.kxcdn.com/wp-content/uploads/2016/05/tile_0008.jpg',
+    title: 'ESPIONAGE AND MASS SURVEILLANCE',
+    path: '/',
+    backgroundUrl: '/static/images/simon-denny.jpg',
   },
 ]
 
-const whatsOnLinks = [
+const visitPrimaryLinks = [
   {
-    title: 'Events',
+    title: 'EVENTS',
     path: '/events',
+    icon: 'event',
   },
   {
-    title: 'Plan',
+    title: 'PLAN',
     path: '/plan',
-  },
-]
-
-const visitorDetailsLinks = [
-  {
-    title: 'Visitor Info',
-    path: '/page-unavailable',
+    icon: 'directions_walk',
   },
   {
-    title: 'Opening Hours',
+    title: 'INFO',
     path: '/page-unavailable',
+    icon: 'info_outline',
+  },
+  {
+    title: 'HOURS',
+    path: '/page-unavailable',
+    icon: 'hourglass_empty',
   },
 ]
 
@@ -58,15 +54,8 @@ const VisitRoute = () => {
   return (
     <div>
       <VisitMuseumHeader />
-      <div className={styles.topLinks}>
-        <div>
-          <h2>What's on</h2>
-          <VisitLinks topLinks={whatsOnLinks} />
-        </div>
-        <div>
-          <h2>Visitor details</h2>
-          <VisitLinks topLinks={visitorDetailsLinks} />
-        </div>
+      <div className={styles.visitPrimaryLinks}>
+        <VisitLinks topLinks={visitPrimaryLinks} />
       </div>
       <VisitFeaturedList featuredLinks={featuredListLinks} />
     </div>

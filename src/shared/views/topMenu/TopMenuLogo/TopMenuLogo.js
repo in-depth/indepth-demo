@@ -8,7 +8,7 @@ const goBack = browserHistory ? browserHistory.goBack : null
 const TopMenuLogo = () => {
   return (
     <div className={styles.logoContainer}onClick={goBack}>
-      <i className="idf idf-left" aria-hidden="true" />
+      <i className="material-icons">arrow_back</i>
     </div>
   )
 }

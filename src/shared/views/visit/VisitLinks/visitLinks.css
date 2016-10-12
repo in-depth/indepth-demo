@@ -1,0 +1,38 @@
+/*@value colors: "../../../styles/colors.css";
+
+@value primary from colors;*/
+
+.visitPrimaryLinks {
+  display: flex;
+  justify-content: space-around;
+  height: 80px;
+  margin: 5px 0;
+  color: #5CA039;
+}
+
+.visitPrimaryLinks a, .visitPrimaryLinks a:visited {
+  font-size: 10px;
+  font-weight: lighter;
+  color: #5CA039;
+  width: 100%;
+}
+
+.visitPrimaryLink {
+  border: white solid 1px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #efeeee;
+  flex-direction: column;
+  height: 100%;
+}
+
+.icon {
+  font-size: 40px;
+  max-width: 40px;
+}
+
+.linkText {
+  padding-top: 3px;
+}

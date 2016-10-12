@@ -4,7 +4,9 @@ import styles from './topMenuSearch.css'
 
 const TopMenuSearch = () => {
   return (
-    <div className={styles.search} />
+    <div className={styles.search}>
+      <i className="material-icons">search</i>
+    </div>
   )
 }
 

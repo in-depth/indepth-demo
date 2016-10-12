@@ -9,7 +9,10 @@ const NavigationList = () => {
   return (
     <ul className={styles.menu}>
       {navigationLinks.map((navigationLink) => (
-        <NavigationItem key={navigationLink.title} link={navigationLink.link} title={navigationLink.title} icon={navigationLink.icon} />
+        <NavigationItem
+          key={navigationLink.title} link={navigationLink.link}
+          title={navigationLink.title} icon={navigationLink.icon}
+        />
       ))}
     </ul>
   )

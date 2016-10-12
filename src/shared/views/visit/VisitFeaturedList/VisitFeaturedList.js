@@ -6,7 +6,6 @@ import styles from './visitFeaturedList.css'
 const VisitFeaturedList = (props) => {
   return (
     <div>
-      <h1>Featured</h1>
       {props.featuredLinks.map((featuredLink) => (
         <div key={featuredLink.title} className={styles.featuredLink} style={{ backgroundImage: `url(${featuredLink.backgroundUrl})` }}>
           <Link to={featuredLink.path}>

@@ -1,13 +1,18 @@
 import React from 'react'
 import { Link } from 'react-router'
 
+import styles from './visitLinks.css'
+
 const VisitLinks = (props) => {
   return (
-    <div>
+    <div className={styles.visitPrimaryLinks}>
       {props.topLinks.map((topLink) => (
-        <div key={topLink.title}>
-          <Link key={topLink.title} to={topLink.path}>{topLink.title}</Link>
-        </div>
+        <Link key={topLink.title} to={topLink.path}>
+          <div key={topLink.title} className={styles.visitPrimaryLink}>
+            <i className={`material-icons ${styles.icon}`}>{topLink.icon}</i>
+            <span className={styles.linkText}>{topLink.title}</span>
+          </div>
+        </Link>
       ))}
     </div>
   )

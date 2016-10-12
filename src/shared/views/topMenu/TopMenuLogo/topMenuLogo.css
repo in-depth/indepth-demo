@@ -1,7 +1,11 @@
 .logoContainer {
   margin-left: auto;
-  padding: 0 15px;
+  padding: 0 10px;
   color: white;
-  font-size: 24px;
   cursor: pointer;
+}
+
+.logoContainer i {
+  font-size: 40px;
+  max-width: 40px;
 }

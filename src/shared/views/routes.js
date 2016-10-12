@@ -18,29 +18,29 @@ import PageNotFound from './PageNotFound/PageNotFound'
 
 export const navigationLinks = [
   {
-    title: 'Visit',
+    title: 'VISIT',
     link: '/',
-    icon: 'idf idf-bank',
+    icon: 'account_balance',
   },
   {
-    title: 'Find',
+    title: 'FIND',
     link: '/collection',
-    icon: 'idf idf-search',
+    icon: 'search',
   },
   {
-    title: 'Map',
+    title: 'MAP',
     link: '/map',
-    icon: 'idf idf-map-o',
+    icon: 'map',
   },
   {
-    title: 'Plan',
+    title: 'PLAN',
     link: '/plan',
-    icon: 'idf idf-map-signs',
+    icon: 'directions_walk',
   },
   {
-    title: 'Events',
+    title: 'EVENTS',
     link: '/events',
-    icon: 'idf idf-calendar',
+    icon: 'event',
   },
 ]
 

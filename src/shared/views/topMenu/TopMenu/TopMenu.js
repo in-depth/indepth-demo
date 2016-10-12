@@ -8,8 +8,8 @@ const TopMenu = (props) => {
     const title = path.split('/')
     // SSR gives title in in 2nd item of array. Clientside first item
     const pageTitle = title[0] ? title[0] : title[1]
-    if (!pageTitle) { return 'Visit' }
-    const pageTitleNoSpace = pageTitle.charAt(0).toUpperCase() + pageTitle.slice(1)
+    if (!pageTitle) { return 'VISIT' }
+    const pageTitleNoSpace = pageTitle.toUpperCase()
     return pageTitleNoSpace.split('-').join(' ')
   }
   return (

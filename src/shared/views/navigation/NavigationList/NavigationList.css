@@ -4,10 +4,7 @@
   width: 100%;
   list-style-type: none;
   padding: 0px;
-  margin-top: 4px;
-  margin-bottom: 2px;
+  margin: 0px;
   max-width: 600px;
+  box-shadow: 0 -2px 5px 0 rgba(0,0,0,0.15);
 }
-  a {
-    text-decoration: none;
-  }

@@ -8,7 +8,7 @@ const NavigationItem = (props) => {
     <li className={styles.navigationLink}>
       <Link to={props.link}>
         <div className={styles.navigationItem}>
-          <i className={`${props.icon} ${styles.icon}`} aria-hidden="true" />
+          <i className={`material-icons ${styles.icon}`}>{props.icon}</i>
           <span className={styles.title}>{props.title}</span>
         </div>
       </Link>
@@ -21,6 +21,5 @@ NavigationItem.propTypes = {
   title: React.PropTypes.string.isRequired,
   link: React.PropTypes.string.isRequired,
 }
-
 
 export default NavigationItem
