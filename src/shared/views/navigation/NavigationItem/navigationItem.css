@@ -12,9 +12,21 @@
   font-weight: lighter;
 }
 
+
+.navigationItem svg {
+  display: flex;
+  justify-content: center;
+  width: 28px;
+  height: 28px;
+  fill: white;
+}
+
 .icon {
   display: flex;
   justify-content: center;
+  width: 28px;
+  height: 28px;
+  fill: white;
   font-size: 28px;
   color: white;
   max-width: 28px;

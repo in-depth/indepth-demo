@@ -1,11 +1,12 @@
 import React from 'react'
 
 import styles from './topMenuSearch.css'
+import Icon from '../../../components/Icon/Icon'
 
 const TopMenuSearch = () => {
   return (
     <div className={styles.search}>
-      <i className="material-icons">search</i>
+      <Icon icon="search" />
     </div>
   )
 }

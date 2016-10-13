@@ -5,7 +5,8 @@
   cursor: pointer;
 }
 
-.logoContainer i {
-  font-size: 40px;
-  max-width: 40px;
+.logoContainer svg {
+  fill: #ffffff;
+  height: 40px;
+  width: 40px;
 }

@@ -2,13 +2,14 @@ import React from 'react'
 import { Link } from 'react-router'
 
 import styles from './navigationItem.css'
+import Icon from '../../../components/Icon/Icon'
 
 const NavigationItem = (props) => {
   return (
     <li className={styles.navigationLink}>
       <Link to={props.link}>
         <div className={styles.navigationItem}>
-          <i className={`material-icons ${styles.icon}`}>{props.icon}</i>
+          <Icon icon={props.icon} />
           <span className={styles.title}>{props.title}</span>
         </div>
       </Link>

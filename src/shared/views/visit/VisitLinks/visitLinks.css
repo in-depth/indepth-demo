@@ -17,6 +17,12 @@
   width: 100%;
 }
 
+.visitPrimaryLinks a svg, .visitPrimaryLinks a:visited svg {
+  fill: #5CA039;
+  height: 40px;
+  width: 40px;
+}
+
 .visitPrimaryLink {
   border: white solid 1px;
   width: 100%;
