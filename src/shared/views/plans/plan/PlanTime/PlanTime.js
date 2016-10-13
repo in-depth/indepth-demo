@@ -6,7 +6,7 @@ import { SliderSnaps } from '../../../../components'
 const PlanTime = ({ min, max, step, value, action }) => {
   return (
     <div>
-      <h2>How much time do you have?</h2>
+      <p>We have (hours):</p>
       <SliderSnaps
         min={min}
         max={max}

@@ -1,15 +1,18 @@
 .card {
-  margin: 8px;
-  max-width: 190px;
+  display: flex;
+  width: calc(100vw / 2 - 15px);
+  min-height: 205px;
+  margin: 5px 0;
   color: black;
-  height: 100%;
+  height: calc(100% - 15px)
 }
 
-.planTitle h5 {
-  margin: 0px;
-  font-size: 18px;
-}
-
-.planText p {
+.card h5 {
   margin: 0;
+  font-size: 16px !important;
+}
+
+.card p {
+  margin: 8px 0;
+  font-size: 11px;
 }

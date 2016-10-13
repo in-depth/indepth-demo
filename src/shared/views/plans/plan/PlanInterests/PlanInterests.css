@@ -1,0 +1,9 @@
+.checkboxs {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.checkbox {
+  width: calc(100vw / 3 - 15px)
+}

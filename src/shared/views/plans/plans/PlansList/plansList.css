@@ -1,12 +1,11 @@
 .plans {
   display: flex;
-  flex-wrap: wrap;
   justify-content: space-around;
-  width: 100%;
+  flex-wrap: wrap;
 }
 
-.link {
+/*.link {
   flex: 1;
   margin: 10px;
   min-width: 200px;
-}
+}*/

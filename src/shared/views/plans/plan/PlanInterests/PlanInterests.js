@@ -2,19 +2,24 @@ import React from 'react'
 
 import { Checkbox } from '../../../../components'
 
+import styles from './PlanInterests.css'
+
 const PlanInterests = (props) => {
   return (
     <div>
-      <h2>What are your interests?</h2>
-      {props.interests.map((interest, index) => (
-        <Checkbox
-          key={interest.title}
-          label={interest.title}
-          checked={interest.checked}
-          action={props.action}
-          index={index}
-        />
-      ))}
+      <p>We are interested in:</p>
+      <div className={styles.checkboxs}>
+        {props.interests.map((interest, index) => (
+          <div key={interest.title} className={styles.checkbox}>
+            <Checkbox
+              label={interest.title}
+              checked={interest.checked}
+              action={props.action}
+              index={index}
+            />
+          </div>
+        ))}
+      </div>
     </div>
   )
 }

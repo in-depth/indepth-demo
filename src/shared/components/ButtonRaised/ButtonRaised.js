@@ -1,8 +1,8 @@
 import React from 'react'
 import { Button } from 'react-toolbox/lib/button'
 
-const ButtonRaised = ({ label, handlePress }) => (
-  <Button raised primary label={label} onMouseUp={handlePress} />
+const ButtonRaised = ({ label, handlePress, width }) => (
+  <Button style={{width: width}} raised primary label={label} onMouseUp={handlePress} />
 )
 
 ButtonRaised.propTypes = {

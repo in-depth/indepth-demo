@@ -2,19 +2,24 @@ import React from 'react'
 
 import { Checkbox } from '../../../../components'
 
+import styles from './PlanAges.css'
+
 const PlanAges = (props) => {
   return (
     <div>
-      <h2>What ages are in your party?</h2>
-      {props.ages.map((age, index) => (
-        <Checkbox
-          key={age.title}
-          label={age.title}
-          checked={age.checked}
-          action={props.action}
-          index={index}
-        />
-      ))}
+      <p>Our ages are:</p>
+      <div className={styles.checkboxs}>
+        {props.ages.map((age, index) => (
+          <div key={age.title} className={styles.checkbox}>
+            <Checkbox
+              label={age.title}
+              checked={age.checked}
+              action={props.action}
+              index={index}
+            />
+          </div>
+        ))}
+      </div>
     </div>
   )
 }
