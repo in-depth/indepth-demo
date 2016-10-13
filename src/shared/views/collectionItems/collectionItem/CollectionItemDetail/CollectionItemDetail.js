@@ -1,8 +1,10 @@
 import React from 'react'
 
+import styles from './CollectionItemDetail'
+
 const CollectionItemDetail = (props) => {
   return (
-    <div>
+    <div className={styles.details}>
       {props.fullDesc.map(desc => (
         <div key={desc.sectionid}>
           <h3>{desc.sectionTitle}</h3>

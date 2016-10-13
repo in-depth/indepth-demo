@@ -1,27 +1,34 @@
 import React from 'react'
 import { Link } from 'react-router'
 
-import { List, ListItem } from 'react-toolbox/lib/list'
+import { Card, CardMedia, CardTitle } from 'react-toolbox/lib/card'
 
-import style from './CollectionItemsList.css'
+import styles from './CollectionItemsList.css'
 
 const CollectionItemsList = (props) => {
   return (
     <div>
-      <p><b>Collection items</b></p>
-      Order by: <Link to="/collection?orderBy=id">id</Link> | <Link to="/collection?orderBy=title">title</Link>
-      <List selectable ripple>
+      <div className={styles.sort}>
+        <span>View:&nbsp;</span><i className="material-icons">view_list</i> <i className="material-icons">view_module</i>
+        <span>Sort by:&nbsp;</span><Link to="/collection?orderBy=id">id</Link> | <Link to="/collection?orderBy=title">title</Link>
+      </div>
+      <div className={styles.cards}>
         {props.order.map((itemId) => (
           <Link to={`/collection/${itemId}`} key={itemId}>
-            <ListItem
-              avatar={props.collectionItems[itemId].image.url}
-              caption={props.collectionItems[itemId].title}
-              legend={`${props.collectionItems[itemId].shortDesc.substr(0, 50)}...`}
-              theme={style}
-            />
+            <Card className={styles.collectionItem}>
+              <CardMedia
+                aspectRatio="wide"
+                image={props.collectionItems[itemId].image.url}
+              />
+              <CardTitle
+                className={styles.cardTitle}
+                title={props.collectionItems[itemId].title}
+                subtitle={`${props.collectionItems[itemId].shortDesc.substr(0, 15)}...`}
+              />
+            </Card>
           </Link>
         ))}
-      </List>
+      </div>
     </div>
   )
 }

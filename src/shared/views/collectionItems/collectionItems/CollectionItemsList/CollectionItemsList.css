@@ -1,8 +1,42 @@
-.listItem [data-react-toolbox="avatar"] {
-    border-radius: 0;
+.collectionItem {
+  width: calc(100vw / 2 - 15px);
+  height: calc(100% - 10px);
+  margin: 5px 0;
 }
 
-.listItem [data-react-toolbox="avatar"] img {
-    border-radius: 0;
-    height: 100%
+.collectionItem h5 {
+  margin: 0;
+  font-size: 16px !important;
+}
+
+.collectionItem p {
+  margin: 8px 0;
+  font-size: 11px;
+}
+
+.cards {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.cardTitle {
+  padding: 15px !important;
+}
+
+.sort {
+  margin-top: 30px;
+  margin-bottom: 10px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  font-size: 12px;
+}
+
+.sort a {
+  color: #5CA039;
+}
+
+.sort i {
+  color: #5CA039;
 }

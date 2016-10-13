@@ -45,7 +45,7 @@ const collectionItemState = {
     },
     APYPEBMF6X: {
       id: 'APYPEBMF6X',
-      title: 'Portrait Of Paul Hugot by Gustave Caillebotte',
+      title: 'Portrait Of Paul Hugot',
       image: {
         id: 'APYPEBMF6X-img',
         url: 'https://uploads3.wikiart.org/images/gustave-caillebotte/portrait-of-paul-hugot.jpg',

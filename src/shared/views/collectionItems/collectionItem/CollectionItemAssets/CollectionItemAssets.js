@@ -1,24 +1,39 @@
 import React from 'react'
 import { Link } from 'react-router'
 
-import { List, ListItem } from 'react-toolbox/lib/list'
+import styles from './CollectionItemAssets.css'
 
-import style from './CollectionItemAssets.css'
+const iconSelector = (asset) => {
+  const assetType = asset.typeName
+  if (assetType === 'deepzoom') { return 'zoom_in' }
+  if (assetType === 'models3d') { return '3d_rotation' }
+  if (assetType === 'chat') { return 'chat_bubble_outline' }
+  if (assetType === 'images') { return 'collections' }
+  return 'cached'
+}
+
+const createAssetName = (asset) => {
+  const assetType = asset.typeName
+  if (assetType === 'deepzoom') { return 'DEEP ZOOM' }
+  if (assetType === 'models3d') { return '3D MODEL' }
+  if (assetType === 'chat') { return 'CHAT' }
+  if (assetType === 'images') { return 'IMAGES' }
+  return 'OTHER'
+}
 
 const CollectionItemAssets = (props) => {
   const assetTypes = Object.keys(props.assets)
   return (
-    <List selectable ripple>
+    <div className={styles.assets}>
       {assetTypes.map(typeName =>
         <Link key={typeName} to={`/collection/${props.itemId}/${typeName}`}>
-          <ListItem
-            leftIcon="3d_rotation"
-            caption={typeName}
-            theme={style}
-          />
+          <div className={styles.asset}>
+            <i className={`${styles.icon} material-icons`}>{iconSelector({ typeName })}</i>
+            <span className={styles.text}>{createAssetName({ typeName })}</span>
+          </div>
         </Link>
       )}
-    </List>
+    </div>
   )
 }
 

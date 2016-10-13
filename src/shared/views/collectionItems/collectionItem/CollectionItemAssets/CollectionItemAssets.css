@@ -1,12 +1,33 @@
-.listItem {
-    background-color: #55acef;
-    border-bottom: 1px solid white;
+.assets {
+  display: flex;
+  justify-content: space-around;
+  margin: 5px 0;
+  height: 80px;
+  color: #5CA039;
 }
 
-.listItem .itemText {
-    color: white;
+.assets a {
+   font-size: 10px;
+   font-weight: lighter;
+   color: #5CA039;
+   width: 100%;
 }
 
-.listItem .itemAction [data-react-toolbox="font-icon"] {
-    color: white;
+.asset {
+  border: white solid 1px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #efeeee;
+  flex-direction: column;
+  height: 100%;
+}
+
+.icon {
+  font-size: 40px;
+}
+
+.text {
+  padding-top: 3px;
 }

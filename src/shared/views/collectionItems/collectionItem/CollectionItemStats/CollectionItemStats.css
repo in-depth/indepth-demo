@@ -1,0 +1,14 @@
+.collectionStats {
+  background-color: #efeeee;
+  padding: 20px 20px;
+}
+
+.title {
+  margin: 0px;
+  margin-bottom: 5px;
+  font-size: 25px;
+}
+
+.stats span {
+  font-weight: lighter;
+}

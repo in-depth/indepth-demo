@@ -7,10 +7,18 @@ import style from './CollectionItem.css'
 const CollectionItem = (props) => {
   return (
     <div className={style.page}>
-      <CollectionItemHeader title={props.title} image={props.image} assets={props.assets} />
+      <CollectionItemHeader image={props.image} assets={props.assets} />
       <br />
-      <CollectionItemStats type={props.type} subType={props.subType} classifications={props.classifications} shortDesc={props.shortDesc} />
-      <CollectionItemAssets itemId={props.itemId} assets={props.assets} />
+      <CollectionItemStats
+        title={props.title}
+        type={props.type} subType={props.subType}
+        classifications={props.classifications}
+        shortDesc={props.shortDesc}
+      />
+      <CollectionItemAssets
+        itemId={props.itemId}
+        assets={props.assets}
+      />
       <CollectionItemDetail fullDesc={props.fullDesc} />
     </div>
   )

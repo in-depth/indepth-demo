@@ -3,6 +3,8 @@ import { connect } from 'react-redux'
 
 import Model3d from './Model3d'
 
+import styles from './model3d.css'
+
 const Model3dRoute = (props) => {
   if (!props.models3d || props.models3d.length === 0) {
     return <div><h2>No deep zoom images found.</h2></div>
@@ -10,7 +12,7 @@ const Model3dRoute = (props) => {
 
   return (
     <div>
-      <p>3d Models for <b>{props.title}</b></p>
+      <p className={styles.title}>3d Models for <b>{props.title}</b></p>
       {props.models3d.map((url) =>
         <Model3d key={url} url={url} />
       )}
