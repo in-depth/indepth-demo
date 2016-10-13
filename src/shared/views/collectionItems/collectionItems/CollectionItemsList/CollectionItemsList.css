@@ -7,6 +7,7 @@
 .collectionItem h5 {
   margin: 0;
   font-size: 16px !important;
+  color: black;
 }
 
 .collectionItem p {
@@ -33,7 +34,7 @@
   font-size: 12px;
 }
 
-.sort a {
+.sort a, .sort a:visited , .sort a:hover, .sort a:active {
   color: #5CA039;
 }
 
