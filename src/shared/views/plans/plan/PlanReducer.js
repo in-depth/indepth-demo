@@ -8,11 +8,11 @@ const planState = {
         checked: false,
       },
       {
-        title: 'Ages 10 to 13',
+        title: '10 to 13',
         checked: false,
       },
       {
-        title: 'Ages 14 to 17',
+        title: '14 to 17',
         checked: false,
       },
       {

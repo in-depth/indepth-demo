@@ -6,6 +6,12 @@
   color: white;
 }
 
+@media (max-width: 400px) { /* thin devices */
+  .museumHeader {
+    background-size: auto 100%;
+  }
+}
+
 .museumName {
   font-size: 50px;
   margin: 0px;
@@ -16,6 +22,7 @@
   font-size: 15px;
   font-weight: lighter;
   margin: 0px;
+  text-align: center;
 }
 
 .overlay {

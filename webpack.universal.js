@@ -9,6 +9,7 @@ const modulevalues = require('postcss-modules-values')
 const cssnext = require('postcss-cssnext')
 const nested = require('postcss-nested')
 const atImport = require('postcss-import')
+const cssnano = require('cssnano')
 /* eslint-enable */
 
 const PATHS = {
@@ -64,12 +65,42 @@ const webpackconfig = {
     nested,
     cssnext,
     modulevalues,
+    cssnano({
+      sourcemap: true,
+      autoprefixer: {
+        add: true,
+        remove: true,
+        browsers: ['last 2 versions'],
+      },
+      safe: true,
+      discardComments: {
+        removeAll: true,
+      },
+    }),
   ]),
   sassLoader: {
     data: '@import "shared/styles/main.scss";',
     includePaths: [PATHS.src],
   },
   plugins: [
+    new webpack.optimize.DedupePlugin(),
+    new webpack.optimize.UglifyJsPlugin({
+      beautify: false,
+      comments: true,
+      compress: {
+        warnings: false,
+        unused: true,
+        dead_code: true,
+        drop_console: true,
+        comparisons: true,
+        conditionals: true,
+      },
+
+      mangle: {
+        screw_ie8: true,
+        keep_fnames: true,
+      },
+    }),
     new ExtractTextPlugin('../common.css', {
       allChunks: true,
     }),

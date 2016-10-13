@@ -4,6 +4,12 @@
   background-size: 100% auto;
 }
 
+@media (max-width: 400px) { /* thin devices */
+  .featuredLink {
+    background-size: auto 100%;
+  }
+}
+
 .featuredLink a {
   color: white;
   font-size: 20px;
