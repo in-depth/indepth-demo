@@ -38,6 +38,7 @@ app.get('*', (req, res) => {
       // generate the React markup for the current route
       let markup
       if (renderProps) {
+        renderProps.lah = 'lag'
         // if the current route matched we have renderProps
         markup = renderToString(
           <Provider store={store}>
