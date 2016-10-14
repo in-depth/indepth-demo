@@ -38,7 +38,10 @@ app.get('*', (req, res) => {
       // generate the React markup for the current route
       let markup
       if (renderProps) {
-        renderProps.lah = 'lag'
+        // get base url
+        renderProps.location.baseUrl = req.headers.host //eslint-disable-line
+        // console.log('render props', renderProps)
+        // console.log('req url', req.headers.host)
         // if the current route matched we have renderProps
         markup = renderToString(
           <Provider store={store}>

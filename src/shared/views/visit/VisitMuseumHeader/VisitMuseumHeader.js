@@ -21,16 +21,13 @@ const museumSettings = {
   },
 }
 
-const getMuseumInfo = () => {
+const getMuseumInfo = (baseUrl) => {
+  // Get the baseurl / hostname to display correct museum
   let subdomain = ''
-  // console.log('is location undefined', typeof location !== 'undefined')
-  // if (typeof window !== 'undefined') {
-  //   console.log('not undefined')
-  //   subdomain = window.location.hostname.split('.')[0].toLowerCase()
-  // }
   if (typeof location !== 'undefined') {
-    console.log('not undefined')
     subdomain = location.hostname.split('.')[0].toLowerCase()
+  } else if (baseUrl) {
+    subdomain = baseUrl.split('.')[0].toLowerCase()
   }
 
   switch (subdomain) {
@@ -43,13 +40,9 @@ const getMuseumInfo = () => {
   }
 }
 
-const VisitMuseumHeader = () => {
-  // console.log(props)
-  // console.log(props.location)
-  // console.log(props.router)
-  // console.log(props.router.location)
-  // console.log(props.router.params)
-  const museumInfo = getMuseumInfo()
+const VisitMuseumHeader = (props) => {
+  const baseUrl = props.location.baseUrl ? props.location.baseUrl : ''
+  const museumInfo = getMuseumInfo(baseUrl)
   return (
     <div className={styles.museumHeader} style={{ backgroundImage: `url("${museumInfo.image}")` }}>
       <div className={styles.overlay}>
@@ -60,8 +53,8 @@ const VisitMuseumHeader = () => {
   )
 }
 
-VisitMuseumHeader.contextTypes = {
-  router: React.PropTypes.func.isRequired,
+VisitMuseumHeader.propTypes = {
+  location: React.PropTypes.object,
 }
 
 export default withRouter(VisitMuseumHeader)
