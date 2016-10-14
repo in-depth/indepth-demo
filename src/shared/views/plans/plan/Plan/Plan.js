@@ -14,7 +14,7 @@ const Plan = (props) => {
         <PlanAges ages={props.preferences.ages} action={props.actions.toggleCheckedAges} />
         <PlanInterests interests={props.preferences.interests} action={props.actions.toggleCheckedInterests} />
         <Link className={styles.continue} to={`${props.path}/map`}>
-          <ButtonRaised width={"400px"} label="MAKE MY PLAN" />
+          <ButtonRaised width="400px" label="MAKE MY PLAN" />
         </Link>
       </div>
     </div>
