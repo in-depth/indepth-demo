@@ -8,7 +8,7 @@ const collectionItemState = {
       title: 'USS George Washington (CVN-73)',
       image: {
         id: 'HNT3APBUNY-img',
-        url: 'http://images.fineartamerica.com/images-medium-large/aircraft-carrier-uss-george-washington-stocktrek-images.jpg',
+        url: '/static/images/collection-items/aircraft-carrier.jpg',
         alt: 'Aircrat Carrier',
       },
       shortDesc: 'USS George Washington (CVN-73) is a United States Navy nuclear-powered aircraft carrier ("supercarrier"), the sixth carrier in the Nimitz class and the fourth US Navy ship named after George Washington, the first president of the United States. She was built by Newport News Shipbuilding and was commissioned on 4 July 1992.',
@@ -48,7 +48,7 @@ const collectionItemState = {
       title: 'Portrait Of Paul Hugot',
       image: {
         id: 'APYPEBMF6X-img',
-        url: 'https://uploads3.wikiart.org/images/gustave-caillebotte/portrait-of-paul-hugot.jpg',
+        url: '/static/images/collection-items/portrait-of-paul-hugot.jpg',
         alt: 'Protrait of Pail Hugot',
       },
       shortDesc: 'Impressionist painting of Paul Hugot. Painted in 1878.',
@@ -87,7 +87,7 @@ const collectionItemState = {
       title: 'Unnamed Patagonian titanosaur',
       image: {
         id: 'CWVSA3MEVN-img',
-        url: 'http://66.media.tumblr.com/2810ddff1324de41dd8b22d71c917d93/tumblr_inline_o11aulyr5Q1qh595v_500.jpg',
+        url: '/static/images/collection-items/dino.jpg',
         alt: 'Titanosaur Skeleton',
       },
       shortDesc: 'An unnamed titanosaur species, found in the Patagonia region of Argentina in 2014, has been estimated to have been 40 m (130 ft) long and 20 m (65 ft) tall, with a weight of 77 tonnes.[1] This makes it comparable to the next largest titanosaur, Puertasaurus (which weighed 73-83 tonnes[2][3]), and thus one of the largest land animals in Earth\'s history. The discovery was announced on 16 May 2014. The remains were initially discovered in 2011 by a farm laborer, in the desert near La Flecha, about 250 km west of Trelew.[4] Excavation was done by palaeontologists from the Museum of Paleontology Egidio Feruglio. The lead scientists on the excavation were Jose Luis Carballido and Diego Pol, with partial funding from The Jurassic Foundation. Seven partial skeletons, consisting of approximately 150 bones, were uncovered, and described as in remarkable condition .',

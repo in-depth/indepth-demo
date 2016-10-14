@@ -4,6 +4,10 @@
   margin: 5px 0;
 }
 
+.collectionItem > div {
+  background-size: contain;
+}
+
 .collectionItem h5 {
   margin: 0;
   font-size: 16px !important;

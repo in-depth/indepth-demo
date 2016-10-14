@@ -11,8 +11,8 @@ const featuredListLinks = [
     backgroundUrl: '/static/images/guided-tours.jpg',
   },
   {
-    title: 'GALLIPOLI EXHIBITION',
-    path: '/page-unavailable',
+    title: 'OUR COLLECTION',
+    path: '/collection',
     backgroundUrl: '/static/images/gallipoli-westmacott.jpg',
   },
   {

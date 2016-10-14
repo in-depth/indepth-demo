@@ -23,7 +23,7 @@ const CollectionItemsList = (props) => {
               <CardTitle
                 className={styles.cardTitle}
                 title={props.collectionItems[itemId].title}
-                subtitle={`${props.collectionItems[itemId].shortDesc.substr(0, 15)}...`}
+                subtitle={`${props.collectionItems[itemId].shortDesc.substr(0, 30)}...`}
               />
             </Card>
           </Link>
