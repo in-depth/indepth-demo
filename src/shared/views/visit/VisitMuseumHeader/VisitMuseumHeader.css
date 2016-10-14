@@ -1,12 +1,11 @@
 .museumHeader {
-  background-image: url("/static/images/tepapa.jpg");
   background-size: 100% auto;
   background-repeat: no-repeat;
   height: 150px;
   color: white;
 }
 
-@media (max-width: 400px) { /* thin devices */
+@media (max-width: 350px) { /* thin devices */
   .museumHeader {
     background-size: auto 100%;
   }
