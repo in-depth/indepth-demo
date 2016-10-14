@@ -10,7 +10,7 @@ const ShowsList = (props) => {
       <List selectable ripple>
         {props.order.map((showId) => (
           <div key={showId}>
-            <i>{props.shows[showId].date}</i>
+            <i style={{ padding: '0 20px' }}>{props.shows[showId].date}</i>
             <Link to={`/events/${showId}`}>
               <ListItem
                 avatar={props.shows[showId].imageUrl}

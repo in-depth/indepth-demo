@@ -3,7 +3,7 @@ import { connect } from 'react-redux'
 
 import DeepZoom from './DeepZoom'
 
-import styles from './deepZoom.css'
+import styles from './DeepZoom.css'
 
 const DeepZoomRoute = (props) => {
   if (!props.deepzoomAssets || props.deepzoomAssets.length === 0) {

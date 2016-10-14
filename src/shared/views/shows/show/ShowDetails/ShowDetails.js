@@ -2,7 +2,7 @@ import React from 'react'
 
 const ShowDetails = (props) => {
   return (
-    <div>
+    <div style={{ padding: '0 15px' }}>
       <i>{props.date}</i>
       <p>{props.time}</p>
       <p>{props.location}</p>

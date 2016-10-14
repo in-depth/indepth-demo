@@ -1,0 +1,8 @@
+.title {
+  padding-left: 20px;
+}
+
+.holder {
+  height: 75vh;
+  background: url('/static/images/loading.gif') center center no-repeat;
+}

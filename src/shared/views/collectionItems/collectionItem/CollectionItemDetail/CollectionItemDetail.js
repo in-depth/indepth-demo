@@ -1,6 +1,6 @@
 import React from 'react'
 
-import styles from './CollectionItemDetail'
+import styles from './CollectionItemDetail.css'
 
 const CollectionItemDetail = (props) => {
   return (
