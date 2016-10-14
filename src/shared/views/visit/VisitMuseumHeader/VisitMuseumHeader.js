@@ -17,7 +17,7 @@ const museumSettings = {
   exploratorium: {
     name: 'EXPLORATORIUM',
     tagline: 'the intersection of science, art, and human perception',
-    image: '/static/image/museums/exploratorium.jpg',
+    image: '/static/images/museums/exploratorium.jpg',
   },
 }
 
