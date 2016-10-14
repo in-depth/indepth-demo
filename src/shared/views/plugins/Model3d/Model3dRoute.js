@@ -3,7 +3,7 @@ import { connect } from 'react-redux'
 
 import Model3d from './Model3d'
 
-import styles from './model3d.css'
+import styles from './Model3d.css'
 
 const Model3dRoute = (props) => {
   if (!props.models3d || props.models3d.length === 0) {
