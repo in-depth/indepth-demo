@@ -45,6 +45,10 @@ const getMuseumInfo = (baseUrl) => {
       return museumSettings.tepapa
     case 'exploratorium':
       return museumSettings.exploratorium
+    case 'calacademy':
+      return museumSettings.calacademy
+    case 'asianart':
+      return museumSettings.asianart
     default:
       return museumSettings.demo
   }
