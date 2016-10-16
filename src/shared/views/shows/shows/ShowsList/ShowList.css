@@ -1,0 +1,14 @@
+.showItem {
+  display: flex;
+  flex-direction: row;
+}
+
+.image {
+  height: 60px;
+  width: 60px;
+}
+
+.showText {
+  display: flex;
+  flex-direction: column;
+}
