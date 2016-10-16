@@ -1,20 +1,23 @@
 .museumHeader {
   background-size: 100% auto;
   background-repeat: no-repeat;
+  background-position: center;
+  background-color: black;
   height: 150px;
   color: white;
 }
 
 @media (max-width: 350px) { /* thin devices */
   .museumHeader {
-    background-size: auto 100%;
+    background-size: cover;
   }
 }
 
 .museumName {
-  font-size: 50px;
+  font-size: 10vw;
   margin: 0px;
   margin-bottom: 5px;
+  text-align: center;
 }
 
 .museumTagline {
@@ -22,6 +25,7 @@
   font-weight: lighter;
   margin: 0px;
   text-align: center;
+  padding: 0 5px;
 }
 
 .overlay {

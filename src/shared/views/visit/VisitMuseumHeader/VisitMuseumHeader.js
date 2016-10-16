@@ -19,6 +19,16 @@ const museumSettings = {
     tagline: 'the intersection of science, art, and human perception',
     image: '/static/images/museums/exploratorium.jpg',
   },
+  calacademy: {
+    name: 'California Academy of Science',
+    tagline: 'There\'s never been a better time or place to explore nature and the future',
+    image: '/static/images/museums/cali-science.jpg',
+  },
+  asianart: {
+    name: 'ASIAN ART',
+    tagline: 'Unique achievements in Asian art and culture',
+    image: '/static/images/museums/asianart.jpg',
+  },
 }
 
 const getMuseumInfo = (baseUrl) => {
