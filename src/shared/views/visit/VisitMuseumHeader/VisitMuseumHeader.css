@@ -13,6 +13,12 @@
   }
 }
 
+@media (min-width: 450px) {
+  h1{
+    font-size: 50px;
+  }
+}
+
 .museumName {
   font-size: 10vw;
   margin: 0px;
