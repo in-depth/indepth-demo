@@ -1,9 +1,7 @@
-/*@value colors: "../../../styles/colors.css";
-
-@value primary from colors;*/
+@import '../../../styles/colors';
 
 .topMenu {
-  background-color: #5CA039;
+  background-color: var(--mainColor);
   height: 50px;
   display: flex;
   align-items: center;

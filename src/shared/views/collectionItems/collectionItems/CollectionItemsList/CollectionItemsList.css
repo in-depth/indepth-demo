@@ -1,3 +1,5 @@
+@import '../../../../styles/colors';
+
 .collectionItem {
   width: calc(100vw / 2 - 15px);
   height: calc(100% - 10px);
@@ -39,9 +41,9 @@
 }
 
 .sort a, .sort a:visited , .sort a:hover, .sort a:active {
-  color: #5CA039;
+  color: var(--mainColor);;
 }
 
 .sort i {
-  color: #5CA039;
+  color: var(--mainColor);;
 }
