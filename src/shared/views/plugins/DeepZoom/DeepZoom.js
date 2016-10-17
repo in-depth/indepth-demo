@@ -3,14 +3,6 @@ import OpenSeaDragon from 'openseadragon'
 
 import styles from './DeepZoom.css'
 
-// const DeepZoom = (props) => {
-//   return (
-//     <div className={styles.holder}>
-//       <iframe width="100%" height="100%" src={props.url} frameBorder="0" allowFullScreen />
-//     </div>
-//   )
-// }
-
 const osdId = 'osd'
 
 class DeepZoom extends Component {
@@ -28,6 +20,7 @@ class DeepZoom extends Component {
       this.setState({
         viewer: OpenSeaDragon({
           element: this[osdId],
+          prefixUrl: '/static/images/dzi-controls/',
           tileSources: imgUrl,
           maxZoomPixelRatio: Infinity,
         }),
@@ -38,7 +31,6 @@ class DeepZoom extends Component {
   onMount(cb) { cb(this.props.url) }
 
   render() {
-    console.log(this.state.viewer)
     return (
       <div
         ref={elm => { this[osdId] = elm }}
