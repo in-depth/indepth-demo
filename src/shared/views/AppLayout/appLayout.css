@@ -1,6 +1,4 @@
-/*@value colors: "../../styles/colors.css";*/
-
-/*@value primary from colors;*/
+@import '../../styles/colors';
 
 .appLayout {
   display: flex;
@@ -20,7 +18,7 @@
 }
 
 .navigation {
-  background-color: #5CA039;
+  background-color: var(--mainColor);
   position: fixed;
   bottom: 0;
   left: 0;
@@ -37,4 +35,16 @@
 
 a {
   text-decoration: none;
+  color: black;
+}
+
+h1, h2, h3, h4, i {
+  padding: 0 20px;
+  padding-bottom: 5px;
+}
+
+p {
+  padding: 0 20px;
+  padding-bottom: 5px;
+  line-height: 120%;
 }

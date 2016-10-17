@@ -36,6 +36,7 @@ const getMuseumInfo = (baseUrl) => {
   let subdomain = ''
   if (typeof location !== 'undefined') {
     subdomain = location.hostname.split('.')[0].toLowerCase()
+    console.log(subdomain)
   } else if (baseUrl) {
     subdomain = baseUrl.split('.')[0].toLowerCase()
   }

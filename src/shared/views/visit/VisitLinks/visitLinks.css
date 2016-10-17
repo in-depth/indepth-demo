@@ -1,24 +1,22 @@
-/*@value colors: "../../../styles/colors.css";
-
-@value primary from colors;*/
+@import '../../../styles/colors';
 
 .visitPrimaryLinks {
   display: flex;
   justify-content: space-around;
   height: 80px;
   margin: 5px 0;
-  color: #5CA039;
+  color: var(--mainColor);
 }
 
 .visitPrimaryLinks a, .visitPrimaryLinks a:visited {
   font-size: 10px;
   font-weight: lighter;
-  color: #5CA039;
+  color: var(--mainColor);
   width: 100%;
 }
 
 .visitPrimaryLinks a svg, .visitPrimaryLinks a:visited svg {
-  fill: #5CA039;
+  fill: var(--mainColor);
   height: 40px;
   width: 40px;
 }

@@ -1,0 +1,13 @@
+@import '../../../../styles/colors';
+
+.title {
+  text-align: center;
+  color: var(--mainColor);
+  font-size: 30px;
+}
+
+.headerImage {
+  width: 100%;
+  max-height: 200px;
+  object-fit: cover;
+}
