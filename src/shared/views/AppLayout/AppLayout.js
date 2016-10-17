@@ -4,6 +4,9 @@ import { TopMenu } from '../topMenu'
 
 import styles from './appLayout.css'
 
+const renderSearchResults = results => {
+  console.log(results)
+}
 
 const AppLayout = (props) => {
   // console.log('AppLayout', props)
@@ -11,7 +14,10 @@ const AppLayout = (props) => {
     <div className={styles.appLayout}>
       <div className={styles.body}>
         <div className={styles.topMenu}>
-          <TopMenu path={props.location.pathname} />
+          <TopMenu
+            path={props.location.pathname}
+            renderSearchResults={renderSearchResults}
+          />
         </div>
         <div className={styles.navigationSpacer} />
         <div className={styles.content}>

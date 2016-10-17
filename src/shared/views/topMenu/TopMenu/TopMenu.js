@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { PropTypes } from 'react'
 
 import { TopMenuHeader, TopMenuLogo, TopMenuSearch } from '../index'
 import styles from './topMenu.css'
@@ -16,13 +16,14 @@ const TopMenu = (props) => {
     <div className={styles.topMenu}>
       <TopMenuLogo />
       <TopMenuHeader title={getTitleFromPath(props.path)} />
-      <TopMenuSearch />
+      <TopMenuSearch renderSearchResults={props.renderSearchResults} />
     </div>
   )
 }
 
 TopMenu.propTypes = {
-  path: React.PropTypes.string.isRequired,
+  path: PropTypes.string.isRequired,
+  renderSearchResults: PropTypes.func.isRequired,
 }
 
 export default TopMenu

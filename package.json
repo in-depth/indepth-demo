@@ -72,6 +72,7 @@
     "yargs": "^6.0.0"
   },
   "dependencies": {
+    "babel-preset-stage-2": "^6.17.0",
     "lodash": "^4.15.0",
     "normalize.css": "^4.2.0",
     "react": "^15.3.0",
