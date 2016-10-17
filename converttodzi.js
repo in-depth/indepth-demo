@@ -4,7 +4,7 @@ const { resolve, basename, extname } = require('path')
 
 const sharp = require('sharp')
 
-const imgDir = resolve(__dirname, 'src/static/images/collection-items')
+const imgDir = resolve(__dirname, 'src/static/maps')
 
 const images = readdirSync(imgDir, { encoding: 'utf8' })
 
