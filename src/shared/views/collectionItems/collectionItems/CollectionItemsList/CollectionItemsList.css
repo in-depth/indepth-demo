@@ -19,6 +19,7 @@
 .collectionItem p {
   margin: 8px 0;
   font-size: 11px;
+  padding: 0 0;
 }
 
 .cards {
