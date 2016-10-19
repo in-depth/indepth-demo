@@ -16,7 +16,7 @@ const CTRL_IDS = {
 class MapTab extends React.Component {
   constructor(props) {
     super(props)
-    this.state = { hasFullscreenEnabled: false, isFs: false }
+    this.state = { isFs: false }
   }
 
   componentDidMount() {
@@ -50,7 +50,7 @@ class MapTab extends React.Component {
   }
 
   render() {
-    const { isFs, hasFullscreenEnabled } = this.state
+    const { isFs } = this.state
     return (
       <div
         id={MAIN_ID}
@@ -66,7 +66,6 @@ class MapTab extends React.Component {
             className={styles.ctrlbtn}
             value={isFs ? 'fullscreen_exit' : 'zoom_out_map'}
             onClick={this.toggleFullscreen.bind(this)}
-            style={{ display: hasFullscreenEnabled ? 'initial' : 'none' }}
           />
         </div>
         <div
