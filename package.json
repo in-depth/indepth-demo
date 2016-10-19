@@ -87,6 +87,7 @@
     "redux-logger": "^2.6.1",
     "redux-saga": "^0.11.0",
     "reselect": "^2.5.3",
+    "screenfull": "^3.0.2",
     "sharp": "^0.16.1"
   }
 }
