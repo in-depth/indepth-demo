@@ -1,4 +1,6 @@
 /* eslint-disable */
+require('dotenv').config()
+
 const webpack = require('webpack')
 const WebpackDevServer = require('webpack-dev-server')
 const path = require('path')
@@ -89,6 +91,10 @@ const webpackconfig = {
     new ExtractTextPlugin('[name].[chunkhash].css', {
       allChunks: true,
     }),
+    new webpack.DefinePlugin({ 'process.env': {
+      NODE_ENV: JSON.stringify('production'),
+      IMAGE_STORAGE_URL: JSON.stringify(process.env.IMAGE_STORAGE_URL),
+    } }),
   ],
 }
 

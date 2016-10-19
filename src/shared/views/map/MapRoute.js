@@ -2,26 +2,28 @@ import React from 'react'
 
 import { MapTabs } from './index'
 
+const mapsStorage = `${process.env.IMAGE_STORAGE_URL}/maps/demo`
+
 const mapLevels = [
   {
     title: 'Level 1',
-    imageUrl: '/static/maps/Level1.jpg',
+    imageUrl: `${mapsStorage}/level1/level1.dzi`,
   },
   {
     title: 'Level 2',
-    imageUrl: '/static/maps/Level2.jpg',
+    imageUrl: `${mapsStorage}/level2/level2.dzi`,
   },
   {
     title: 'Level 3',
-    imageUrl: '/static/maps/Level3.jpg',
+    imageUrl: `${mapsStorage}/level3/level3.dzi`,
   },
   {
     title: 'Level 4',
-    imageUrl: '/static/maps/Level4.jpg',
+    imageUrl: `${mapsStorage}/level4/level4.dzi`,
   },
   {
     title: 'Level 5',
-    imageUrl: '/static/maps/Level5.jpg',
+    imageUrl: `${mapsStorage}/level5/level5.dzi`,
   },
 ]
 

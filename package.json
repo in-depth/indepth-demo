@@ -72,6 +72,8 @@
     "yargs": "^6.0.0"
   },
   "dependencies": {
+    "dotenv": "^2.0.0",
+    "isomorphic-fetch": "^2.2.1",
     "lodash": "^4.15.0",
     "normalize.css": "^4.2.0",
     "openseadragon": "^2.2.1",

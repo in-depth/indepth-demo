@@ -1,4 +1,6 @@
 /* eslint-disable */
+require('dotenv').config()
+
 const webpack = require('webpack')
 const WebpackDevServer = require('webpack-dev-server')
 const path = require('path')
@@ -82,6 +84,11 @@ const webpackconfig = {
       inject: 'body', // Enject into the end of the body tag
     }),
     new webpack.HotModuleReplacementPlugin(), // Auto refresh page
+    new webpack.DefinePlugin({ 'process.env': {
+      IMAGE_STORAGE_URL: JSON.stringify(process.env.IMAGE_STORAGE_URL),
+      NODE_ENV: JSON.stringify('development'),
+      DEBUG: JSON.stringify(process.env.DEBUG === 'true'),
+    } }),
   ],
 }
 

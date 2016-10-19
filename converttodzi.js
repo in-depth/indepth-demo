@@ -4,13 +4,13 @@ const { resolve, basename, extname } = require('path')
 
 const sharp = require('sharp')
 
-const imgDir = resolve(__dirname, 'src/static/maps')
+const imgDir = resolve(__dirname, 'maps')
 
 const images = readdirSync(imgDir, { encoding: 'utf8' })
 
 images.filter(img => img !== '.DS_Store').forEach(img => {
   sharp(`${imgDir}/${img}`)
-  .tile({ size: 256 })
+  .tile({ size: 256, overlap: 2 })
   .toFile(`${imgDir}/${basename(img, extname(img))}.dzi`, (err, info) => {
     if (err) {
       return console.error(img, err)
