@@ -4,7 +4,7 @@ import { withRouter } from 'react-router'
 import styles from './VisitMuseumHeader.css'
 
 const museumSettings = {
-  demo: {
+  la: {
     name: 'DEMO',
     tagline: 'The official demo museum',
     image: '/static/images/museums/tepapa.jpg',
@@ -28,6 +28,11 @@ const museumSettings = {
     name: 'ASIAN ART',
     tagline: 'Unique achievements in Asian art and culture',
     image: '/static/images/museums/asianart.jpg',
+  },
+  demo: {
+    name: 'INTREPID MUSEUM',
+    tagline: 'To promote the awareness and understanding of history & science',
+    image: '/static/images/museums/intrepid.jpg',
   },
 }
 
