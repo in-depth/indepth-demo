@@ -4,7 +4,7 @@ import { withRouter } from 'react-router'
 import styles from './VisitMuseumHeader.css'
 
 const museumSettings = {
-  la: {
+  demo: {
     name: 'DEMO',
     tagline: 'The official demo museum',
     image: '/static/images/museums/tepapa.jpg',
@@ -29,7 +29,7 @@ const museumSettings = {
     tagline: 'Unique achievements in Asian art and culture',
     image: '/static/images/museums/asianart.jpg',
   },
-  demo: {
+  intrepid: {
     name: 'INTREPID MUSEUM',
     tagline: 'To promote the awareness and understanding of history & science',
     image: '/static/images/museums/intrepid.jpg',
@@ -40,7 +40,7 @@ const getMuseumInfo = (baseUrl) => {
   // Get the baseurl / hostname to display correct museum
   let subdomain = ''
   if (typeof location !== 'undefined') {
-    subdomain = location.hostname.split('.')[0].toLowerCase()
+    subdomain = location.hostname.split('.')[0].toLowerCase() // eslint-disable-line
   } else if (baseUrl) {
     subdomain = baseUrl.split('.')[0].toLowerCase()
   }
@@ -54,6 +54,8 @@ const getMuseumInfo = (baseUrl) => {
       return museumSettings.calacademy
     case 'asianart':
       return museumSettings.asianart
+    case 'intrepid':
+      return museumSettings.intrepid
     default:
       return museumSettings.demo
   }
