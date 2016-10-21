@@ -1,4 +1,6 @@
 /* eslint-disable */
+require('dotenv').config()
+
 const webpack = require('webpack')
 const WebpackDevServer = require('webpack-dev-server')
 const path = require('path')
@@ -82,6 +84,11 @@ const webpackconfig = {
       inject: 'body', // Enject into the end of the body tag
     }),
     new webpack.HotModuleReplacementPlugin(), // Auto refresh page
+    new webpack.DefinePlugin({ 'process.env': {
+      IMAGE_STORAGE_URL: JSON.stringify(process.env.IMAGE_STORAGE_URL),
+      NODE_ENV: JSON.stringify('development'),
+      DEBUG: JSON.stringify(process.env.DEBUG === 'true'),
+    } }),
   ],
 }
 
@@ -99,8 +106,8 @@ new WebpackDevServer(webpack(webpackconfig), {
     ignored: /node_modules/, // Don't hot reload node modules
   },
   contentBase: 'src/',
-  host: '0.0.0.0',
   port: 3000,
+  host: '0.0.0.0',
 }).listen(3000, '0.0.0.0', (err, result) => {
   if (err) {
     console.log(err, result) //eslint-disable-line

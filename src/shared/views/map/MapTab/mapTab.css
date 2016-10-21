@@ -1,3 +1,35 @@
+.main {
+  width: 100%;
+  min-height: 100%;
+  background: #f0f0f0;
+  position: relative;
+}
+
+.ctrlCommon {
+  background: rgba(0,0,0,0.5);
+  position: absolute;
+  z-index: 999;
+  right: 0;
+  top: 0;
+  width: 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  margin: 7px;
+  height: 150px;
+}
+
+.ctrlbtn {
+  color: #fff;
+  cursor: pointer;
+}
+
+.dzi {
+  width: 100%;
+  border: 1px solid #ddd;
+}
+
 .mapImage {
   width: 100%;
   height: auto;

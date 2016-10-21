@@ -5,8 +5,10 @@
   "main": "index.js",
   "scripts": {
     "start": "node --harmony webpack.dev.js",
+    "ssr-start-prod": "npm run dist:clean && npm run dist:copy-static && npm run universal-webpack-prod && npm run start-server",
     "ssr-start": "npm run dist:clean && npm run dist:copy-static && npm run universal-webpack && npm run start-server",
     "universal-webpack": "NODE_ENV=production node --harmony webpack.universal.js",
+    "universal-webpack-prod": "NODE_ENV=production node --harmony webpack.prod.js",
     "start-server": "NODE_ENV=production node_modules/.bin/babel-node --presets 'react,es2015' server/server.js",
     "static-start": "npm run dist-static:clean && npm run dist-static:copy-static && npm run static-webpack && npm run static-server",
     "static-start:local": "npm run dist-static:clean && npm run dist-static:copy-static && npm run static-webpack && npm run static-server:local",
@@ -72,8 +74,11 @@
     "yargs": "^6.0.0"
   },
   "dependencies": {
+    "dotenv": "^2.0.0",
+    "isomorphic-fetch": "^2.2.1",
     "lodash": "^4.15.0",
     "normalize.css": "^4.2.0",
+    "openseadragon": "^2.2.1",
     "react": "^15.3.0",
     "react-addons-css-transition-group": "^15.3.2",
     "react-dom": "^15.3.0",
@@ -83,6 +88,8 @@
     "redux": "^3.5.2",
     "redux-logger": "^2.6.1",
     "redux-saga": "^0.11.0",
-    "reselect": "^2.5.3"
+    "reselect": "^2.5.3",
+    "screenfull": "^3.0.2",
+    "sharp": "^0.16.1"
   }
 }

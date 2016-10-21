@@ -15,6 +15,7 @@
     "no-duplicate-imports": 0,
     "import/no-duplicates": 0,
     "global-require": 0,
+    "no-extra-boolean-cast": 0,
     "import/prefer-default-export": 0,
     "react/jsx-filename-extension": 0
   }
