@@ -34,6 +34,16 @@ const museumSettings = {
     tagline: 'To promote the awareness and understanding of history & science',
     image: '/static/images/museums/intrepid.jpg',
   },
+  met: {
+    name: 'The Met',
+    tagline: 'The Metropolitan Museum of Art is one of the world\'s largest and finest art museums.',
+    image: '/static/images/museums/ny-met.jpg',
+  },
+  amnh: {
+    name: 'American Museum of Natural History',
+    tagline: 'Institution for scientific research and education',
+    image: '/static/images/museums/amnh.jpg',
+  },
 }
 
 const getMuseumInfo = (baseUrl) => {
@@ -56,6 +66,10 @@ const getMuseumInfo = (baseUrl) => {
       return museumSettings.asianart
     case 'intrepid':
       return museumSettings.intrepid
+    case 'met':
+      return museumSettings.met
+    case 'amnh':
+      return museumSettings.amnh
     default:
       return museumSettings.demo
   }
