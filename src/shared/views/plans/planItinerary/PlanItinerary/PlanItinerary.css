@@ -1,0 +1,6 @@
+@import '../../../../styles/colors';
+
+.itinerary h3 {
+  color: var(--mainColor);
+  padding: 10px 0;
+}

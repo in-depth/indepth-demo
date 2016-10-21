@@ -7,7 +7,7 @@ import styles from './PlanInterests.css'
 const PlanInterests = (props) => {
   return (
     <div>
-      <p>We are interested in:</p>
+      <h3>We are interested in:</h3>
       <div className={styles.checkboxs}>
         {props.interests.map((interest, index) => (
           <div key={interest.title} className={styles.checkbox}>

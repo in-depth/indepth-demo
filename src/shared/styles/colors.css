@@ -1,1 +1,5 @@
-@value primary: #5CA039;
+:root {
+  --mainColor: #5CA039;
+  --textGrey: #757575;
+  --accentGrey: #efeeee
+}

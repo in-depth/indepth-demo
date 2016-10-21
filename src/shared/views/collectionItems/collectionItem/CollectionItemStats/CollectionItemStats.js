@@ -7,10 +7,10 @@ const CollectionItemStats = (props) => {
     <div className={styles.collectionStats}>
       <h1 className={styles.title}>{props.title}</h1>
       <div className={styles.stats}>
-        <b>Date:</b> <span>{props.date}</span><br />
-        <b>Type:</b> <span>{props.type}</span><br />
-        <b>Sub Type:</b> <span>{props.subType}</span><br />
-        <b>Classifications:</b> <span>{props.classifications.map(v => `${v}, `)}</span><br />
+        <p><b>Date: </b>{props.date}</p>
+        <p><b>Type:</b> <span>{props.type}</span></p>
+        <p><b>Sub Type:</b> <span>{props.subType}</span></p>
+        <p><b>Classifications:</b> <span>{props.classifications.map(v => `${v}, `)}</span></p>
       </div>
     </div>
   )
@@ -22,7 +22,7 @@ CollectionItemStats.propTypes = {
   subType: React.PropTypes.string.isRequired,
   classifications: React.PropTypes.array.isRequired,
   shortDesc: React.PropTypes.string,
-  title: React.PropTypes.string,
+  title: React.PropTypes.string.isRequired,
 }
 
 export default CollectionItemStats

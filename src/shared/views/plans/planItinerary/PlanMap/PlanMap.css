@@ -1,0 +1,15 @@
+@import '../../../../styles/colors.css';
+
+.map {
+  display: block;
+  margin: auto;
+  height: 400px;
+  border: black 1px solid;
+}
+
+.title {
+  color: var(--mainColor);
+  padding-top: 20px;
+  padding-bottom: 10px;
+  font-size: 20px;
+}

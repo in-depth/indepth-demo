@@ -1,0 +1,31 @@
+@import '../../../../styles/colors';
+
+.details {
+  background-color: var(--accentGrey);
+  padding: 20px 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.details svg {
+  height: 20px;
+  vertical-align: middle;
+}
+
+.details p {
+  vertical-align: middle;
+}
+
+.details span {
+  vertical-align: middle;
+  padding: 0 8px;
+}
+
+.details div {
+  padding: 2px 0;
+}
+
+.description {
+  padding: 20px 0;
+}

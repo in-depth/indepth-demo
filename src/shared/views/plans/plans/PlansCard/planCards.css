@@ -4,7 +4,6 @@
   min-height: 205px;
   margin: 5px 0;
   color: black;
-  height: calc(100% - 15px)
 }
 
 .card h5 {
@@ -15,4 +14,5 @@
 .card p {
   margin: 8px 0;
   font-size: 11px;
+  padding: 0;
 }

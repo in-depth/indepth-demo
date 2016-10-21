@@ -11,7 +11,6 @@ const CollectionItemHeader = (props) => {
 }
 
 CollectionItemHeader.propTypes = {
-  title: React.PropTypes.string.isRequired,
   image: React.PropTypes.shape({
     url: React.PropTypes.string.isRequired,
     alt: React.PropTypes.string,

@@ -1,6 +1,4 @@
-/*@value colors: "../../styles/colors.css";*/
-
-/*@value primary from colors;*/
+@import '../../styles/colors';
 
 .appLayout {
   display: flex;
@@ -15,12 +13,13 @@
 
 .content {
   height: calc(100vh - 100px);
-  overflow-y: auto;
+  overflow-y: scroll;
+  -webkit-overflow-scrolling: touch;
   overflow-x: hidden;
 }
 
 .navigation {
-  background-color: #5CA039;
+  background-color: var(--mainColor);
   position: fixed;
   bottom: 0;
   left: 0;
@@ -31,10 +30,35 @@
   box-shadow: 2px 2px 3px 2px rgba(0,0,0,0.25);
 }
 
+.topMenu {
+  position: fixed;
+  z-index: 1;
+}
+
 .navigationSpacer {
   height: 50px;
 }
 
 a {
   text-decoration: none;
+  color: black;
+}
+
+h1, h2, h3, h4 {
+  padding: 0 20px;
+  padding-bottom: 5px;
+}
+
+h2 {
+  font-size: 20px;
+}
+
+h3 {
+  font-size: 18px;
+}
+
+p {
+  padding: 0 20px;
+  padding-bottom: 5px;
+  line-height: 120%;
 }

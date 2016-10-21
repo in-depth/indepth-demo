@@ -7,7 +7,7 @@ import styles from './PlanAges.css'
 const PlanAges = (props) => {
   return (
     <div>
-      <p>Our ages are:</p>
+      <h3>Our ages are:</h3>
       <div className={styles.checkboxs}>
         {props.ages.map((age, index) => (
           <div key={age.title} className={styles.checkbox}>
