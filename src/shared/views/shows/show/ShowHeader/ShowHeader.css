@@ -4,6 +4,7 @@
   text-align: center;
   color: var(--mainColor);
   font-size: 30px;
+  padding: 20px 20px;
 }
 
 .headerImage {
