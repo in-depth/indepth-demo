@@ -22,7 +22,7 @@ CollectionItemStats.propTypes = {
   subType: React.PropTypes.string.isRequired,
   classifications: React.PropTypes.array.isRequired,
   shortDesc: React.PropTypes.string,
-  title: React.PropTypes.string,
+  title: React.PropTypes.string.isRequired,
 }
 
 export default CollectionItemStats

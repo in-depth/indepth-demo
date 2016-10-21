@@ -6,7 +6,6 @@ import styles from './appLayout.css'
 
 
 const AppLayout = (props) => {
-  // console.log('AppLayout', props)
   return (
     <div className={styles.appLayout}>
       <div className={styles.body}>
@@ -14,7 +13,7 @@ const AppLayout = (props) => {
           <TopMenu path={props.location.pathname} />
         </div>
         <div className={styles.navigationSpacer} />
-        <div className={styles.content}>
+        <div className={styles.content} id="content">
           {props.children}
         </div>
         <div className={styles.navigationSpacer} />

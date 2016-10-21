@@ -2,7 +2,6 @@
 
 .collectionItem {
   width: calc(100vw / 2 - 15px);
-  height: calc(100% - 10px);
   margin: 5px 0;
 }
 
@@ -39,6 +38,10 @@
   justify-content: flex-end;
   align-items: center;
   font-size: 12px;
+}
+
+.link {
+  display: flex;
 }
 
 .sort a, .sort a:visited , .sort a:hover, .sort a:active {

@@ -99,7 +99,9 @@ new WebpackDevServer(webpack(webpackconfig), {
     ignored: /node_modules/, // Don't hot reload node modules
   },
   contentBase: 'src/',
-}).listen(3000, (err, result) => {
+  host: '0.0.0.0',
+  port: 3000,
+}).listen(3000, '0.0.0.0', (err, result) => {
   if (err) {
     console.log(err, result) //eslint-disable-line
   }
