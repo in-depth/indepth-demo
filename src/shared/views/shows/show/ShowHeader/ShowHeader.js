@@ -1,15 +1,19 @@
 import React from 'react'
 
+import styles from './ShowHeader.css'
+
 const ShowHeader = (props) => {
   return (
     <div>
-      <h1>{props.title}</h1>
+      <img className={styles.headerImage} alt={props.title} src={props.imageUrl} />
+      <h1 className={styles.title}>{props.title}</h1>
     </div>
   )
 }
 
 ShowHeader.propTypes = {
   title: React.PropTypes.string.isRequired,
+  imageUrl: React.PropTypes.string.isRequired,
 }
 
 export default ShowHeader

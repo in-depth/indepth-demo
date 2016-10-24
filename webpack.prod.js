@@ -1,4 +1,6 @@
 /* eslint-disable */
+require('dotenv').config()
+
 const webpack = require('webpack')
 const WebpackDevServer = require('webpack-dev-server')
 const path = require('path')
@@ -9,26 +11,24 @@ const modulevalues = require('postcss-modules-values')
 const cssnext = require('postcss-cssnext')
 const nested = require('postcss-nested')
 const atImport = require('postcss-import')
+const cssnano = require('cssnano')
 /* eslint-enable */
 
 const PATHS = {
   src: path.join(__dirname, 'src'),
-  app: path.join(__dirname, 'src/client/app.js'),
-  dist: path.join(__dirname, 'dist'),
-  client: path.join(__dirname, 'src', 'client'),
-  distStatic: path.join(__dirname, 'dist_static'),
+  app: path.join(__dirname, 'src', 'client', 'app.js'),
+  dist: path.join(__dirname, 'dist', 'js'),
 }
 
 const webpackconfig = {
-  devtool: 'eval-cheap-module-source-map',
   entry: {
     app: [
       PATHS.app,
     ],
   },
   output: {
-    path: PATHS.distStatic,
-    filename: '[name].js', // Output name of bundle
+    path: PATHS.dist,
+    filename: 'bundle.js', // Output name of bundle
     publicPath: '/',
   },
   module: {
@@ -50,11 +50,10 @@ const webpackconfig = {
       },
       {
         test: /\.css/,
-        exclude: 'node_modules',
+        exclude: /node_modules/,
         loader: ExtractTextPlugin.extract(
           'style',
-          'css?modules&sourceMap&importLoaders=1&localIdentName=[name]_[local]__[hash:base64:5]',
-          'postcss'
+          'css?sourceMap&modules&&importLoaders=1&localIdentName=[name]__[local]___[hash:base64:5]!postcss'
         ),
       },
       {
@@ -62,9 +61,7 @@ const webpackconfig = {
         include: /react-toolbox/,
         loader: ExtractTextPlugin.extract(
           'style',
-          'css?sourceMap&modules&importLoaders=1&localIdentName=[name]_[local]__[hash:base64:5]',
-          'postcss',
-          'sass'
+          'css?sourceMap&modules&importLoaders=1&localIdentName=[name]__[local]___[hash:base64:5]!postcss!sass'
         ),
       },
     ],
@@ -74,22 +71,57 @@ const webpackconfig = {
     nested,
     cssnext,
     modulevalues,
+    cssnano({
+      sourcemap: true,
+      autoprefixer: {
+        add: true,
+        remove: true,
+        browsers: ['last 2 versions'],
+      },
+      safe: true,
+      discardComments: {
+        removeAll: true,
+      },
+    }),
   ]),
   sassLoader: {
     data: '@import "shared/styles/main.scss";',
     includePaths: [PATHS.src],
   },
   plugins: [
-    new HtmlWebpackPlugin({
-      template: path.resolve(PATHS.client, 'index.html'), // Use index.html as template for index.html
-      chunksSortMode: 'dependency', // Order the dependacy so that bundle comes first
-      filename: 'index.html', // Output file name
-      inject: 'body', // Enject into the end of the body tag
+    new webpack.optimize.DedupePlugin(),
+    new webpack.optimize.UglifyJsPlugin({
+      beautify: false,
+      comments: true,
+      compress: {
+        warnings: true,
+        unused: true,
+        dead_code: true,
+        drop_console: true,
+        comparisons: true,
+        conditionals: true,
+      },
+
+      mangle: {
+        screw_ie8: true,
+        keep_fnames: true,
+      },
     }),
-    new ExtractTextPlugin('[name].[chunkhash].css', {
+    new ExtractTextPlugin('../common.css', {
       allChunks: true,
     }),
+    new webpack.DefinePlugin({ 'process.env': {
+      NODE_ENV: JSON.stringify('production'),
+      IMAGE_STORAGE_URL: JSON.stringify(process.env.IMAGE_STORAGE_URL),
+    } }),
   ],
 }
 
-module.exports = webpackconfig
+const complier = webpack(webpackconfig)
+
+/* eslint-disable */
+complier.run((err, stats) => {
+  console.log(err)
+  console.log(stats)
+})
+/* eslint-enable */

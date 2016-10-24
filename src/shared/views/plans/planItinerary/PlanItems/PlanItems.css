@@ -1,0 +1,35 @@
+@import '../../../../styles/colors.css';
+
+.item {
+  display: flex;
+  flex-direction: row;
+  padding: 15px 20px;
+}
+
+.image {
+  height: 70px;
+  width: 70px;
+  object-fit: cover;
+}
+
+.itemText {
+  display: flex;
+  flex-direction: column;
+  color: var(--textGrey)
+}
+
+.itemText p {
+  padding-bottom: 5px;
+  font-size: 15px;
+}
+
+.itemHeader {
+  color: var(--mainColor);
+}
+
+.title {
+  color: var(--mainColor);
+  padding-top: 20px;
+  padding-bottom: 10px;
+  font-size: 20px;
+}

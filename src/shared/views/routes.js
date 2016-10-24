@@ -11,7 +11,7 @@ import { DeepZoomRoute } from './plugins/DeepZoom'
 import { Model3dRoute } from './plugins/Model3d'
 import { PlansRoute } from './plans/plans'
 import { PlanRoute } from './plans/plan'
-import { PlanMapRoute } from './plans/planMap'
+import { PlanItineraryRoute } from './plans/planItinerary'
 import { MapRoute } from './map'
 import PageNotFound from './PageNotFound/PageNotFound'
 import { Demo, Vibrate } from './demos'
@@ -55,7 +55,7 @@ const routes = (
     <Route path="/collection/:id/models3d" component={Model3dRoute} />
     <Route path="/plan" component={PlansRoute} />
     <Route path="/plan/:id" component={PlanRoute} />
-    <Route path="/plan/:id/map" component={PlanMapRoute} />
+    <Route path="/plan/:id/map" component={PlanItineraryRoute} />
     <Route path="/visit" component={VisitRoute} />
     <Route path="/map" component={MapRoute} />
     <Route path="/page-unavailable" component={PageNotFound} />

@@ -2,18 +2,21 @@ import React from 'react'
 
 import { SliderSnaps } from '../../../../components'
 
+import styles from './PlanTime.css'
 
 const PlanTime = ({ min, max, step, value, action }) => {
   return (
     <div>
-      <p>We have (hours):</p>
-      <SliderSnaps
-        min={min}
-        max={max}
-        step={step}
-        value={value}
-        action={action}
-      />
+      <h3>We have (hours):</h3>
+      <div className={styles.slider}>
+        <SliderSnaps
+          min={min}
+          max={max}
+          step={step}
+          value={value}
+          action={action}
+        />
+      </div>
     </div>
   )
 }

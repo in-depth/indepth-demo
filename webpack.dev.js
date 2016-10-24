@@ -1,13 +1,15 @@
 /* eslint-disable */
+require('dotenv').config()
+
 const webpack = require('webpack')
 const WebpackDevServer = require('webpack-dev-server')
 const path = require('path')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 
-const modulevalues = require('postcss-modules-values')
 const cssnext = require('postcss-cssnext')
 const nested = require('postcss-nested')
 const atImport = require('postcss-import')
+const sass = require('postcss-scss')
 /* eslint-enable */
 
 const PATHS = {
@@ -55,6 +57,7 @@ const webpackconfig = {
           'style',
           'css?modules&sourceMap&importLoaders=1&localIdentName=[name]_[local]__[hash:base64:5]',
           'postcss',
+          'sass',
         ],
       },
       {
@@ -68,7 +71,6 @@ const webpackconfig = {
     atImport,
     nested,
     cssnext,
-    modulevalues,
   ]),
   sassLoader: {
     data: '@import "shared/styles/main.scss";',
@@ -82,6 +84,11 @@ const webpackconfig = {
       inject: 'body', // Enject into the end of the body tag
     }),
     new webpack.HotModuleReplacementPlugin(), // Auto refresh page
+    new webpack.DefinePlugin({ 'process.env': {
+      IMAGE_STORAGE_URL: JSON.stringify(process.env.IMAGE_STORAGE_URL),
+      NODE_ENV: JSON.stringify('development'),
+      DEBUG: JSON.stringify(process.env.DEBUG === 'true'),
+    } }),
   ],
 }
 
@@ -99,7 +106,9 @@ new WebpackDevServer(webpack(webpackconfig), {
     ignored: /node_modules/, // Don't hot reload node modules
   },
   contentBase: 'src/',
-}).listen(3000, (err, result) => {
+  port: 3000,
+  host: '0.0.0.0',
+}).listen(3000, '0.0.0.0', (err, result) => {
   if (err) {
     console.log(err, result) //eslint-disable-line
   }

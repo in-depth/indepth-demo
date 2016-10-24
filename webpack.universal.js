@@ -1,4 +1,6 @@
 /* eslint-disable */
+require('dotenv').config()
+
 const webpack = require('webpack')
 const WebpackDevServer = require('webpack-dev-server')
 const path = require('path')
@@ -84,26 +86,12 @@ const webpackconfig = {
   },
   plugins: [
     new webpack.optimize.DedupePlugin(),
-    new webpack.optimize.UglifyJsPlugin({
-      beautify: false,
-      comments: true,
-      compress: {
-        warnings: false,
-        unused: true,
-        dead_code: true,
-        drop_console: true,
-        comparisons: true,
-        conditionals: true,
-      },
-
-      mangle: {
-        screw_ie8: true,
-        keep_fnames: true,
-      },
-    }),
     new ExtractTextPlugin('../common.css', {
       allChunks: true,
     }),
+    new webpack.DefinePlugin({ 'process.env': {
+      IMAGE_STORAGE_URL: JSON.stringify(process.env.IMAGE_STORAGE_URL),
+    } }),
   ],
 }
 

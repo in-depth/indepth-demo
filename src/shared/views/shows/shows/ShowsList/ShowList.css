@@ -1,0 +1,32 @@
+@import '../../../../styles/colors';
+
+.showItem {
+  display: flex;
+  flex-direction: row;
+  padding: 15px 20px;
+}
+
+.image {
+  height: 70px;
+  width: 70px;
+  object-fit: cover;
+}
+
+.showText {
+  display: flex;
+  flex-direction: column;
+  color: var(--textGrey)
+}
+
+.showText p {
+  padding-bottom: 5px;
+  font-size: 15px;
+}
+
+.showHeader {
+  color: var(--mainColor);
+}
+
+.month {
+  padding-top: 30px;
+}

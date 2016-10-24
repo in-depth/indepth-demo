@@ -14,7 +14,7 @@ const CollectionItemsList = (props) => {
       </div>
       <div className={styles.cards}>
         {props.order.map((itemId) => (
-          <Link to={`/collection/${itemId}`} key={itemId}>
+          <Link className={styles.link} to={`/collection/${itemId}`} key={itemId}>
             <Card className={styles.collectionItem}>
               <CardMedia
                 aspectRatio="wide"

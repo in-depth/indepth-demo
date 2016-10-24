@@ -10,6 +10,8 @@ const mapStateToProps = (state, ownProps) => {
     description: show.description,
     location: show.location,
     time: show.time,
+    cost: show.cost,
+    imageUrl: show.imageUrl,
   }
 }
 

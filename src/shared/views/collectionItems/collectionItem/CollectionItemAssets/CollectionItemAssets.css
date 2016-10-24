@@ -1,15 +1,17 @@
+@import '../../../../styles/colors';
+
 .assets {
   display: flex;
   justify-content: space-around;
   margin: 5px 0;
   height: 80px;
-  color: #5CA039;
+  color: var(--mainColor);;
 }
 
 .assets a {
    font-size: 10px;
    font-weight: lighter;
-   color: #5CA039;
+   color: var(--mainColor);;
    width: 100%;
 }
 
