@@ -14,7 +14,7 @@ import { PlanRoute } from './plans/plan'
 import { PlanItineraryRoute } from './plans/planItinerary'
 import { MapRoute } from './map'
 import PageNotFound from './PageNotFound/PageNotFound'
-import { Demo, Vibrate } from './demos'
+import { Demo, Vibrate, VoiceRecognition, Notifications } from './demos'
 
 export const navigationLinks = [
   {
@@ -60,8 +60,10 @@ const routes = (
     <Route path="/map" component={MapRoute} />
     <Route path="/page-unavailable" component={PageNotFound} />
     <Route path="/demo" component={Demo}>
-      <IndexRoute component={Vibrate} />
-    </Route>
+        <IndexRoute component={Vibrate} />
+        <Route path="/demo/voice" component={VoiceRecognition} />
+        <Route path="/demo/notifications" component={Notifications} />
+      </Route>
   </Route>
 )
 
