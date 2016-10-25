@@ -12,18 +12,11 @@ import routes from '../src/shared/views/routes'
 import NotFoundPage from '../src/shared/views/PageNotFound/PageNotFound'
 import rootReducer from '../src/shared/views/rootReducer'
 
-const { LETS_ENCRYPT_RECV, LETS_ENCRYPT_SEND } = process.env
-
 const app = new Express()
 const server = new Server(app)
 
 // define the folder that will be used for static assets
 app.use(Express.static(path.join(__dirname, '/../dist/')))
-
-app.get(`/.well-known/acme-challenge/${LETS_ENCRYPT_RECV}`, (req, res) => {
-  res.set('Content-Type', 'text/plain')
-  return res.send(LETS_ENCRYPT_SEND)
-})
 
 // universal routing and rendering
 app.get('*', (req, res) => {
