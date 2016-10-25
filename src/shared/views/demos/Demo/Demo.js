@@ -33,7 +33,7 @@ class Demo extends React.Component {
           source={demoFeatures}
           value={selected}
         />
-      {demoFeatures[selected].component}
+        {demoFeatures[selected].component}
       </div>
     )
   }
