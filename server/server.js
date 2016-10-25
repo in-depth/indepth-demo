@@ -20,9 +20,9 @@ const server = new Server(app)
 // define the folder that will be used for static assets
 app.use(Express.static(path.join(__dirname, '/../dist/')))
 
-app.get(`.well-known/acme-challenge/${LETS_ENCRYPT_RECV}`, (req, res) => {
+app.get(`/.well-known/acme-challenge/${LETS_ENCRYPT_RECV}`, (req, res) => {
   res.set('Content-Type', 'text/plain')
-  res.send(LETS_ENCRYPT_SEND)
+  return res.send(LETS_ENCRYPT_SEND)
 })
 
 // universal routing and rendering
