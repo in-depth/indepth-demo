@@ -74,6 +74,7 @@
     "yargs": "^6.0.0"
   },
   "dependencies": {
+    "chokidar": "^1.6.1",
     "dotenv": "^2.0.0",
     "isomorphic-fetch": "^2.2.1",
     "lodash": "^4.15.0",
