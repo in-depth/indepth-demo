@@ -18,6 +18,11 @@ const server = new Server(app)
 // define the folder that will be used for static assets
 app.use(Express.static(path.join(__dirname, '/../dist/')))
 
+app.get('/.well-known/acme-challenge/cfc3HHQXjpY3EnMbVKNUeWjLdy6rCsEA16c_rz2b_WA', (req, res) => {
+  res.set('Content-Type', 'text/plain')
+  return res.send('cfc3HHQXjpY3EnMbVKNUeWjLdy6rCsEA16c_rz2b_WA.JRYIg_CLoNLjLXOJcVYfNLzn8lvMQqU2pbbAd5YWsTI')
+})
+
 // universal routing and rendering
 app.get('*', (req, res) => {
   const store = createStore(rootReducer)
@@ -72,6 +77,7 @@ function renderFullPage(html, preloadedState) {
       <meta http-equiv="cache-control" content="no-cache">
       <meta http-equiv="Expires" content="0">
       <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1"/>
+      <meta name="apple-mobile-web-app-capable" content="yes">
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.css"/>
       <link rel="stylesheet" href="/common.css"/>
       <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Open+Sans|Roboto|Material+Icons">
