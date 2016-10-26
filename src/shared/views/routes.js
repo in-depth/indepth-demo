@@ -14,34 +14,14 @@ import { PlanRoute } from './plans/plan'
 import { PlanItineraryRoute } from './plans/planItinerary'
 import { MapRoute } from './map'
 import PageNotFound from './PageNotFound/PageNotFound'
-import { Demo, Vibrate, VoiceRecognition, Notifications, Fullscreen } from './demos'
+import { Demo } from './demos'
 
 export const navigationLinks = [
-  {
-    title: 'VISIT',
-    link: '/',
-    icon: 'account_balance',
-  },
-  {
-    title: 'FIND',
-    link: '/collection',
-    icon: 'search',
-  },
-  {
-    title: 'MAP',
-    link: '/map',
-    icon: 'map',
-  },
-  {
-    title: 'PLAN',
-    link: '/plan',
-    icon: 'directions_walk',
-  },
-  {
-    title: 'EVENTS',
-    link: '/events',
-    icon: 'event',
-  },
+  { title: 'VISIT', link: '/', icon: 'account_balance' },
+  { title: 'FIND', link: '/collection', icon: 'search' },
+  { title: 'MAP', link: '/map', icon: 'map' },
+  { title: 'PLAN', link: '/plan', icon: 'directions_walk' },
+  { title: 'EVENTS', link: '/events', icon: 'event' },
 ]
 
 const routes = (
@@ -59,12 +39,7 @@ const routes = (
     <Route path="/visit" component={VisitRoute} />
     <Route path="/map" component={MapRoute} />
     <Route path="/page-unavailable" component={PageNotFound} />
-    <Route path="/demo" component={Demo}>
-      <IndexRoute component={Vibrate} />
-      <Route path="/demo/voice" component={VoiceRecognition} />
-      <Route path="/demo/notifications" component={Notifications} />
-      <Route path="/demo/fullscreen" component={Fullscreen} />
-    </Route>
+    <Route path="/demo" component={Demo} />
   </Route>
 )
 

@@ -43,7 +43,7 @@ const webpackconfig = {
         loader: 'babel',
         query: {
           cacheDirectory: true,
-          presets: ['modern-browsers', 'react'],
+          presets: ['modern-browsers', 'react', 'stage-2'],
           plugins: [
             'react-hot-loader/babel',
             'transform-class-properties',
