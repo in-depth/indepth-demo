@@ -1,12 +1,20 @@
 import React from 'react'
 import Link from 'react-router/lib/Link'
+import IndexLink from 'react-router/lib/IndexLink'
 
 const Demo = ({ children }) => {
-  <ul role={'nav'}>
-    <li><Link to={'demo/vibrate'}>Vibration-API</Link></li>
-    <li><Link to={'demo/voice'}>Voice-Recognition</Link></li>
-    {children}
-  </ul>
+  return (
+    <nav>
+      <li><IndexLink to={'demo'}>Vibration-Example</IndexLink></li>
+      <li><Link to={'demo/voice'}>Voice-Recognition</Link></li>
+      <li><Link to={'demo/notifications'}>Notifications</Link></li>
+      {children}
+    </nav>
+  )
+}
+
+Demo.propTypes = {
+  children: React.PropTypes.node.isRequired,
 }
 
 export default Demo
