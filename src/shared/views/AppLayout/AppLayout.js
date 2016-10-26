@@ -4,7 +4,6 @@ import { TopMenu } from '../topMenu'
 
 import styles from './appLayout.css'
 
-
 const AppLayout = (props) => {
   return (
     <div className={styles.appLayout}>

@@ -14,7 +14,7 @@ import { PlanRoute } from './plans/plan'
 import { PlanItineraryRoute } from './plans/planItinerary'
 import { MapRoute } from './map'
 import PageNotFound from './PageNotFound/PageNotFound'
-import { Demo, Vibrate, VoiceRecognition, Notifications } from './demos'
+import { Demo, Vibrate, VoiceRecognition, Notifications, Fullscreen } from './demos'
 
 export const navigationLinks = [
   {
@@ -63,6 +63,7 @@ const routes = (
       <IndexRoute component={Vibrate} />
       <Route path="/demo/voice" component={VoiceRecognition} />
       <Route path="/demo/notifications" component={Notifications} />
+      <Route path="/demo/fullscreen" component={Fullscreen} />
     </Route>
   </Route>
 )

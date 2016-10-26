@@ -8,6 +8,7 @@ const Demo = ({ children }) => {
       <li><IndexLink to={'demo'}>Vibration-Example</IndexLink></li>
       <li><Link to={'demo/voice'}>Voice-Recognition</Link></li>
       <li><Link to={'demo/notifications'}>Notifications</Link></li>
+      <li><Link to={'demo/fullscreen'}>Fullscreen</Link></li>
       {children}
     </nav>
   )
