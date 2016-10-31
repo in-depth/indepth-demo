@@ -14,8 +14,9 @@ const notification = () => {
       x32: 'static/images/waving.png',
     },
     timeout: 5000,
-    vibrate: [500],
+    vibrate: [2000],
     onClick: () => { window.location.href = '/collection' },
+    serviceWorker: '/static/sw.js',
   })
 }
 

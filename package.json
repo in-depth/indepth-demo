@@ -79,6 +79,7 @@
     "isomorphic-fetch": "^2.2.1",
     "lodash": "^4.15.0",
     "normalize.css": "^4.2.0",
+    "notifyjs": "^2.0.3",
     "openseadragon": "^2.2.1",
     "push.js": "^0.0.11",
     "react": "^15.3.0",

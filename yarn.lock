@@ -3691,7 +3691,15 @@ normalize.css@~5.0.0:
   version "5.0.0"
   resolved "https://registry.yarnpkg.com/normalize.css/-/normalize.css-5.0.0.tgz#7cec875ce8178a5333c4de80b68ea9c18b9d7c37"
 
+<<<<<<< Updated upstream
 npmlog@^4.0.0, npmlog@4.x:
+=======
+notifyjs:
+  version "2.0.3"
+  resolved "https://registry.yarnpkg.com/notifyjs/-/notifyjs-2.0.3.tgz#6a4fe28efc2bfad737c491477c2486a6de1b9721"
+
+npmlog@^4.0.0:
+>>>>>>> Stashed changes
   version "4.0.0"
   resolved "https://registry.yarnpkg.com/npmlog/-/npmlog-4.0.0.tgz#e094503961c70c1774eb76692080e8d578a9f88f"
   dependencies:
