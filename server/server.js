@@ -23,6 +23,11 @@ app.get('/.well-known/acme-challenge/cfc3HHQXjpY3EnMbVKNUeWjLdy6rCsEA16c_rz2b_WA
   return res.send('cfc3HHQXjpY3EnMbVKNUeWjLdy6rCsEA16c_rz2b_WA.JRYIg_CLoNLjLXOJcVYfNLzn8lvMQqU2pbbAd5YWsTI')
 })
 
+app.get('/.well-known/acme-challenge/UaZiXYNuB8iGN-Ae8aXZ_vQDlEFH2YfrQk1axuKu0Mk', (req, res) => {
+  res.set('Content-Type', 'text/plain')
+  return res.send('UaZiXYNuB8iGN-Ae8aXZ_vQDlEFH2YfrQk1axuKu0Mk.Y8IPkTZsKXb_QEWE2ahZct0W2D2Zdx-XjwGKFlq6LLI')
+})
+
 // universal routing and rendering
 app.get('*', (req, res) => {
   const store = createStore(rootReducer)
