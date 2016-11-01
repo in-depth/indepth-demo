@@ -1,0 +1,50 @@
+@import '../../../styles/colors';
+
+.wrapper {
+  width: 100%;
+}
+
+.visitPrimaryLink {
+  border: white solid 1px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #efeeee;
+  flex-direction: column;
+  height: 80px;
+}
+
+.icon {
+  font-size: 40px;
+  max-width: 40px;
+}
+
+.linkText {
+  padding-top: 3px;
+  height: 10px;
+}
+
+.visitPrimaryLink {
+  border: white solid 1px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #efeeee;
+  flex-direction: column;
+  height: 80px;
+}
+
+.link, .link:visited {
+  font-size: 10px;
+  font-weight: lighter;
+  color: var(--mainColor);
+  width: 100%;
+}
+
+.link svg, .link:visited svg {
+  fill: var(--mainColor);
+  height: 40px;
+  width: 40px;
+}

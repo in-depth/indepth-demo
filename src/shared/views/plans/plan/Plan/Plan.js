@@ -6,6 +6,7 @@ import { ButtonRaised } from '../../../../components'
 import styles from './Plan.css'
 
 const Plan = (props) => {
+  console.log(props)
   return (
     <div>
       <p className={styles.intro}>

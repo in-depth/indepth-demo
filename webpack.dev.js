@@ -38,7 +38,7 @@ const webpackconfig = {
     loaders: [
       {
         test: /\.js$/, // Javascript loader
-        include: PATHS.src,
+        include: [PATHS.src, '/node_modules/react-medium-editor-es6'],
         exclude: /node_modules/,
         loader: 'babel',
         query: {
@@ -53,11 +53,21 @@ const webpackconfig = {
       {
         test: /\.css/,
         exclude: 'node_modules',
+        include: PATHS.src,
         loaders: [
           'style',
           'css?modules&sourceMap&importLoaders=1&localIdentName=[name]_[local]__[hash:base64:5]',
           'postcss',
           'sass',
+        ],
+      },
+      {
+        test: /\.css/,
+        include: 'node_modules',
+        exclude: PATHS.src,
+        loaders: [
+          'style',
+          'css?sourceMap&importLoaders=1',
         ],
       },
       {

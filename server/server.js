@@ -85,7 +85,7 @@ function renderFullPage(html, preloadedState) {
       <meta name="apple-mobile-web-app-capable" content="yes">
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.css"/>
       <link rel="stylesheet" href="/common.css"/>
-      <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Open+Sans|Roboto|Material+Icons">
+      <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Open+Sans:300,400,400i,700|Roboto|Material+Icons">
     </head>
     <body>
       <script>
