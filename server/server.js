@@ -15,6 +15,11 @@ import rootReducer from '../src/shared/views/rootReducer'
 const app = new Express()
 const server = new Server(app)
 
+app.get('/static/sw.js', (req, res) => {
+  res.set('Service-Worker-Allowed', '/demo')
+  return res.sendFile(path.resolve(__dirname, '../src/static/sw.js'))
+})
+
 // define the folder that will be used for static assets
 app.use(Express.static(path.join(__dirname, '/../dist/')))
 
@@ -80,6 +85,7 @@ function renderFullPage(html, preloadedState) {
       <meta name="apple-mobile-web-app-capable" content="yes">
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.css"/>
       <link rel="stylesheet" href="/common.css"/>
+      <link rel="manifest" href="/static/manifest.json">
       <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Open+Sans:300,400,400i,700|Roboto|Material+Icons">
     </head>
     <body>
