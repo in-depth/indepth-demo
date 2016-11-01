@@ -18,6 +18,11 @@ const server = new Server(app)
 // define the folder that will be used for static assets
 app.use(Express.static(path.join(__dirname, '/../dist/')))
 
+app.get('/.well-known/acme-challenge/21PnIj2DXN311bOxBZaDNEcD2-NKGtpmdqikDcE29ME', (req, res) => {
+  res.set('Content-Type', 'text/plain')
+  return res.send('21PnIj2DXN311bOxBZaDNEcD2-NKGtpmdqikDcE29ME.Y8IPkTZsKXb_QEWE2ahZct0W2D2Zdx-XjwGKFlq6LLI')
+})
+
 // universal routing and rendering
 app.get('*', (req, res) => {
   const store = createStore(rootReducer)
