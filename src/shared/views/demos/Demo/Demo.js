@@ -1,6 +1,6 @@
 import React from 'react'
 import Dropdown from 'react-toolbox/lib/dropdown'
-import { Vibrate, Notifications, VoiceRecognition, Fullscreen } from '../index'
+import { Vibrate, Notifications, VoiceRecognition, Fullscreen, Camera } from '../index'
 
 import styles from './Demo.css'
 
@@ -14,6 +14,7 @@ class Demo extends React.Component {
         { value: 1, label: 'Fullscreen', component: <Fullscreen /> },
         { value: 2, label: 'Voice Recognition', component: <VoiceRecognition /> },
         { value: 3, label: 'Notifications', component: <Notifications /> },
+        { value: 4, label: 'Camera', component: <Camera /> },
       ],
     }
   }

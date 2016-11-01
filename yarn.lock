@@ -4650,6 +4650,10 @@ react-toolbox@^1.2.2:
     normalize.css "~5.0.0"
     react-css-themr "~1.4.1"
 
+react-webcam:
+  version "0.0.14"
+  resolved "https://registry.yarnpkg.com/react-webcam/-/react-webcam-0.0.14.tgz#9bb964439be654d4a9d2d7722d7bf5a9cccca877"
+
 react@^15.3.0:
   version "15.3.2"
   resolved "https://registry.yarnpkg.com/react/-/react-15.3.2.tgz#a7bccd2fee8af126b0317e222c28d1d54528d09e"
