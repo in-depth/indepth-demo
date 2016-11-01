@@ -11,7 +11,7 @@ class Demo extends React.Component {
       selected: 0,
       demoFeatures: [
         { value: 0, label: 'Vibrate', component: <Vibrate /> },
-        { value: 1, label: 'Fullscreen', component: <Fullscreen /> },
+        { value: 1, label: 'Fullscreen', component: <Fullscreen action={this.props.actions.toggleFullscreen} /> },
         { value: 2, label: 'Voice Recognition', component: <VoiceRecognition /> },
         { value: 3, label: 'Notifications', component: <Notifications /> },
         { value: 4, label: 'Camera', component: <Camera /> },

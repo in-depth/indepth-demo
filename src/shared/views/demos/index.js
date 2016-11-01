@@ -7,6 +7,7 @@ import Camera from './Camera/Camera'
 import AudioPlayer from './AudioPlayer/AudioPlayer'
 import ThreeD from './ThreeD/ThreeD'
 import DeepZoomDemo from './DeepZoom/DeepZoom'
+import DemoContainer from './Demo/DemoContainer'
 
 export {
   Demo,
@@ -18,4 +19,5 @@ export {
   Camera,
   ThreeD,
   DeepZoomDemo,
+  DemoContainer,
 }

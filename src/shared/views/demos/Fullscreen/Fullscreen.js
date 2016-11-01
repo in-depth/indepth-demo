@@ -12,6 +12,7 @@ class Fullscreen extends React.Component {
 
   toggleFullscreen() {
     this.screenfull.toggle()
+    this.props.action()
   }
 
   render() {

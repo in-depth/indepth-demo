@@ -1,6 +1,6 @@
 import React from 'react'
 
-import { TopMenuHeader, TopMenuLogo, TopMenuSearch } from '../index'
+import { TopMenuHeader, TopMenuLogo, TopMenuSearch, TopMenuExitFullscreen } from '../index'
 import styles from './topMenu.css'
 
 const TopMenu = (props) => {
@@ -16,13 +16,15 @@ const TopMenu = (props) => {
     <div className={styles.topMenu}>
       <TopMenuLogo />
       <TopMenuHeader title={getTitleFromPath(props.path)} />
-      <TopMenuSearch />
+      <TopMenuExitFullscreen fullscreen={props.fullscreen} handleToggleFullscreen={props.handleToggleFullscreen} />
+      <TopMenuSearch handleToggleEditMode={props.handleToggleEditMode} />
     </div>
   )
 }
 
 TopMenu.propTypes = {
   path: React.PropTypes.string.isRequired,
+  handleToggleEditMode: React.PropTypes.func.isRequired,
 }
 
 export default TopMenu
