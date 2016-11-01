@@ -21,10 +21,16 @@ const notification = () => {
 
 const Notifications = () => {
   return (
-    <div className={styles.notificationButton}>
-      <Button onClick={notification} raised primary>
-        <Icon icon="notification" /> Test notification
-      </Button>
+    <div>
+      <div>Note: this feature is currently unavailable on iPhone</div>
+      <div className={styles.notificationButton}>
+        <Button onClick={notification} raised primary>
+          <Icon icon="notification" /> Test notification
+        </Button>
+      </div>
+      <div>
+        This button will either send you a push notification to your mobile phone, or a pop up notification on desktop.
+      </div>
     </div>
   )
 }
