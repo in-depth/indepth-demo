@@ -11,10 +11,6 @@
   pointer-events: none;
 }
 
-.body {
-  flex: 1 0 auto;
-}
-
 .content {
   height: calc(100vh - 100px);
   overflow-y: scroll;
