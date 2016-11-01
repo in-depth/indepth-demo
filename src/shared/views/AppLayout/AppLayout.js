@@ -1,6 +1,10 @@
 import React from 'react'
+import { connect } from 'react-redux'
+import { bindActionCreators } from 'redux'
 import { NavigationList } from '../navigation'
 import { TopMenu } from '../topMenu'
+
+import * as VisitActions from '../visit/VisitActions'
 
 import styles from './appLayout.css'
 
@@ -11,17 +15,24 @@ const toggleAppLinks = (mode) => {
   editModeStyle.pointerEvents = 'auto'
 }
 
-const AppLayout = (props) => {
+const AppLayout = ({
+  location,
+  children,
+  toggleInlineEditing,
+}) => {
   return (
     <div className={styles.appLayout}>
       <div className={styles.body}>
         <div className={styles.topMenu}>
-          <TopMenu path={props.location.pathname} />
+          <TopMenu
+            path={location.pathname}
+            handleToggleEditMode={toggleInlineEditing}
+          />
         </div>
         <div className={styles.navigationSpacer} />
         <div style={editModeStyle} className={styles.content}>
           <div className={styles.content} id="content">
-            {props.children}
+            {children}
           </div>
         </div>
         <div className={styles.navigationSpacer} />
@@ -36,6 +47,10 @@ const AppLayout = (props) => {
 AppLayout.propTypes = {
   children: React.PropTypes.element.isRequired,
   location: React.PropTypes.object.isRequired,
+  toggleInlineEditing: React.PropTypes.func.isRequired,
 }
 
-export default AppLayout
+const mapStateToProps = state => ({})
+const mapDispatchToProps = dispatch => bindActionCreators(VisitActions, dispatch)
+
+export default connect(mapStateToProps, mapDispatchToProps)(AppLayout)

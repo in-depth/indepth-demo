@@ -16,13 +16,14 @@ const TopMenu = (props) => {
     <div className={styles.topMenu}>
       <TopMenuLogo />
       <TopMenuHeader title={getTitleFromPath(props.path)} />
-      <TopMenuSearch />
+      <TopMenuSearch handleToggleEditMode={props.handleToggleEditMode} />
     </div>
   )
 }
 
 TopMenu.propTypes = {
   path: React.PropTypes.string.isRequired,
+  handleToggleEditMode: React.PropTypes.func.isRequired,
 }
 
 export default TopMenu
