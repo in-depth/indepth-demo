@@ -9,6 +9,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin')
 const cssnext = require('postcss-cssnext')
 const nested = require('postcss-nested')
 const atImport = require('postcss-import')
+const modulevalues = require('postcss-modules-values')
 const sass = require('postcss-scss')
 /* eslint-enable */
 
@@ -81,6 +82,7 @@ const webpackconfig = {
     atImport,
     nested,
     cssnext,
+    modulevalues,
   ]),
   sassLoader: {
     data: '@import "shared/styles/main.scss";',

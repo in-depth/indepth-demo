@@ -11,13 +11,6 @@ const Visit = (props) => {
         inlineEditing={props.inlineEditing}
         action={props.actions.toggleInlineEditing}
       />
-      <div>
-        <VisitPrimaryLinksList
-          primaryLinks={props.primaryLinks}
-          inlineEditing={props.inlineEditing}
-          action={props.actions.updatePrimaryLinks}
-        />
-      </div>
       <VisitFeaturedList
         inlineEditing={props.inlineEditing}
         featuredLinks={props.featuredLinks}

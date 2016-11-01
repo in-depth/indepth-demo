@@ -1,4 +1,5 @@
 @import '../../styles/colors';
+@import '../../styles/mixins';
 
 .appLayout {
   display: flex;

@@ -11,7 +11,12 @@ const VisitFeaturedList = (props) => {
         <div
           key={featuredLink.title}
           className={styles.featuredWrapper}
-          style={{ backgroundImage: `url(${featuredLink.backgroundUrl})` }}
+          style={{
+            backgroundImage: `url(${featuredLink.backgroundUrl})`,
+            backgroundRepeat: 'no-repeat',
+            backgroundPosition: 'center',
+            backgroundSize: 'cover',
+          }}
         >
           <div>
             <VisitFeaturedLink
