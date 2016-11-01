@@ -3,9 +3,9 @@ import { UPDATE_FEATURED_LINKS, UPDATE_PRIMARY_LINKS, TOGGLE_INLINE_EDITING } fr
 const visitState = {
   featuredLinks: [
     {
-      title: 'GUIDED TOURS',
-      path: '/plan',
-      backgroundUrl: '/static/images/guided-tours.jpg',
+      title: 'DEMO FEATURES',
+      path: '/demo',
+      backgroundUrl: '/static/images/simon-denny.jpg',
     },
     {
       title: 'OUR COLLECTION',
@@ -13,14 +13,14 @@ const visitState = {
       backgroundUrl: '/static/images/gallipoli-westmacott.jpg',
     },
     {
+      title: 'GUIDED TOURS',
+      path: '/plan',
+      backgroundUrl: '/static/images/guided-tours.jpg',
+    },
+    {
       title: 'EUROPEAN SPLENDOR',
       path: '/page-unavailable',
       backgroundUrl: '/static/images/fan.jpg',
-    },
-    {
-      title: 'ESPIONAGE AND MASS SURVEILLANCE',
-      path: '/',
-      backgroundUrl: '/static/images/simon-denny.jpg',
     },
   ],
   primaryLinks: [
