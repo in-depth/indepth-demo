@@ -15,17 +15,17 @@ import rootReducer from '../src/shared/views/rootReducer'
 const app = new Express()
 const server = new Server(app)
 
+app.get('/static/sw.js', (req, res) => {
+  res.set('Service-Worker-Allowed', '/demo')
+  return res.sendFile(path.resolve(__dirname, '../src/static/sw.js'))
+})
+
 // define the folder that will be used for static assets
 app.use(Express.static(path.join(__dirname, '/../dist/')))
 
-app.get('/.well-known/acme-challenge/cfc3HHQXjpY3EnMbVKNUeWjLdy6rCsEA16c_rz2b_WA', (req, res) => {
+app.get('/.well-known/acme-challenge/21PnIj2DXN311bOxBZaDNEcD2-NKGtpmdqikDcE29ME', (req, res) => {
   res.set('Content-Type', 'text/plain')
-  return res.send('cfc3HHQXjpY3EnMbVKNUeWjLdy6rCsEA16c_rz2b_WA.JRYIg_CLoNLjLXOJcVYfNLzn8lvMQqU2pbbAd5YWsTI')
-})
-
-app.get('/.well-known/acme-challenge/UaZiXYNuB8iGN-Ae8aXZ_vQDlEFH2YfrQk1axuKu0Mk', (req, res) => {
-  res.set('Content-Type', 'text/plain')
-  return res.send('UaZiXYNuB8iGN-Ae8aXZ_vQDlEFH2YfrQk1axuKu0Mk.Y8IPkTZsKXb_QEWE2ahZct0W2D2Zdx-XjwGKFlq6LLI')
+  return res.send('21PnIj2DXN311bOxBZaDNEcD2-NKGtpmdqikDcE29ME.Y8IPkTZsKXb_QEWE2ahZct0W2D2Zdx-XjwGKFlq6LLI')
 })
 
 // universal routing and rendering
@@ -85,6 +85,7 @@ function renderFullPage(html, preloadedState) {
       <meta name="apple-mobile-web-app-capable" content="yes">
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.css"/>
       <link rel="stylesheet" href="/common.css"/>
+      <link rel="manifest" href="/static/manifest.json">
       <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Open+Sans:300,400,400i,700|Roboto|Material+Icons">
     </head>
     <body>

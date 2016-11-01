@@ -5,6 +5,7 @@ import { CollectionItemsReducer } from './collectionItems/collectionItems/Collec
 import { ShowsReducer } from './shows/shows/ShowsReducer'
 import { PlanReducer } from './plans/plan/PlanReducer'
 import { VisitReducer } from './visit/VisitReducer'
+import { DemosReducer } from './demos/DemosReducer'
 
 const indepth = combineReducers({
   collectionItem: CollectionItemReducer,
@@ -12,6 +13,7 @@ const indepth = combineReducers({
   shows: ShowsReducer,
   plans: PlanReducer,
   visit: VisitReducer,
+  demos: DemosReducer,
 })
 
 export default indepth
