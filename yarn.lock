@@ -428,6 +428,13 @@ babel-plugin-check-es2015-constants@^6.3.13, babel-plugin-check-es2015-constants
   dependencies:
     babel-runtime "^6.0.0"
 
+babel-plugin-css-modules-transform:
+  version "1.1.0"
+  resolved "https://registry.yarnpkg.com/babel-plugin-css-modules-transform/-/babel-plugin-css-modules-transform-1.1.0.tgz#d52760d9c2c984f9455c34a4a10ef6c6ec92cd69"
+  dependencies:
+    css-modules-require-hook "^4.0.3"
+    mkdirp "^0.5.1"
+
 babel-plugin-syntax-async-functions@^6.8.0:
   version "6.13.0"
   resolved "https://registry.yarnpkg.com/babel-plugin-syntax-async-functions/-/babel-plugin-syntax-async-functions-6.13.0.tgz#cad9cad1191b5ad634bf30ae0872391e0647be95"
@@ -1378,7 +1385,7 @@ css-loader@^0.23.1:
     postcss-modules-values "^1.1.0"
     source-list-map "^0.1.4"
 
-css-modules-require-hook@^4.0.5:
+css-modules-require-hook@^4.0.3, css-modules-require-hook@^4.0.5:
   version "4.0.5"
   resolved "https://registry.yarnpkg.com/css-modules-require-hook/-/css-modules-require-hook-4.0.5.tgz#10ffb3161bd7518b25ba50cc65a940f26a1cc39d"
   dependencies:

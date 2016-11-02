@@ -10,6 +10,8 @@ const nodeModulesPath = path.resolve(__dirname, 'node_modules')
 const sourcePath = path.resolve(__dirname, 'src')
 
 const config = {
+  context: process.cwd(),
+
   target: 'node',
 
   externals: [nodeExternals({
@@ -44,18 +46,22 @@ const config = {
             'babel-plugin-transform-object-rest-spread',
             'babel-plugin-transform-class-properties',
             'transform-class-properties',
+            ['css-modules-transform', {
+              extensions: ['.css', '.scss'],
+              generateScopedName: '[name]__[local]___[hash:base64:5]',
+            }],
           ],
         },
       },
       {
         test: /\.css$/,
         include: sourcePath,
-        loader: 'css?sourceMap&modules&importLoaders=1&localIdentName=[name]__[local]___[hash:base64:5]!postcss',
+        loader: 'css?modules&importLoaders=1&localIdentName=[name]__[local]___[hash:base64:5]!postcss',
       },
       {
         test: /\.scss$/,
         include: nodeModulesPath,
-        loader: 'css?sourceMap&modules&importLoaders=1!sass',
+        loader: 'css?modules&importLoaders=1&localIdentName=[name]__[local]___[hash:base64:5]!postcss!sass',
       },
     ],
   },
