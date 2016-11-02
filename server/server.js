@@ -15,6 +15,13 @@ import rootReducer from '../src/shared/views/rootReducer'
 const app = new Express()
 const server = new Server(app)
 
+app.use((req, res, next) => {
+  if (req.header('x-forwarded-proto') !== 'https') {
+    return res.redirect(`https://${req.get('Host')}${req.url}`)
+  }
+  return next()
+})
+
 app.get('/static/sw.js', (req, res) => {
   res.set('Service-Worker-Allowed', '/demo')
   return res.sendFile(path.resolve(__dirname, '../src/static/sw.js'))
