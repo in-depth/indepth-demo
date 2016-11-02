@@ -1,7 +1,7 @@
 import React from 'react'
 import { Route, IndexRoute } from 'react-router'
 
-import AppLayout from './AppLayout/AppLayout'
+import AppLayoutContainer from './AppLayout/AppLayoutContainer'
 import { CollectionItemRoute } from './collectionItems/collectionItem'
 import { ShowsRoute } from './shows/shows'
 import { VisitRoute } from './visit'
@@ -14,38 +14,18 @@ import { PlanRoute } from './plans/plan'
 import { PlanItineraryRoute } from './plans/planItinerary'
 import { MapRoute } from './map'
 import PageNotFound from './PageNotFound/PageNotFound'
-
+import { DemoContainer } from './demos'
 
 export const navigationLinks = [
-  {
-    title: 'VISIT',
-    link: '/',
-    icon: 'account_balance',
-  },
-  {
-    title: 'FIND',
-    link: '/collection',
-    icon: 'search',
-  },
-  {
-    title: 'MAP',
-    link: '/map',
-    icon: 'map',
-  },
-  {
-    title: 'PLAN',
-    link: '/plan',
-    icon: 'directions_walk',
-  },
-  {
-    title: 'EVENTS',
-    link: '/events',
-    icon: 'event',
-  },
+  { title: 'VISIT', link: '/', icon: 'account_balance' },
+  { title: 'FIND', link: '/collection', icon: 'search' },
+  { title: 'MAP', link: '/map', icon: 'map' },
+  { title: 'PLAN', link: '/plan', icon: 'directions_walk' },
+  { title: 'EVENTS', link: '/events', icon: 'event' },
 ]
 
 const routes = (
-  <Route path="/" component={AppLayout} >
+  <Route path="/" component={AppLayoutContainer} >
     <IndexRoute component={VisitRoute} />
     <Route path="events" component={ShowsRoute} />
     <Route path="events/:id" component={ShowRoute} />
@@ -59,6 +39,7 @@ const routes = (
     <Route path="/visit" component={VisitRoute} />
     <Route path="/map" component={MapRoute} />
     <Route path="/page-unavailable" component={PageNotFound} />
+    <Route path="/demo" component={DemoContainer} />
   </Route>
 )
 

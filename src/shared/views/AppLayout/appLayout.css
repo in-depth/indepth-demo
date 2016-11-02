@@ -7,6 +7,10 @@
   font-family: 'Open Sans', sans-serif;
 }
 
+.appLayout.edit {
+  pointer-events: none;
+}
+
 .body {
   flex: 1 0 auto;
 }
@@ -61,4 +65,12 @@ p {
   padding: 0 20px;
   padding-bottom: 5px;
   line-height: 120%;
+}
+
+b {
+  font-weight: bold;
+}
+
+i {
+  font-style: italic;
 }

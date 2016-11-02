@@ -2,14 +2,20 @@ import React from 'react'
 import ReactDOM from 'react-dom'
 import { AppContainer } from 'react-hot-loader'
 import { Provider } from 'react-redux'
-import { createStore } from 'redux'
+import { createStore, applyMiddleware } from 'redux'
+import createLogger from 'redux-logger'
+
+const logger = createLogger()
 
 import rootReducer from '../shared/views/rootReducer'
 import AppRoutes from '../shared/views/AppRoutes'
 
 const initialState = window.__INITIAL_STATE__ // eslint-disable-line
 
-const store = createStore(rootReducer, initialState)
+const store = createStore(
+  rootReducer, initialState,
+  applyMiddleware(logger),
+  )
 
 window.onload = () => { // eslint-disable-line
   renderApp(AppRoutes)

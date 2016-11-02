@@ -2,6 +2,7 @@
   margin-right: auto;
   padding: 0 10px;
   color: white;
+  cursor: pointer;
 }
 
 .search svg {

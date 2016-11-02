@@ -1,11 +1,19 @@
 import VisitRoute from './VisitRoute'
-import VisitLinks from './VisitLinks/VisitLinks'
+import VisitPrimaryLinksList from './VisitPrimaryLinksList/VisitPrimaryLinksList'
 import VisitFeaturedList from './VisitFeaturedList/VisitFeaturedList'
 import VisitMuseumHeader from './VisitMuseumHeader/VisitMuseumHeader'
+import VisitReducer from './VisitReducer'
+import VisitContainer from './Visit/VisitContainer'
+import VisitFeaturedLink from './VisitFeaturedLink/VisitFeaturedLink'
+import VisitPrimaryLink from './VisitPrimaryLink/VisitPrimaryLink'
 
 export {
   VisitRoute,
-  VisitLinks,
+  VisitPrimaryLinksList,
   VisitFeaturedList,
   VisitMuseumHeader,
+  VisitReducer,
+  VisitContainer,
+  VisitFeaturedLink,
+  VisitPrimaryLink,
 }

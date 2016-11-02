@@ -15,8 +15,18 @@ import rootReducer from '../src/shared/views/rootReducer'
 const app = new Express()
 const server = new Server(app)
 
+app.get('/static/sw.js', (req, res) => {
+  res.set('Service-Worker-Allowed', '/demo')
+  return res.sendFile(path.resolve(__dirname, '../src/static/sw.js'))
+})
+
 // define the folder that will be used for static assets
 app.use(Express.static(path.join(__dirname, '/../dist/')))
+
+app.get('/.well-known/acme-challenge/21PnIj2DXN311bOxBZaDNEcD2-NKGtpmdqikDcE29ME', (req, res) => {
+  res.set('Content-Type', 'text/plain')
+  return res.send('21PnIj2DXN311bOxBZaDNEcD2-NKGtpmdqikDcE29ME.Y8IPkTZsKXb_QEWE2ahZct0W2D2Zdx-XjwGKFlq6LLI')
+})
 
 // universal routing and rendering
 app.get('*', (req, res) => {
@@ -72,9 +82,11 @@ function renderFullPage(html, preloadedState) {
       <meta http-equiv="cache-control" content="no-cache">
       <meta http-equiv="Expires" content="0">
       <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1"/>
+      <meta name="apple-mobile-web-app-capable" content="yes">
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.css"/>
       <link rel="stylesheet" href="/common.css"/>
-      <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Open+Sans|Roboto|Material+Icons">
+      <link rel="manifest" href="/static/manifest.json">
+      <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Open+Sans:300,400,400i,700|Roboto|Material+Icons">
     </head>
     <body>
       <script>

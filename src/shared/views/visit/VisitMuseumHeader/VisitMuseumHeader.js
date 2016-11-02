@@ -79,7 +79,7 @@ const VisitMuseumHeader = (props) => {
   const baseUrl = props.location.baseUrl ? props.location.baseUrl : ''
   const museumInfo = getMuseumInfo(baseUrl)
   return (
-    <div className={styles.museumHeader} style={{ backgroundImage: `url("${museumInfo.image}")` }}>
+    <div className={styles.museumHeader} style={{ backgroundImage: `url("${museumInfo.image}")` }} onDoubleClick={props.action}>
       <div className={styles.overlay}>
         <h1 className={styles.museumName}>{museumInfo.name}</h1>
         <p className={styles.museumTagline}>{museumInfo.tagline}</p>
@@ -90,6 +90,7 @@ const VisitMuseumHeader = (props) => {
 
 VisitMuseumHeader.propTypes = {
   location: React.PropTypes.object,
+  action: React.PropTypes.func.isRequired,
 }
 
 export default withRouter(VisitMuseumHeader)
