@@ -1,5 +1,6 @@
 @import '../../styles/mixins.css';
 @value baseColor from '../../styles/colors.css';
+@value botMenuHeight from '../../styles/vars.css';
 
 .appLayout {
   display: flex;
@@ -13,7 +14,8 @@
 }
 
 .content {
-  height: calc(100vh - 100px);
+  /*height: calc(100vh - 100px);*/
+  height: 100%;
   overflow-y: scroll;
   -webkit-overflow-scrolling: touch;
   overflow-x: hidden;
