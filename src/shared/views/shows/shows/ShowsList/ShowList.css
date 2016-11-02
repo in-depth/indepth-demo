@@ -3,13 +3,12 @@
 
 .showItem {
   display: flex;
-  flex-direction: row;
   padding: 15px 20px;
 }
 
 .image {
   height: 70px;
-  width: 70px;
+  min-width: 70px;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -21,7 +20,12 @@
   color: var(--textGrey)
 }
 
-.showText p {
+.shortDesc {
+  padding-bottom: 5px;
+  font-size: 15px;
+}
+
+.time {
   padding-bottom: 5px;
   font-size: 15px;
 }
@@ -31,7 +35,7 @@
 }
 
 .month {
-  padding-top: 30px;
+  padding-top: 15px;
 }
 
 .eventTitle {
@@ -44,6 +48,12 @@
 
 .shortDesc {
   display: none;
+}
+
+.linkWrapper {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
 }
 
 @media (min-width: 768px) {
@@ -61,6 +71,8 @@
   .month {
     text-align: center;
     color: var(--mainColor);
+    padding-bottom: 30px;
+    padding-top: 0;
   }
   .linkWrapper {
     display: flex;
@@ -86,11 +98,10 @@
   }
   .eventsList {
     background-color: #F6F6F6;
-    height: 100%;
     padding-top: 40px;
   }
   .ShowListFullPage {
-    height: 100%;
+    
   }
   .showText {
     display: flex;
@@ -110,8 +121,13 @@
   }
   .shortDesc {
     display: block;
+    padding-bottom: 15px;
   }
   .time {
     font-weight: bold;
+    padding-bottom: 0;
+  }
+  .showHeader {
+    padding-bottom: 15px;
   }
 }
