@@ -1,3 +1,5 @@
+@import '../../../styles/mixins.css';
+
 .featuredPath {
   color: white;
   font-size: 20px;
@@ -11,6 +13,9 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  h2 {
+    @mixin fp font-size, 10, 50;
+  }
 }
 
 .wrapper {

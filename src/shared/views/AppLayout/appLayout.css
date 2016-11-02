@@ -1,5 +1,5 @@
-@import '../../styles/colors';
-@import '../../styles/mixins';
+@import '../../styles/mixins.css';
+@value baseColor from '../../styles/colors.css';
 
 .appLayout {
   display: flex;
@@ -20,7 +20,7 @@
 }
 
 .navigation {
-  background-color: var(--mainColor);
+  background-color: baseColor;
   position: fixed;
   bottom: 0;
   left: 0;

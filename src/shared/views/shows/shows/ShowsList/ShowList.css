@@ -1,4 +1,4 @@
-@import '../../../../styles/colors';
+@value baseColor, textGrey from '../../../../styles/colors.css';
 
 .showItem {
   display: flex;
@@ -15,7 +15,7 @@
 .showText {
   display: flex;
   flex-direction: column;
-  color: var(--textGrey)
+  color: textGrey
 }
 
 .showText p {
@@ -24,7 +24,7 @@
 }
 
 .showHeader {
-  color: var(--mainColor);
+  color: baseColor;
 }
 
 .month {

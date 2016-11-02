@@ -6,11 +6,7 @@ const WebpackDevServer = require('webpack-dev-server')
 const path = require('path')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 
-const cssnext = require('postcss-cssnext')
-const nested = require('postcss-nested')
-const atImport = require('postcss-import')
-const modulevalues = require('postcss-modules-values')
-const sass = require('postcss-scss')
+const postcssConfig = require('./postcss.config')
 /* eslint-enable */
 
 const PATHS = {
@@ -59,16 +55,6 @@ const webpackconfig = {
           'style',
           'css?modules&sourceMap&importLoaders=1&localIdentName=[name]_[local]__[hash:base64:5]',
           'postcss',
-          'sass',
-        ],
-      },
-      {
-        test: /\.css/,
-        include: 'node_modules',
-        exclude: PATHS.src,
-        loaders: [
-          'style',
-          'css?sourceMap&importLoaders=1',
         ],
       },
       {
@@ -78,12 +64,7 @@ const webpackconfig = {
       },
     ],
   },
-  postcss: () => ([
-    atImport,
-    nested,
-    cssnext,
-    modulevalues,
-  ]),
+  postcss: () => postcssConfig,
   sassLoader: {
     data: '@import "shared/styles/main.scss";',
     includePaths: [PATHS.src],
