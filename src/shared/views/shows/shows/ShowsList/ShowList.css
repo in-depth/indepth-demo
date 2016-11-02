@@ -1,4 +1,5 @@
 @import '../../../../styles/colors';
+@import '../../../../styles/breakpoints';
 
 .showItem {
   display: flex;
@@ -9,7 +10,9 @@
 .image {
   height: 70px;
   width: 70px;
-  object-fit: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .showText {
@@ -29,4 +32,86 @@
 
 .month {
   padding-top: 30px;
+}
+
+.eventTitle {
+  display: none;
+}
+
+.dateDay, .dateMonth {
+  display: none;
+}
+
+.shortDesc {
+  display: none;
+}
+
+@media (min-width: 768px) {
+  .header {
+    height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .eventTitle {
+    display: block;
+    font-size: 35px;
+  }
+  .month {
+    text-align: center;
+    color: var(--mainColor);
+  }
+  .linkWrapper {
+    display: flex;
+    justify-content: center;
+    background-color: #F6F6F6 !important;
+    margin: 20px;
+  }
+  .showItem {
+    width: 800px;
+    display: flex;
+    justify-content: flex-start;
+    background-color: white;
+    padding: 0;
+  }
+  .image {
+    height: 160px;
+    width: 160px;
+    object-fit: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .eventsList {
+    background-color: #F6F6F6;
+    height: 100%;
+    padding-top: 40px;
+  }
+  .ShowListFullPage {
+    height: 100%;
+  }
+  .showText {
+    display: flex;
+    justify-content: center;
+  }
+  .dateDay {
+    display: block;
+    color: white;
+    font-weight: bold;
+    font-size: 80px;
+  }
+  .dateMonth {
+    display: block;
+    color: white;
+    font-weight: bold;
+    font-size: 20px;
+  }
+  .shortDesc {
+    display: block;
+  }
+  .time {
+    font-weight: bold;
+  }
 }
