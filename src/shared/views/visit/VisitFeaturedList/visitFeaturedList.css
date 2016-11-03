@@ -1,32 +1,53 @@
+@import '../../../styles/mixins.css';
 @value lg from '../../../styles/breakpoints.css';
 
 .main {
   width: 100%;
+  height: 100%;
   display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: stretch;
 
   @media lg {
     height: 100%;
     align-items: center;
     justify-content: space-around;
+  }
+}
 
-    .featuredWrapper {
-      width: 100%;
-      padding: 12px;
-      height: 400px;
+.featuredJumbotron {
+  width: 100%;
+  display: none;
+  background: #fff;
+
+  @media lg {
+    display: initial;
+    @mixin fp height, 180, 430;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    h1 {
+      display: block;
+      @mixin fp font-size, 27, 50;
     }
   }
 }
 
-.featuredLink {
+.featuredContainer {
+  background: #F4F4F4;
   height: 100%;
   width: 100%;
-  margin-bottom: 2px;
-  background-size: 100% auto;
-  text-align: center;
-}
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  justify-content: center;
 
-@media (max-width: 400px) { /* thin devices */
-  .featuredLink {
-    background-size: auto 100%;
+  @media lg {
+    padding: 12px;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: stretch;
   }
 }

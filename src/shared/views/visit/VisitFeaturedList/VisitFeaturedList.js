@@ -7,26 +7,20 @@ import styles from './visitFeaturedList.css'
 const VisitFeaturedList = (props) => {
   return (
     <div className={styles.main}>
-      {props.featuredLinks.map((featuredLink, index) => (
-        <div
-          key={featuredLink.title}
-          className={styles.featuredWrapper}
-        >
+      <aside className={styles.featuredJumbotron}>
+        <h1>{'FEATURED'}</h1>
+      </aside>
+      <section className={styles.featuredContainer}>
+        {props.featuredLinks.map((featuredLink, i) => (
           <VisitFeaturedLink
-            key={index}
+            key={i}
             inlineEditing={props.inlineEditing}
             featuredLink={featuredLink}
-            index={index}
+            index={i}
             action={props.action}
-            style={{
-              backgroundImage: `url(${featuredLink.backgroundUrl})`,
-              backgroundRepeat: 'no-repeat',
-              backgroundPosition: 'center',
-              backgroundSize: 'cover',
-            }}
           />
-        </div>
-    ))}
+        ))}
+      </section>
     </div>
   )
 }

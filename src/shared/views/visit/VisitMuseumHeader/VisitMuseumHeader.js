@@ -54,7 +54,7 @@ const VisitMuseumHeader = (props) => {
   const baseUrl = props.location.baseUrl ? props.location.baseUrl : ''
   const museumInfo = getMuseumInfo(baseUrl)
   return (
-    <div
+    <header
       className={styles.museumHeader}
       style={{ backgroundImage: `url("${museumInfo.image}")` }}
       onDoubleClick={props.action}
@@ -72,7 +72,7 @@ const VisitMuseumHeader = (props) => {
           <path d={'M0 0h24v24H0z'} fill={'none'} />
         </svg>
       </div>
-    </div>
+    </header>
   )
 }
 

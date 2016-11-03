@@ -1,21 +1,19 @@
-:global {
-  @define-mixin fp $property, $min, $max, $start: 320, $end: 1920, $clip: true, $clipAtStart: true, $clipAtEnd: true {
-    $multiplier: resolve(($max - $min) / ($end - $start) * 100);
-    $adder: resolve(($min * $end - $max * $start) / ($end - $start));
-    $formula: calc($(multiplier)vw + $(adder)px);
+@define-mixin fp $property, $min, $max, $start: 320, $end: 1920, $clip: true, $clipAtStart: true, $clipAtEnd: true {
+  $multiplier: resolve(($max - $min) / ($end - $start) * 100);
+  $adder: resolve(($min * $end - $max * $start) / ($end - $start));
+  $formula: calc($(multiplier)vw + $(adder)px);
 
-    @if $clip == true and $clipAtStart == true {
-      @media (max-width: $(start)px) {
-        $(property): $(min)px;
-      }
+  @if $clip == true and $clipAtStart == true {
+    @media (max-width: $(start)px) {
+      $(property): $(min)px;
     }
-
-    @if $clip == true and $clipAtEnd == true {
-      @media (min-width: $(end)px) {
-        $(property): $(max)px;
-      }
-    }
-
-    $(property): $formula;
   }
+
+  @if $clip == true and $clipAtEnd == true {
+    @media (min-width: $(end)px) {
+      $(property): $(max)px;
+    }
+  }
+
+  $(property): $formula;
 }
