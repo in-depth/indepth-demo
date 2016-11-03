@@ -1,10 +1,16 @@
+@value lg from '../../../styles/breakpoints.css';
+
 .museumHeader {
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
-  background-color: black;
-  height: 150px;
+  background-color: #787878;
+  height: 20%;
   color: white;
+
+  @media lg {
+    height: 100%;
+  }
 }
 
 @media (max-width: 350px) { /* thin devices */
@@ -18,6 +24,9 @@
   margin: 0px;
   margin-bottom: 5px;
   text-align: center;
+
+  @media lg {
+  }
 }
 
 .museumTagline {

@@ -1,8 +1,11 @@
+@value lg from '../../../styles/breakpoints.css';
+
 .main {
   width: 100%;
   display: flex;
 
-  @media (min-width: 1280px) {
+  @media lg {
+    height: 100%;
     align-items: center;
     justify-content: space-around;
 
