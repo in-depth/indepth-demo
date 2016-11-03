@@ -1,11 +1,6 @@
 import React from 'react'
-import { connect } from 'react-redux'
-import { bindActionCreators } from 'redux'
 import { NavigationList } from '../navigation'
 import { TopMenu } from '../topMenu'
-
-import * as VisitActions from '../visit/VisitActions'
-import * as DemosActions from '../demos/DemosActions'
 
 import styles from './appLayout.css'
 
@@ -25,26 +20,20 @@ const AppLayout = ({
 }) => {
   return (
     <div className={styles.appLayout}>
-      <div className={styles.body}>
-        <div className={styles.topMenu}>
-          <TopMenu
-            path={location.pathname}
-            handleToggleEditMode={visitActions.toggleInlineEditing}
-            handleToggleFullscreen={fullscreenAction.toggleFullscreen}
-            fullscreen={fullscreen}
-          />
-        </div>
-        <div className={styles.navigationSpacer} />
-        <div style={editModeStyle} className={styles.content}>
-          <div className={styles.content} id="content">
-            {children}
-          </div>
-        </div>
-        <div className={styles.navigationSpacer} />
-        <div className={styles.navigation}>
-          <NavigationList />
-        </div>
-      </div>
+      <TopMenu
+        path={location.pathname}
+        handleToggleEditMode={visitActions.toggleInlineEditing}
+        handleToggleFullscreen={fullscreenAction.toggleFullscreen}
+        fullscreen={fullscreen}
+      />
+      <main
+        style={editModeStyle}
+        className={styles.content}
+        id={'content'}
+      >
+        {children}
+      </main>
+      <div className={styles.navigation}><NavigationList /></div>
     </div>
   )
 }

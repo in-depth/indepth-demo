@@ -2,16 +2,12 @@
 require('dotenv').config()
 
 const webpack = require('webpack')
-const WebpackDevServer = require('webpack-dev-server')
 const path = require('path')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
-const ExtractTextPlugin = require('extract-text-webpack-plugin');
+const ExtractTextPlugin = require('extract-text-webpack-plugin')
 
-const modulevalues = require('postcss-modules-values')
-const cssnext = require('postcss-cssnext')
-const nested = require('postcss-nested')
-const atImport = require('postcss-import')
-const cssnano = require('cssnano')
+const postcssConfig = require('./postcss.config')
+
 /* eslint-enable */
 
 const PATHS = {
@@ -66,24 +62,7 @@ const webpackconfig = {
       },
     ],
   },
-  postcss: () => ([
-    atImport,
-    nested,
-    cssnext,
-    modulevalues,
-    cssnano({
-      sourcemap: true,
-      autoprefixer: {
-        add: true,
-        remove: true,
-        browsers: ['last 2 versions'],
-      },
-      safe: true,
-      discardComments: {
-        removeAll: true,
-      },
-    }),
-  ]),
+  postcss: () => postcssConfig,
   sassLoader: {
     data: '@import "shared/styles/main.scss";',
     includePaths: [PATHS.src],

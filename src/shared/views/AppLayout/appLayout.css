@@ -1,11 +1,11 @@
-@import '../../styles/colors';
-@import '../../styles/mixins';
+@import '../../styles/mixins.css';
+@value baseColor from '../../styles/colors.css';
+@value topMenuHeight from '../../styles/vars.css';
+@value botMenuHeight from '../../styles/vars.css';
 
 .appLayout {
-  display: flex;
-  flex-direction: column;
-  min-height: 100vh;
-  font-family: 'Open Sans', sans-serif;
+  height: 100vh;
+  width: 100vw;
 }
 
 .appLayout.edit {
@@ -13,21 +13,26 @@
 }
 
 .content {
-  height: calc(100vh - 100px);
-  overflow-y: scroll;
-  -webkit-overflow-scrolling: touch;
-  overflow-x: hidden;
+  height: 100%;
+  width: 100%;
+    padding-bottom: botMenuHeight;
+    padding-top: topMenuHeight;
+
+  &> div {
+    overflow-y: scroll;
+    -webkit-overflow-scrolling: touch;
+  }
 }
 
 .navigation {
-  background-color: var(--mainColor);
+  background-color: baseColor;
   position: fixed;
   bottom: 0;
   left: 0;
   right: 0;
   display: flex;
   justify-content: center;
-  height: 50px;
+  height: botMenuHeight;
   box-shadow: 2px 2px 3px 2px rgba(0,0,0,0.25);
 }
 

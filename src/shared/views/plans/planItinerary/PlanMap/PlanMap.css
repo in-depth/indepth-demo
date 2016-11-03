@@ -1,4 +1,4 @@
-@import '../../../../styles/colors.css';
+@value baseColor from '../../../../styles/colors.css';
 
 .map {
   display: block;
@@ -8,7 +8,7 @@
 }
 
 .title {
-  color: var(--mainColor);
+  color: baseColor;
   padding-top: 20px;
   padding-bottom: 10px;
   font-size: 20px;

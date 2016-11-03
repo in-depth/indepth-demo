@@ -1,5 +1,3 @@
-:root {
-  --sm: 480px;
-  --md: 768px;
-  --lg: 1280px;
-}
+@value sm: (max-width: 480px);
+@value md: (max-width: 780px);
+@value lg: (max-width: 1280px);

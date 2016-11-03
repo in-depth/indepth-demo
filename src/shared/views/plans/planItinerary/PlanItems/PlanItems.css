@@ -1,4 +1,4 @@
-@import '../../../../styles/colors.css';
+@value baseColor, textGrey from '../../../../styles/colors.css';
 
 .item {
   display: flex;
@@ -15,7 +15,7 @@
 .itemText {
   display: flex;
   flex-direction: column;
-  color: var(--textGrey)
+  color: textGrey
 }
 
 .itemText p {
@@ -24,11 +24,11 @@
 }
 
 .itemHeader {
-  color: var(--mainColor);
+  color: baseColor;
 }
 
 .title {
-  color: var(--mainColor);
+  color: baseColor;
   padding-top: 20px;
   padding-bottom: 10px;
   font-size: 20px;

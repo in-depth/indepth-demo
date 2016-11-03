@@ -1,8 +1,8 @@
-@import '../../../../styles/colors';
+@value baseColor from '../../../../styles/colors.css';
 
 .title {
   text-align: center;
-  color: var(--mainColor);
+  color: baseColor;
   font-size: 30px;
   padding: 20px 20px;
 }

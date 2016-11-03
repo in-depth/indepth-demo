@@ -1,12 +1,12 @@
 import React from 'react'
 
-import { VisitMuseumHeader, VisitPrimaryLinksList, VisitFeaturedList } from '../index'
+import { VisitMuseumHeader, VisitFeaturedList } from '../index'
 
 import styles from './Visit.css'
 
 const Visit = (props) => {
   return (
-    <div>
+    <div className={styles.main}>
       <VisitMuseumHeader
         inlineEditing={props.inlineEditing}
         action={props.actions.toggleInlineEditing}

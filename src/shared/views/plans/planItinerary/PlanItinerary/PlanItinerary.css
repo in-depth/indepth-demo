@@ -1,6 +1,6 @@
-@import '../../../../styles/colors';
+@value baseColor from '../../../../styles/colors.css';
 
 .itinerary h3 {
-  color: var(--mainColor);
+  color: baseColor;
   padding: 10px 0;
 }

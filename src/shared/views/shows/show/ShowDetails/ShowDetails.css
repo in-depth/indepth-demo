@@ -1,7 +1,7 @@
-@import '../../../../styles/colors';
+@value accentGrey from '../../../../styles/colors.css';
 
 .details {
-  background-color: var(--accentGrey);
+  background-color: accentGrey;
   padding: 20px 20px;
   display: flex;
   flex-direction: column;

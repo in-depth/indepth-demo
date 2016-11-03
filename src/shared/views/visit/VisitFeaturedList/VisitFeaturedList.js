@@ -11,22 +11,20 @@ const VisitFeaturedList = (props) => {
         <div
           key={featuredLink.title}
           className={styles.featuredWrapper}
-          style={{
-            backgroundImage: `url(${featuredLink.backgroundUrl})`,
-            backgroundRepeat: 'no-repeat',
-            backgroundPosition: 'center',
-            backgroundSize: 'cover',
-          }}
         >
-          <div>
-            <VisitFeaturedLink
-              key={index}
-              inlineEditing={props.inlineEditing}
-              featuredLink={featuredLink}
-              index={index}
-              action={props.action}
-            />
-          </div>
+          <VisitFeaturedLink
+            key={index}
+            inlineEditing={props.inlineEditing}
+            featuredLink={featuredLink}
+            index={index}
+            action={props.action}
+            style={{
+              backgroundImage: `url(${featuredLink.backgroundUrl})`,
+              backgroundRepeat: 'no-repeat',
+              backgroundPosition: 'center',
+              backgroundSize: 'cover',
+            }}
+          />
         </div>
     ))}
     </div>
