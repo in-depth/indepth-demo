@@ -1,9 +1,18 @@
-.plans {
+@value lg from '../../../../styles/breakpoints.css';
+
+.main {
   display: flex;
-  justify-content: space-around;
-  flex-wrap: wrap;
+  flex-direction: column;
+  height: 100%;
+
+  @media lg {
+    height: 100%;
+    align-items: center;
+    justify-content: space-around;
+  }
 }
 
-.link {
-  display: flex;
+.plansWrapper {
+  height: 150px;
+  margin-bottom: 2px;
 }

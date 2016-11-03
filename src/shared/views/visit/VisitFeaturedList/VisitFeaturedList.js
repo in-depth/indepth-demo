@@ -31,7 +31,6 @@ const VisitFeaturedList = (props) => {
   )
 }
 
-
 VisitFeaturedList.propTypes = {
   featuredLinks: React.PropTypes.array.isRequired,
   inlineEditing: React.PropTypes.bool.isRequired,

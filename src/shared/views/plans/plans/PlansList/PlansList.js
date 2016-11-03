@@ -1,16 +1,21 @@
 import React from 'react'
-import { Link } from 'react-router'
-import { PlansCard } from '../index'
+import { PlanLink } from '../index'
 
-import styles from './plansList.css'
+import styles from './PlansList.css'
 
 const PlansList = (props) => {
   return (
-    <div className={styles.plans}>
+    <div className={styles.main}>
       {props.plans.map((plan) => (
-        <Link className={styles.link} key={plan.title} to={plan.path}>
-          <PlansCard image={plan.backgroundUrl} text={plan.subtitle} title={plan.title} />
-        </Link>
+        <div key={plan.title} className={styles.plansWrapper}>
+          <PlanLink
+            image={plan.backgroundUrl}
+            subtitle={plan.subtitle}
+            title={plan.title}
+            backgroundUrl={plan.backgroundUrl}
+            path={plan.path}
+          />
+        </div>
       ))}
     </div>
   )
