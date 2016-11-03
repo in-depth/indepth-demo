@@ -33,7 +33,7 @@ const AppLayout = ({
       >
         {children}
       </main>
-      <div className={styles.navigation}><NavigationList /></div>
+      <NavigationList />
     </div>
   )
 }
