@@ -1,40 +1,36 @@
+@import '../../../styles/mixins.css';
 @value lg from '../../../styles/breakpoints.css';
 
 .museumHeader {
+  border-bottom: 2px solid #ddd;
+  position: relative;
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
   background-color: #787878;
-  height: 20%;
+  height: 30%;
   color: white;
 
   @media lg {
+    border: none;
     height: 100%;
   }
 }
 
-@media (max-width: 350px) { /* thin devices */
-  .museumHeader {
-    background-size: cover;
-  }
-}
-
 .museumName {
-  font-size: 10vw;
+  @mixin fp font-size, 28, 120;
+  font-weight: 500;
   margin: 0px;
   margin-bottom: 5px;
   text-align: center;
-
-  @media lg {
-  }
 }
 
 .museumTagline {
-  font-size: 15px;
+  @mixin fp font-size, 18, 55;
   font-weight: lighter;
   margin: 0px;
   text-align: center;
-  padding: 0 5px;
+  padding: 7px auto;
 }
 
 .overlay {
@@ -45,4 +41,11 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+}
+
+.downarrow {
+  position: absolute;
+  width: 4.7em;
+  height: 4.7em;
+  bottom: 0;
 }
