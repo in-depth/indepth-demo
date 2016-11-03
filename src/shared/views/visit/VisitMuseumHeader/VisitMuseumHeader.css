@@ -41,9 +41,16 @@
   align-items: center;
 }
 
-.downarrow {
+.arrowContainer {
+  width: 100%;
   position: absolute;
+  bottom: 0;
+  left: 0;
+  text-align: center;
+  height: 4.8em;
+}
+
+.downarrow {
   width: 4.7em;
   height: 4.7em;
-  bottom: 0;
 }
