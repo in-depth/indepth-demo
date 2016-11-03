@@ -1,7 +1,7 @@
 @import '../../styles/mixins.css';
 @value baseColor from '../../styles/colors.css';
-@value topMenuHeight from '../../styles/vars.css';
-@value botMenuHeight from '../../styles/vars.css';
+@value topMenuHeight, botMenuHeight from '../../styles/vars.css';
+@value lg from '../../styles/breakpoints.css';
 
 .appLayout {
   height: 100vh;
@@ -15,8 +15,12 @@
 .content {
   height: 100%;
   width: 100%;
-    padding-bottom: botMenuHeight;
-    padding-top: topMenuHeight;
+  padding-bottom: botMenuHeight;
+  padding-top: topMenuHeight;
+
+  @media lg {
+    padding-bottom: 0;
+  }
 
   &> div {
     overflow-y: scroll;
@@ -34,6 +38,10 @@
   justify-content: center;
   height: botMenuHeight;
   box-shadow: 2px 2px 3px 2px rgba(0,0,0,0.25);
+
+  @media lg {
+    display: none;
+  }
 }
 
 .topMenu {

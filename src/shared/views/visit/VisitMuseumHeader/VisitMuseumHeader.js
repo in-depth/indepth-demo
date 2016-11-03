@@ -36,7 +36,6 @@ const getMuseumInfo = (baseUrl) => {
   let subdomain = ''
   if (typeof location !== 'undefined') {
     subdomain = location.hostname.split('.')[0].toLowerCase()
-    console.log(subdomain)
   } else if (baseUrl) {
     subdomain = baseUrl.split('.')[0].toLowerCase()
   }
@@ -55,11 +54,19 @@ const VisitMuseumHeader = (props) => {
   const baseUrl = props.location.baseUrl ? props.location.baseUrl : ''
   const museumInfo = getMuseumInfo(baseUrl)
   return (
-    <div className={styles.museumHeader} style={{ backgroundImage: `url("${museumInfo.image}")` }} onDoubleClick={props.action}>
+    <div
+      className={styles.museumHeader}
+      style={{ backgroundImage: `url("${museumInfo.image}")` }}
+      onDoubleClick={props.action}
+    >
       <div className={styles.overlay}>
         <h1 className={styles.museumName}>{museumInfo.name}</h1>
         <p className={styles.museumTagline}>{museumInfo.tagline}</p>
       </div>
+      <svg fill={'#ffffff'} viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+        <path d="M16.59 8.59L12 13.17 7.41 8.59 6 10l6 6 6-6z" />
+        <path d="M0 0h24v24H0z" fill="none" />
+      </svg>
     </div>
   )
 }
