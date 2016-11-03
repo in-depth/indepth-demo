@@ -1,7 +1,14 @@
 @value baseColor from '../../../styles/colors.css';
+@value botMenuHeight from '../../../styles/vars.css';
+@value lg from '../../../styles/breakpoints.css';
 
 .menu {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
   width: 100%;
+  height: botMenuHeight;
   background: baseColor;
   display: flex;
   justify-content: center;
@@ -9,5 +16,9 @@
   list-style-type: none;
   padding: 0;
   margin: 0;
-  box-shadow: 0 -2px 5px 0 rgba(0,0,0,0.15);
+  box-shadow: 2px 2px 3px 2px rgba(0,0,0,0.25);
+
+  @media lg {
+    display: none;
+  }
 }
