@@ -1,10 +1,13 @@
 import React from 'react'
-import { DeepZoom } from '../../plugins/DeepZoom'
+import DeepZoom from '../../plugins/DeepZoom/osd'
 
 const DeepZoomDemo = () => {
   return (
     <div>
-      <DeepZoom url="http://www.gigapan.com/embeds/x9jj_i-vmX8/" />
+      <DeepZoom
+        title={'Paris'}
+        url={'https://s3-us-west-2.amazonaws.com/indepthapp/deepzooms/paris/paris.dzi'}
+      />
     </div>
   )
 }
