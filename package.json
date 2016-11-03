@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "start": "node --harmony webpack.dev.js",
-    "ssr-start-prod": "npm run dist:clean && npm run dist:copy-static && npm run universal-webpack-prod && npm run start-server",
+    "ssr-start-prod": "npm run dist:clean && npm run dist:copy-static && npm run universal-webpack-prod && SSLONLY=true npm run start-server",
     "ssr-start": "npm run dist:clean && npm run dist:copy-static && npm run universal-webpack && npm run start-server",
     "universal-webpack": "NODE_ENV=production node --harmony webpack.universal.js",
     "universal-webpack-prod": "NODE_ENV=production node --harmony webpack.prod.js",

@@ -1,6 +1,9 @@
-import { UPDATE_FEATURED_LINKS, UPDATE_PRIMARY_LINKS, TOGGLE_INLINE_EDITING } from './VisitActions'
+import { UPDATE_FEATURED_LINKS, UPDATE_PRIMARY_LINKS, TOGGLE_INLINE_EDITING, UPDATE_HEADER } from './VisitActions'
 
 const visitState = {
+  header: 'Demo',
+  subHeader: 'The official demo museum',
+  image: '/static/images/museums/tepapa.jpg',
   featuredLinks: [
     {
       title: 'DEMO FEATURES',
@@ -71,6 +74,11 @@ export const VisitReducer = (state = visitState, action) => {
           }
           return link
         }),
+      })
+    case UPDATE_HEADER:
+      return Object.assign({}, state, {
+        header: action.header,
+        subHeader: action.subHeader,
       })
     case TOGGLE_INLINE_EDITING:
       return Object.assign({}, state, {
