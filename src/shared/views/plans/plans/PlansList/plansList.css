@@ -1,4 +1,6 @@
 @value lg from '../../../../styles/breakpoints.css';
+@value pageHeaderHeight from '../../../../styles/vars.css';
+@value accentGrey from '../../../../styles/colors.css';
 
 .main {
   display: flex;
@@ -6,22 +8,59 @@
   height: 100%;
 
   @media lg {
+    justify-content: center;
+    align-items: center;
   }
 }
 
-.plansWrapper {
+.planWrapper {
   height: 150px;
   margin-bottom: 2px;
 
   @media lg {
-    height: 200px;
-    width: 200px;
+    display: flex;
+    flex-wrap: wrap;
+    height: 500px;
+    width: 300px;
   }
 }
 
 .plansList {
   @media lg {
     display: flex;
-    flex-direction: row
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    max-width: 900px;
+  }
+}
+
+.pageHeader {
+  display: none;
+
+  @media lg {
+    font-size: 35px;
+    height: pageHeaderHeight;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+.subHeader {
+  display: none;
+
+  @media lg {
+    display: block;
+    text-align: center;
+  }
+}
+
+.plansWrapper {
+  @media lg {
+    background-color: accentGrey;
+    width: 100%;
+    display: flex;
+    justify-content: center;
   }
 }
