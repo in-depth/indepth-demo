@@ -1,10 +1,13 @@
+@value baseColor from '../../../styles/colors.css';
+
 .menu {
+  width: 100%;
+  background: baseColor;
   display: flex;
   justify-content: center;
   width: 100%;
   list-style-type: none;
-  padding: 0px;
-  margin: 0px;
-  max-width: 600px;
+  padding: 0;
+  margin: 0;
   box-shadow: 0 -2px 5px 0 rgba(0,0,0,0.15);
 }
