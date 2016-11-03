@@ -6,13 +6,22 @@
   height: 100%;
 
   @media lg {
-    height: 100%;
-    align-items: center;
-    justify-content: space-around;
   }
 }
 
 .plansWrapper {
   height: 150px;
   margin-bottom: 2px;
+
+  @media lg {
+    height: 200px;
+    width: 200px;
+  }
+}
+
+.plansList {
+  @media lg {
+    display: flex;
+    flex-direction: row
+  }
 }
