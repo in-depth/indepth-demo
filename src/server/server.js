@@ -84,6 +84,22 @@ function renderFullPage(html, preloadedState) {
       <link rel="stylesheet" href="/common.css"/>
       <link rel="manifest" href="/static/manifest.json">
       <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Open+Sans:300,400,400i,700|Roboto|Material+Icons">
+      <style>
+        * { box-sizing: border-box; }
+        html, body, #root {
+          width: 100%;
+          height: 100%;
+        }
+        html {
+          -webkit-font-smoothing: antialiased;
+          -moz-osx-font-smoothing: grayscale;
+          font-family: 'Open Sans', 'Roboto', Helvetica, sans-serif;
+          color: #686868;
+        }
+        body, #root {
+          position: relative;
+        }
+      </style>
     </head>
     <body>
       <script>

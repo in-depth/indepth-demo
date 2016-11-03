@@ -26,14 +26,14 @@ const AppLayout = ({
         handleToggleFullscreen={fullscreenAction.toggleFullscreen}
         fullscreen={fullscreen}
       />
-      <div style={editModeStyle} className={styles.content}>
-        <div className={styles.content} id="content">
-          {children}
-        </div>
-      </div>
-      <div className={styles.navigation}>
-        <NavigationList />
-      </div>
+      <main
+        style={editModeStyle}
+        className={styles.content}
+        id={'content'}
+      >
+        {children}
+      </main>
+      <div className={styles.navigation}><NavigationList /></div>
     </div>
   )
 }

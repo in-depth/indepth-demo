@@ -1,12 +1,11 @@
 @import '../../styles/mixins.css';
 @value baseColor from '../../styles/colors.css';
+@value topMenuHeight from '../../styles/vars.css';
 @value botMenuHeight from '../../styles/vars.css';
 
 .appLayout {
-  display: flex;
-  flex-direction: column;
-  min-height: 100vh;
-  font-family: 'Open Sans', sans-serif;
+  height: 100vh;
+  width: 100vw;
 }
 
 .appLayout.edit {
@@ -14,11 +13,18 @@
 }
 
 .content {
-  /*height: calc(100vh - 100px);*/
   height: 100%;
-  overflow-y: scroll;
-  -webkit-overflow-scrolling: touch;
-  overflow-x: hidden;
+  width: 100%;
+
+  &> div {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding-bottom: botMenuHeight;
+    padding-top: topMenuHeight;
+    overflow-y: scroll;
+    -webkit-overflow-scrolling: touch;
+  }
 }
 
 .navigation {
@@ -29,7 +35,7 @@
   right: 0;
   display: flex;
   justify-content: center;
-  height: 50px;
+  height: botMenuHeight;
   box-shadow: 2px 2px 3px 2px rgba(0,0,0,0.25);
 }
 
