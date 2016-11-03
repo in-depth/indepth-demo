@@ -35,8 +35,8 @@
 .navigationLink {
   width: 100%;
   max-width: 150px;
-  border-left: 1px solid #7db361;
-  border-right: 1px solid #7db361;
+  border-left: 1px solid #fff;
+  border-right: 1px solid #fff;
   padding-top: 5px;
   padding-bottom: 2px;
 }

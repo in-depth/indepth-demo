@@ -1,0 +1,15 @@
+@value lg from '../../../styles/breakpoints.css';
+@value botHeaderHeight, topHeaderHeight from '../../../styles/vars.css';
+
+.main {
+  width: 100%;
+  height: 100%;
+  background: crimson;
+
+  @media lg {
+    & > div {
+      width: 100%;
+      height: calc(100vh - topHeaderHeight);
+    }
+  }
+}
