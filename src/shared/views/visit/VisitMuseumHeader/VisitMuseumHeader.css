@@ -1,6 +1,7 @@
 @value lg from '../../../styles/breakpoints.css';
 
 .museumHeader {
+  position: relative;
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -45,4 +46,11 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+}
+
+.downarrow {
+  position: absolute;
+  width: 4.7em;
+  height: 4.7em;
+  bottom: 0;
 }
