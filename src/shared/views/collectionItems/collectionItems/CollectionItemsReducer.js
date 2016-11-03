@@ -9,7 +9,7 @@ const collectionItemState = {
       image: {
         id: 'HNT3APBUNY-img',
         url: '/static/images/collection-items/aircraft-carrier.jpg',
-        alt: 'Aircrat Carrier',
+        alt: 'Aircraft Carrier',
       },
       shortDesc: 'USS George Washington (CVN-73) is a United States Navy nuclear-powered aircraft carrier ("supercarrier"), the sixth carrier in the Nimitz class and the fourth US Navy ship named after George Washington, the first president of the United States. She was built by Newport News Shipbuilding and was commissioned on 4 July 1992.',
       fullDesc: [
@@ -37,7 +37,7 @@ const collectionItemState = {
       },
       exhibition: 'Military future',
       assets: {
-        deepzoom: ['http://www.gigapan.com/embeds/1bOtzzlDMTU/'],
+        deepzoom: ['https://s3-us-west-2.amazonaws.com/indepthapp/deepzooms/aircraftcarrier/aircraftcarrier.dzi'],
         models3d: ['http://sketchfab.com/models/16e5e1fdeff3434e89dba4f6b140601a/embed'],
         images: ['https://i.ytimg.com/vi/7iVUrSKH9QU/maxresdefault.jpg', 'http://navaltoday.com/wp-content/uploads/2015/09/USS-George-Washington-Prepares-for-Southern-Seas-2015.jpg', 'https://upload.wikimedia.org/wikipedia/commons/c/c7/USS_George_Washington_(CVN_73)_arrives_at_Fleet_Activities_Yokosuka,_Japan.jpg', 'https://s-media-cache-ak0.pinimg.com/originals/eb/19/c1/eb19c10b4e9568c4838106c6bce5c97d.jpg'], // eslint-disable-line
         chat: 'HNT3APBUNY-chat',
@@ -77,7 +77,7 @@ const collectionItemState = {
       },
       exhibition: 'Awesome Art',
       assets: {
-        deepzoom: ['http://www.gigapan.com/embeds/Nn-IU96I7s8/'],
+        deepzoom: ['https://s3-us-west-2.amazonaws.com/indepthapp/deepzooms/paulhugot/paulhugot.dzi'],
         models3d: ['http://sketchfab.com/models/c1c17aaf51474295b55db6eabc92763e/embed'],
         chat: 'APYPEBMF6X-chat',
       },
@@ -111,7 +111,7 @@ const collectionItemState = {
       },
       exhibition: 'Extreme past',
       assets: {
-        deepzoom: ['http://www.gigapan.com/embeds/zZ_uvV_lSaQ/'],
+        deepzoom: ['https://s3-us-west-2.amazonaws.com/indepthapp/deepzooms/dinosaur/dinosaur.dzi'],
         models3d: ['http://sketchfab.com/models/641feb1a485b492c8de31e84ff89ad64/embed'],
         chat: 'CWVSA3MEVN-chat',
       },
