@@ -1,6 +1,10 @@
 @value baseColor from '../../../../styles/colors.css';
+@value lg from '../../../../styles/breakpoints.css';
 
-.itinerary h3 {
-  color: baseColor;
-  padding: 10px 0;
+.main {
+  @media lg {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+  }
 }

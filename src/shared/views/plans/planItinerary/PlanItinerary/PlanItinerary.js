@@ -8,7 +8,7 @@ const items = ['APYPEBMF6X', 'CWVSA3MEVN', 'HNT3APBUNY']
 
 const PlanItinerary = (props) => {
   return (
-    <div className={styles.intinerary}>
+    <div className={styles.main}>
       <PlanMap />
       <PlanItems items={items} intinerary={props.intinerary} />
     </div>
