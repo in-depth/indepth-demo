@@ -1,10 +1,18 @@
+@value lg from '../../../../styles/breakpoints.css';
+
 .checkboxs {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   padding: 10px 20px;
+  @media lg {
+
+  }
 }
 
 .checkbox {
   width: calc(100vw / 3);
+  @media lg {
+    width: calc(100vw / 9);
+  }
 }

@@ -9,9 +9,9 @@ const PlansList = (props) => {
       <div className={styles.pageHeader}>
         <h1>PLAN</h1>
       </div>
-      <p className={styles.subHeader}>Pick a plan below to get a custom itinerary</p>
-      <div className={styles.plansWrapper}>
-        <div className={styles.plansList}>
+      <h2 className={styles.subHeader}>Pick a plan below to get a custom itinerary</h2>
+      <div className={styles.gridWrapper}>
+        <div className={styles.grid}>
           {props.plans.map((plan) => (
             <div key={plan.title} className={styles.planWrapper}>
               <PlanLink

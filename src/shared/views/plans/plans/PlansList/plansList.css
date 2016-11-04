@@ -1,15 +1,13 @@
 @value lg from '../../../../styles/breakpoints.css';
 @value pageHeaderHeight from '../../../../styles/vars.css';
-@value accentGrey from '../../../../styles/colors.css';
+@value accentGrey, baseColor from '../../../../styles/colors.css';
 
 .main {
   display: flex;
   flex-direction: column;
-  height: 100%;
-
+  height: 100vh;
   @media lg {
-    justify-content: center;
-    align-items: center;
+    background-color: accentGrey;
   }
 }
 
@@ -21,16 +19,16 @@
     display: flex;
     flex-wrap: wrap;
     height: 500px;
-    width: 300px;
+    flex-grow: 1;
+    min-width: 20%;
+    margin: 5px 5px;
   }
 }
 
-.plansList {
+.grid {
   @media lg {
     display: flex;
-    flex-direction: row;
     flex-wrap: wrap;
-    justify-content: space-around;
     max-width: 900px;
   }
 }
@@ -40,10 +38,11 @@
 
   @media lg {
     font-size: 35px;
-    height: pageHeaderHeight;
+    min-height: pageHeaderHeight;
     display: flex;
     justify-content: center;
     align-items: center;
+    background-color: white;
   }
 }
 
@@ -53,14 +52,18 @@
   @media lg {
     display: block;
     text-align: center;
+    padding-bottom: 30px;
+    padding-top: 0;
+    background-color: white;
+    color: baseColor;
   }
 }
 
-.plansWrapper {
+.gridWrapper {
   @media lg {
-    background-color: accentGrey;
     width: 100%;
     display: flex;
     justify-content: center;
+    padding: 50px;
   }
 }
