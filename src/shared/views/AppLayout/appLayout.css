@@ -8,10 +8,6 @@
   width: 100vw;
 }
 
-.appLayout.edit {
-  pointer-events: none;
-}
-
 .content {
   height: 100%;
   width: 100%;

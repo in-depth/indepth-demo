@@ -2,9 +2,41 @@
 @value lg from '../../../../styles/breakpoints.css';
 
 .main {
+  height: 100%;
   @media lg {
     display: flex;
     justify-content: center;
     flex-direction: column;
+  }
+}
+
+.title {
+  color: baseColor;
+  padding-top: 20px;
+  padding-bottom: 10px;
+  font-size: 20px;
+  @media lg {
+    color: inherit;
+    font-size: 35px;
+  }
+}
+
+.header {
+  display: none;
+  @media {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: pageHeaderHeight;
+  }
+}
+.subHeader {
+  display: none;
+  @media lg {
+    display: block;
+    text-align: center;
+    padding-bottom: 30px;
+    padding-top: 0;
+    color: baseColor;
   }
 }
