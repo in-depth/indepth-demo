@@ -42,7 +42,6 @@
   display: flex;
   flex-direction: column;
   align-items: stretch;
-  justify-content: center;
 
   @media lg {
     padding: 12px;

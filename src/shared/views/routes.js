@@ -17,7 +17,7 @@ import PageNotFound from './PageNotFound/PageNotFound'
 import { DemoContainer } from './demos'
 
 export const navigationLinks = [
-  { title: 'VISIT', link: '/', icon: 'account_balance' },
+  { title: 'VISIT', link: '/', icon: 'account_balance', main: true },
   { title: 'FIND', link: '/collection', icon: 'search' },
   { title: 'MAP', link: '/map', icon: 'map' },
   { title: 'PLAN', link: '/plan', icon: 'directions_walk' },
