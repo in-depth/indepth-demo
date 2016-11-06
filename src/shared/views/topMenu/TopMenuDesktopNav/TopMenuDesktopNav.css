@@ -29,13 +29,13 @@
 
 .navLink {
   display: flex;
-  justify-content: space-between;
   align-items: center;
+  justify-content: space-between;
   color: #fff;
 
   span {
-    @mixin fp font-size, 9, 14;
     font-weight: 600;
+    margin-left: 13px;
   }
 
   svg {
