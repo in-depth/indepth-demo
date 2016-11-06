@@ -1,14 +1,30 @@
 @value baseColor from '../../../../styles/colors.css';
+@value lg from '../../../../styles/breakpoints.css';
+
+.titleWrapper {
+  @media lg {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+}
 
 .title {
   text-align: center;
   color: baseColor;
   font-size: 30px;
   padding: 20px 20px;
+  @media lg {
+    height: 150px;
+  }
 }
 
 .headerImage {
   width: 100%;
   max-height: 200px;
   object-fit: cover;
+  @media lg {
+    max-height: 400px;
+  }
 }
