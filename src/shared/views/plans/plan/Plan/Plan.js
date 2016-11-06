@@ -6,14 +6,13 @@ import { ButtonRaised } from '../../../../components'
 import styles from './Plan.css'
 
 const Plan = (props) => {
-  console.log(props)
   return (
     <div className={styles.main}>
       <div className={styles.header}>
         <h1>Plan</h1>
       </div>
       <p className={styles.intro}>
-        Give us a few details and we'll create the perfect plan for your experience
+        {'Give us a few details and we\'ll create the perfect plan for your experience'}
       </p>
       <div className={styles.preferencesWrapper}>
         <div className={styles.preferences}>

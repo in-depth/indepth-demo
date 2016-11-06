@@ -20,7 +20,7 @@
 .itemText {
   display: flex;
   flex-direction: column;
-  color: textGrey
+  color: textGrey;
 }
 
 .itemText p {
