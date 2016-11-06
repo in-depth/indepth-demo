@@ -34,16 +34,14 @@
     display: block;
     background-color: baseColor;
     display: flex;
-    align-items: stretch;
+    align-items: center;
     justify-content: center;
   }
 }
 
 .logo {
-  display: block;
   color: #fff;
   @mixin fp font-size, 20, 40;
-  width: 200px;
-  height: 100%;
+  width: 30%;
   margin: 0;
 }

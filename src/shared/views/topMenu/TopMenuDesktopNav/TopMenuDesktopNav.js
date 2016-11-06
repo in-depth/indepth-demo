@@ -22,7 +22,11 @@ const TopMenuDesktopNav = ({ navs }) => {
 
 const DesktopNavItem = ({ link, title, icon }) => (
   <li className={styles.navMain}>
-    <Link to={link} className={styles.navLink}>
+    <Link
+      to={link}
+      className={styles.navLink}
+      activeStyle={{ borderTop: '3px solid #fff' }}
+    >
       <Icon icon={icon} />
       <span>{title}</span>
     </Link>
