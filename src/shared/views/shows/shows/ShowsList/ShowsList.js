@@ -34,6 +34,7 @@ const ShowsList = (props) => {
                 <h3 className={styles.showHeader}>{props.shows[showId].title}</h3>
                 <p className={styles.shortDesc}>{props.shows[showId].shortDesc}</p>
                 <p className={styles.time}>{props.shows[showId].time}</p>
+                <p className={styles.date}>{props.shows[showId].date}</p>
               </div>
             </Link>
           </div>
