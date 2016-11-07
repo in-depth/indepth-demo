@@ -1,11 +1,22 @@
 @value accentGrey from '../../../../styles/colors.css';
+@value lg from '../../../../styles/breakpoints.css';
 
-.details {
+.detailsWrapper {
   background-color: accentGrey;
   padding: 20px 20px;
   display: flex;
   flex-direction: column;
   justify-content: center;
+  align-items: center;
+  @media lg {
+    padding: 40px;
+  }
+}
+
+.details {
+  @media lg {
+    width: 900px;
+  }
 }
 
 .details svg {
@@ -28,4 +39,14 @@
 
 .description {
   padding: 20px 0;
+  @media lg {
+    display: flex;
+    justify-content: center;
+  }
+}
+
+.description p {
+  @media lg {
+    width: 900px;
+  }
 }

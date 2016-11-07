@@ -6,7 +6,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    flex-direction: column;
+    height: 150px;
   }
 }
 
@@ -16,7 +16,7 @@
   font-size: 30px;
   padding: 20px 20px;
   @media lg {
-    height: 150px;
+    font-size: 35px;
   }
 }
 
