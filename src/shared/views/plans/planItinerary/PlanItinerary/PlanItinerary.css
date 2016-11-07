@@ -5,5 +5,37 @@
 .main {
   height: 100%;
   width: 100%;
-  overflow-y: scroll;
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  @media lg {
+    height: pageHeaderHeight;
+  }
+}
+
+.title {
+  color: baseColor;
+  padding-top: 20px;
+  padding-bottom: 10px;
+  font-size: 20px;
+  @media lg {
+    color: inherit;
+    font-size: 35px;
+  }
+}
+
+.subHeader {
+  display: none;
+  @media lg {
+    display: initial;
+    text-align: center;
+    padding-bottom: 30px;
+    padding-top: 0;
+    color: baseColor;
+  }
 }
