@@ -35,6 +35,7 @@
 
 .pageHeader {
   display: none;
+  visibility: hidden;
 
   @media lg {
     font-size: 35px;
@@ -48,6 +49,7 @@
 
 .subHeader {
   display: none;
+  visibility: hidden;
 
   @media lg {
     display: block;
