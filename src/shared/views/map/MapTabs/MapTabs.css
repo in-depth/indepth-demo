@@ -1,0 +1,27 @@
+@value lg from '../../../styles/breakpoints.css';
+
+.header {
+  display: none;
+  @media lg {
+    height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+.header h1 {
+  @media lg {
+    font-size: 35px;
+  }
+}
+
+.tabs {
+  @media lg {
+    display: flex;
+    justify-content: center;
+    &> nav {
+      align-self: center;
+    }
+  }
+}

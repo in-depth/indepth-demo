@@ -1,6 +1,6 @@
 import React from 'react'
 
-import { VisitMuseumHeader, VisitFeaturedList } from '../index'
+import { VisitMuseumHeader, VisitFeaturedList, VisitPrimaryLinksList } from '../index'
 
 import styles from './Visit.css'
 
@@ -10,6 +10,11 @@ const Visit = (props) => {
       <VisitMuseumHeader
         inlineEditing={props.inlineEditing}
         action={props.actions.toggleInlineEditing}
+      />
+      <VisitPrimaryLinksList
+        primaryLinks={props.primaryLinks}
+        inlineEditing={props.inlineEditing}
+        action={props.actions.updatePrimaryLinks}
       />
       <VisitFeaturedList
         inlineEditing={props.inlineEditing}
