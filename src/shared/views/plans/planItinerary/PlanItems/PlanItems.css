@@ -1,6 +1,35 @@
 @value baseColor, textGrey, accentGrey from '../../../../styles/colors.css';
 @value lg from '../../../../styles/breakpoints.css';
 
+.main {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: stretch;
+  height: 100%;
+  @media lg {
+
+  }
+}
+
+.headerWrapper {
+  @media lg {
+    height: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+.itemsWrapper {
+  @media lg {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    background-color: accentGrey;
+  }
+}
+
 .item {
   display: flex;
   flex-direction: row;
@@ -40,30 +69,6 @@
   @media lg {
     font-size: 35px;
     color: inherit;
-  }
-}
-
-.main {
-  @media lg {
-    height: 600px;
-  }
-}
-
-.headerWrapper {
-  @media lg {
-    height: 150px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-}
-
-.itemsWrapper {
-  @media lg {
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    background-color: accentGrey;
   }
 }
 
