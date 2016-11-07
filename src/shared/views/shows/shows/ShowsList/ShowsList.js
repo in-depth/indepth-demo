@@ -16,6 +16,7 @@ const colorPicker = () => {
 }
 
 const ShowsList = (props) => {
+  console.log(props.shows[1].imageUrl)
   return (
     <div className={styles.ShowListFullPage}>
       <div className={styles.header}>
@@ -26,7 +27,7 @@ const ShowsList = (props) => {
         {props.order.map((showId, index) => (
           <div className={styles.linkWrapper} key={showId} style={backgroundColor(index)}>
             <Link className={styles.showItem} to={`/events/${showId}`}>
-              <div className={styles.image} style={{ backgroundImage: `url(${props.shows[showId].imageUrl}`, backgroundColor: `${colorPicker()}` }}>
+              <div className={styles.image} style={{ backgroundImage: `url(${props.shows[showId].imageUrl})`, backgroundColor: `${colorPicker()}` }}>
                   <span className={styles.dateDay}>{props.shows[showId].day}</span>
                   <span className={styles.dateMonth}>{props.shows[showId].month}</span>
               </div>
