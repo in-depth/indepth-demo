@@ -12,9 +12,9 @@ const PlanItinerary = (props) => {
       <div className={styles.header}>
         <h2 className={styles.title}>{'Recommended Route'}</h2>
       </div>
-      <p className={styles.subHeader}>
-        {'Thanks! We\'ve put together a schedule for you.'}
-      </p>
+      <div className={styles.subHeader}>
+        <p>{'Thanks! We\'ve put together a schedule for you.'}</p>
+      </div>
       <PlanMap />
       <PlanItems items={items} intinerary={props.intinerary} />
     </div>

@@ -32,8 +32,8 @@
 .subHeader {
   display: none;
   @media lg {
-    display: initial;
-    text-align: center;
+    display: flex;
+    justify-content: center;
     padding-bottom: 30px;
     padding-top: 0;
     color: baseColor;
