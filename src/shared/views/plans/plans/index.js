@@ -1,9 +1,9 @@
 import PlansRoute from './PlansRoute'
 import PlansList from './PlansList/PlansList'
-import PlansCard from './PlansCard/PlansCard'
+import PlanLink from './PlanLink/PlanLink'
 
 export {
   PlansRoute,
   PlansList,
-  PlansCard,
+  PlanLink,
 }

@@ -1,4 +1,35 @@
-@value baseColor, textGrey from '../../../../styles/colors.css';
+@value baseColor, textGrey, accentGrey from '../../../../styles/colors.css';
+@value lg from '../../../../styles/breakpoints.css';
+
+.main {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: stretch;
+  height: 100%;
+  @media lg {
+
+  }
+}
+
+.headerWrapper {
+  @media lg {
+    height: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+.itemsWrapper {
+  @media lg {
+    padding-top: 50px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    background-color: accentGrey;
+  }
+}
 
 .item {
   display: flex;
@@ -10,21 +41,36 @@
   height: 70px;
   width: 70px;
   object-fit: cover;
+  @media lg {
+    height: 150px;
+    width: 150px;
+  }
 }
 
 .itemText {
   display: flex;
   flex-direction: column;
-  color: textGrey
+  color: textGrey;
+  @media lg {
+    display: flex;
+    justify-content: center;
+  }
 }
 
 .itemText p {
   padding-bottom: 5px;
   font-size: 15px;
+  @media lg {
+    padding-bottom: 15px;
+  }
 }
 
 .itemHeader {
   color: baseColor;
+  @media {
+    padding-bottom: 15px;
+    padding-top: 15px;
+  }
 }
 
 .title {
@@ -32,4 +78,21 @@
   padding-top: 20px;
   padding-bottom: 10px;
   font-size: 20px;
+  @media lg {
+    font-size: 35px;
+    color: inherit;
+  }
+}
+
+.itemLink {
+  @media lg {
+    width: 900px;
+  }
+}
+
+.itemBackground {
+  @media lg {
+    background-color: white !important;
+    margin: 5px;
+  }
 }
