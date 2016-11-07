@@ -43,6 +43,7 @@
 
 .cardsContainer {
   height: 100%;
+  width: 100%;
   max-width: 950px;
   display: flex;
   justify-content: space-around;
@@ -52,10 +53,11 @@
 
 .cardLinkWrapper {
   display: block;
-  width: 50%;
-  min-width: 320px;
+  width: 320px;
   padding: 12px;
   flex-grow: 1;
+  display: flex;
+  align-items: stretch;
 }
 
 .card {
