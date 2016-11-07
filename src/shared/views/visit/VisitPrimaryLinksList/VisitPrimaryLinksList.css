@@ -1,4 +1,5 @@
 @value baseColor from '../../../styles/colors.css';
+@value lg from '../../../styles/breakpoints.css';
 
 .visitPrimaryLinks {
   display: flex;
@@ -6,4 +7,8 @@
   height: 80px;
   margin: 5px 0;
   color: baseColor;
+
+  @media lg {
+    display: none;
+  }
 }
