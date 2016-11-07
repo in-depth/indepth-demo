@@ -1,7 +1,7 @@
 import React from 'react'
 import { PlanLink } from '../index'
 
-import styles from './PlansList.css'
+import styles from './plansList.css'
 
 const PlansList = (props) => {
   return (
