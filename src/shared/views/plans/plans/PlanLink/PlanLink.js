@@ -11,9 +11,6 @@ const PlanLink = (props) => {
         className={styles.planImage}
         style={{
           backgroundImage: `url(${props.backgroundUrl})`,
-          backgroundRepeat: 'no-repeat',
-          backgroundPosition: 'center',
-          backgroundSize: 'cover',
         }}
       >
         <div className={styles.text}>
@@ -29,6 +26,7 @@ PlanLink.propTypes = {
   title: React.PropTypes.string.isRequired,
   subtitle: React.PropTypes.string.isRequired,
   path: React.PropTypes.string.isRequired,
+  backgroundUrl: React.PropTypes.string.isRequired,
 }
 
 export default PlanLink
