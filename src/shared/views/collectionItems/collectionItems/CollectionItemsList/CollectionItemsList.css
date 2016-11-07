@@ -1,5 +1,38 @@
 @value baseColor from '../../../../styles/colors.css';
 
+.main {
+  width: 100%;
+  height: 100%;
+}
+
+.sortMenu {
+  width: 100%;
+  height: 70px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  font-size: 12px;
+}
+
+.sortOpts {
+  width: 260px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+
+  span {
+    margin-left: 1em;
+  }
+}
+
+.cards {
+  height: 100%;
+  border: 1px solid #ddd;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
 .collectionItem {
   width: calc(100vw / 2 - 15px);
   margin: 5px 0;
@@ -21,23 +54,8 @@
   padding: 0 0;
 }
 
-.cards {
-  display: flex;
-  justify-content: space-around;
-  flex-wrap: wrap;
-}
-
 .cardTitle {
   padding: 15px !important;
-}
-
-.sort {
-  margin-top: 30px;
-  margin-bottom: 10px;
-  display: flex;
-  justify-content: flex-end;
-  align-items: center;
-  font-size: 12px;
 }
 
 .link {

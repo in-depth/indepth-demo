@@ -7,10 +7,17 @@ import styles from './CollectionItemsList.css'
 
 const CollectionItemsList = (props) => {
   return (
-    <div>
-      <div className={styles.sort}>
-        <span>View:&nbsp;</span><i className="material-icons">view_list</i> <i className="material-icons">view_module</i>
-        <span>Sort by:&nbsp;</span><Link to="/collection?orderBy=id">id</Link> | <Link to="/collection?orderBy=title">title</Link>
+    <div className={styles.main}>
+      <div className={styles.sortMenu}>
+        <div className={styles.sortOpts}>
+          <span>{'View:'}</span>
+          <i className="material-icons">view_list</i>
+          <i className="material-icons">view_module</i>
+          <span>{'Sort by: '}</span>
+          <Link to="/collection?orderBy=id">id</Link>
+          {'|'}
+          <Link to="/collection?orderBy=title">title</Link>
+        </div>
       </div>
       <div className={styles.cards}>
         {props.order.map((itemId) => (
