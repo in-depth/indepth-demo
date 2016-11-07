@@ -8,10 +8,12 @@ import Icon from '../../../../components/Icon/Icon'
 const ShowDetails = (props) => {
   return (
     <div>
-      <div className={styles.details}>
-        <div><Icon icon={'event'} /><span>{props.date}, {props.time}</span></div>
-        <div><Icon icon={'map'} /><span>{props.location}</span></div>
-        <div><Icon icon={'cost'} /><span>{props.cost}</span></div>
+      <div className={styles.detailsWrapper}>
+        <div className={styles.details}>
+          <div><Icon icon={'event'} /><span>{props.date}, {props.time}</span></div>
+          <div><Icon icon={'map'} /><span>{props.location}</span></div>
+          <div><Icon icon={'cost'} /><span>{props.cost}</span></div>
+        </div>
       </div>
       <div className={styles.description}>
         <p>{props.description}</p>

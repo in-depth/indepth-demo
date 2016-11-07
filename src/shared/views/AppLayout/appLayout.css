@@ -8,15 +8,12 @@
   width: 100vw;
 }
 
-.appLayout.edit {
-  pointer-events: none;
-}
-
 .content {
   height: 100%;
   width: 100%;
   padding-bottom: botMenuHeight;
   padding-top: topMenuHeight;
+  overflow-y: scroll;
 
   @media lg {
     padding-bottom: 0;

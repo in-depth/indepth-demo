@@ -6,28 +6,32 @@ import styles from './PlanItems.css'
 const PlanItems = (props) => {
   const backgroundColor = (index) => {
     if (index % 2 === 0) {
-      return { backgroundColor: '#efeeee' }
+      return { backgroundColor: '#F6F6F5' }
     }
     return null
   }
 
   return (
-    <div className={styles.items}>
-      <h2 className={styles.title}>COLLECTION ITEMS</h2>
-      {props.items.map((itemId, index) => (
-        <Link to={`/collection/${itemId}`} key={itemId}>
-          <div key={itemId} style={backgroundColor(index)}>
-            <div className={styles.item}>
-              <img className={styles.image} alt={props.intinerary[itemId].title} src={props.intinerary[itemId].image.url} />
-              <div className={styles.itemText}>
-                <h3 className={styles.itemHeader}>{props.intinerary[itemId].title}</h3>
-                <p><b>Exhibition: </b>{props.intinerary[itemId].exhibition}</p>
-                <p>{`${props.intinerary[itemId].shortDesc.substr(0, 50)}...`}</p>
+    <div className={styles.main}>
+      <div className={styles.headerWrapper}>
+        <h2 className={styles.title}>Collection Items</h2>
+      </div>
+      <div className={styles.itemsWrapper}>
+        {props.items.map((itemId, index) => (
+          <Link className={styles.itemLink} to={`/collection/${itemId}`} key={itemId}>
+            <div className={styles.itemBackground} key={itemId} style={backgroundColor(index)}>
+              <div className={styles.item}>
+                <img className={styles.image} alt={props.intinerary[itemId].title} src={props.intinerary[itemId].image.url} />
+                <div className={styles.itemText}>
+                  <h3 className={styles.itemHeader}>{props.intinerary[itemId].title}</h3>
+                  <p><b>Exhibition: </b>{props.intinerary[itemId].exhibition}</p>
+                  <p>{`${props.intinerary[itemId].shortDesc.substr(0, 50)}...`}</p>
+                </div>
               </div>
             </div>
-          </div>
-        </Link>
-      ))}
+          </Link>
+        ))}
+      </div>
     </div>
   )
 }

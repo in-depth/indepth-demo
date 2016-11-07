@@ -6,21 +6,23 @@ import { ButtonRaised } from '../../../../components'
 import styles from './Plan.css'
 
 const Plan = (props) => {
-  console.log(props)
   return (
-    <div>
+    <div className={styles.main}>
+      <div className={styles.header}>
+        <h1>Plan</h1>
+      </div>
       <p className={styles.intro}>
-        Let us help you make the most of your time here.
-        Fill out the details below and we'll give you the perfect schedule around the museum.
-        Whether you keep to it or not is entirely your choice.
+        {'Give us a few details and we\'ll create the perfect plan for your experience'}
       </p>
-      <div className={styles.preferences}>
-        <PlanTime max={7} min={1} step={1} value={props.preferences.time} action={props.actions.addTime} />
-        <PlanAges ages={props.preferences.ages} action={props.actions.toggleCheckedAges} />
-        <PlanInterests interests={props.preferences.interests} action={props.actions.toggleCheckedInterests} />
-        <Link className={styles.continue} to={`${props.path}/map`}>
-          <ButtonRaised width="400px" label="MAKE MY PLAN" />
-        </Link>
+      <div className={styles.preferencesWrapper}>
+        <div className={styles.preferences}>
+          <PlanTime max={7} min={1} step={1} value={props.preferences.time} action={props.actions.addTime} />
+          <PlanAges ages={props.preferences.ages} action={props.actions.toggleCheckedAges} />
+          <PlanInterests interests={props.preferences.interests} action={props.actions.toggleCheckedInterests} />
+          <Link className={styles.continue} to={`${props.path}/map`}>
+            <ButtonRaised width="300px" label="MAKE MY PLAN" />
+          </Link>
+        </div>
       </div>
     </div>
   )

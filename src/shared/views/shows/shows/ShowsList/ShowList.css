@@ -1,15 +1,18 @@
 @value baseColor, textGrey from '../../../../styles/colors.css';
+@value lg from '../../../../styles/breakpoints.css';
+@value pageHeaderHeight from '../../../../styles/vars.css';
 
 .showItem {
   display: flex;
-  flex-direction: row;
   padding: 15px 20px;
 }
 
 .image {
   height: 70px;
-  width: 70px;
-  object-fit: cover;
+  min-width: 70px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .showText {
@@ -18,7 +21,12 @@
   color: textGrey
 }
 
-.showText p {
+.shortDesc {
+  padding-bottom: 5px;
+  font-size: 15px;
+}
+
+.time {
   padding-bottom: 5px;
   font-size: 15px;
 }
@@ -28,5 +36,102 @@
 }
 
 .month {
-  padding-top: 30px;
+  padding-top: 15px;
+}
+
+.eventTitle {
+  display: none;
+}
+
+.dateDay, .dateMonth {
+  display: none;
+}
+
+.shortDesc {
+  display: none;
+}
+
+.linkWrapper {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+@media lg {
+  .header {
+    min-height: pageHeaderHeight;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .eventTitle {
+    display: block;
+    font-size: 35px;
+  }
+  .month {
+    text-align: center;
+    color: baseColor;
+    padding-bottom: 30px;
+    padding-top: 0;
+  }
+  .linkWrapper {
+    display: flex;
+    justify-content: center;
+    background-color: #F6F6F6 !important;
+    margin: 20px;
+  }
+  .showItem {
+    width: 800px;
+    display: flex;
+    justify-content: flex-start;
+    background-color: white;
+    padding: 0;
+  }
+  .image {
+    height: 160px;
+    width: 160px;
+    object-fit: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .eventsList {
+    background-color: #F6F6F6;
+    padding-top: 40px;
+    height: 100vh;
+  }
+  .ShowListFullPage {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+  }
+  .showText {
+    display: flex;
+    justify-content: center;
+  }
+  .dateDay {
+    display: block;
+    color: white;
+    font-weight: bold;
+    font-size: 80px;
+  }
+  .dateMonth {
+    display: block;
+    color: white;
+    font-weight: bold;
+    font-size: 20px;
+  }
+  .shortDesc {
+    display: block;
+    padding-bottom: 15px;
+  }
+  .time {
+    font-weight: bold;
+    padding-bottom: 0;
+  }
+  .showHeader {
+    padding-bottom: 15px;
+  }
 }

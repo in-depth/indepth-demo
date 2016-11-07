@@ -1,6 +1,41 @@
 @value baseColor from '../../../../styles/colors.css';
+@value lg from '../../../../styles/breakpoints.css';
+@value pageHeaderHeight from '../../../../styles/vars.css';
 
-.itinerary h3 {
+.main {
+  height: 100%;
+  width: 100%;
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  @media lg {
+    height: pageHeaderHeight;
+  }
+}
+
+.title {
   color: baseColor;
-  padding: 10px 0;
+  padding-top: 20px;
+  padding-bottom: 10px;
+  font-size: 20px;
+  @media lg {
+    color: inherit;
+    font-size: 35px;
+  }
+}
+
+.subHeader {
+  display: none;
+  @media lg {
+    display: initial;
+    text-align: center;
+    padding-bottom: 30px;
+    padding-top: 0;
+    color: baseColor;
+  }
 }

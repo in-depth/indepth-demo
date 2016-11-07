@@ -1,0 +1,29 @@
+@value lg from '../../../../styles/breakpoints.css';
+
+.main {
+  color: white;
+  width: 100%;
+}
+
+.planImage {
+  height: 100%;
+}
+
+.text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  background:rgba(0,0,0,0.2);
+
+  h2 {
+    font-weight: bold;
+    text-align: center;
+    font-size: 30px;
+  }
+
+  p {
+    text-align: center;
+  }
+}
