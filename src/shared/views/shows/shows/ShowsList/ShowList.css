@@ -75,6 +75,9 @@
     padding-bottom: 30px;
     padding-top: 0;
   }
+  .date {
+    display: none;
+  }
   .linkWrapper {
     display: flex;
     justify-content: center;

@@ -29,7 +29,7 @@
 
 .topMenu {
   position: fixed;
-  z-index: 1;
+  z-index: 9;
 }
 
 .navigationSpacer {

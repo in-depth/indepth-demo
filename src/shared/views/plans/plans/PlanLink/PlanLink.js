@@ -1,6 +1,5 @@
 import React from 'react'
 import { Link } from 'react-router'
-import { Card, CardTitle, CardMedia } from 'react-toolbox/lib/card'
 
 import styles from './PlanLink.css'
 
@@ -9,9 +8,7 @@ const PlanLink = (props) => {
     <Link to={props.path} className={styles.main}>
       <div
         className={styles.planImage}
-        style={{
-          backgroundImage: `url(${props.backgroundUrl})`,
-        }}
+        style={{ backgroundImage: `url(${props.backgroundUrl})` }}
       >
         <div className={styles.text}>
           <h2>{props.title}</h2>
