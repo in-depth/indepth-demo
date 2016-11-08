@@ -7,7 +7,7 @@
   @mixin fp width, 320, 500;
   color: baseColor;
   margin: 0 auto;
-  padding-bottom: 3em;
+  @mixin fp padding-bottom, 10, 60;
 }
 
 .main a {
