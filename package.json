@@ -4,10 +4,11 @@
   "description": "In-depth core",
   "main": "index.js",
   "engines": {
-    "node": "7.0"
+    "node": "7.0.0"
   },
   "scripts": {
-    "postinstall": "npm run dist:clean && npm run dist:copy-static && npm run universal-webpack-prod && node_modules/.bin/webpack --config webpack.server.js",
+    "preinstall": "npm run dist:clean && npm run dist:copy-static",
+    "postinstall": "npm run universal-webpack-prod && node_modules/.bin/webpack --config webpack.server.js",
     "ssr-start-prod": "node .",
     "start": "node --harmony webpack.dev.js",
     "ssr-start": "npm run dist:clean && npm run dist:copy-static && npm run universal-webpack && npm run start-server",
