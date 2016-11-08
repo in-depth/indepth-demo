@@ -43,4 +43,8 @@ class Demo extends React.Component {
   }
 }
 
+React.propTypes = {
+  actions: React.PropTypes.func.isRequired,
+}
+
 export default Demo
