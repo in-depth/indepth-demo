@@ -1,1 +1,35 @@
+@import '../../../../styles/mixins.css';
 
+.main {
+  width: 100%;
+  height: 100%;
+  overflow-y: scroll;
+}
+
+.contentBody {
+  background: #f8f8f8;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  @mixin fp padding, 20, 120;
+}
+
+.container {
+  max-width: 1020px;
+  display: flex;
+  align-items: stretch;
+  justify-content: space-around;
+  flex-wrap: wrap;
+
+  & > div:first-child {
+    flex-basis: 40%;
+    min-width: 320px;
+    flex-grow: 1;
+  }
+
+  & > div:last-child {
+    min-width: 320px;
+    flex-basis: 60%;
+    flex-grow: 1;
+  }
+}
