@@ -16,7 +16,7 @@ const CollectionItem = (props) => {
         itemId={props.itemId}
         assets={props.assets}
       />
-      <div className={styles.contentBody} style={{ backgroundColor: '#ddd' }}>
+      <div className={styles.contentBody}>
         <div className={styles.container}>
           <CollectionItemStats
             title={props.title}

@@ -3,7 +3,6 @@
 
 .main {
     text-align: center;
-    @mixin fp height, 300, 450;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
@@ -13,5 +12,9 @@
     h1 {
       @mixin fp font-size, 16, 24;
       font-weight: 600;
+    }
+
+    img {
+      margin: 2em 0;
     }
 }
