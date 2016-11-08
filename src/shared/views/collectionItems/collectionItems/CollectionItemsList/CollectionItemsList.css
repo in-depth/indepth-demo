@@ -16,7 +16,7 @@
 
   @media lg {
     display: flex;
-    @mixin fp height, 140, 300;
+    height: 270px;
     justify-content: center;
     align-items: center;
   }
@@ -83,6 +83,7 @@
 .card {
   width: 100%;
   height: 100%;
+  box-shadow: none;
 
   p {
     padding: 1em 0;
