@@ -42,12 +42,16 @@
 }
 
 .arrowContainer {
+  display: none;
   width: 100%;
   position: absolute;
   bottom: 0;
   left: 0;
   text-align: center;
   height: 4.8em;
+  @media lg {
+    display: block;
+  }
 }
 
 .downarrow {

@@ -32,7 +32,7 @@ const TopMenu = (props) => {
         <TopMenuSearch handleToggleEditMode={props.handleToggleEditMode} />
       </div>
       <div className={styles.headDesktop}>
-        <h1 className={styles.logo}>{getTitleFromPath(props.path)}</h1>
+        <h1 className={styles.logo}>{props.siteName}</h1>
         <TopMenuDesktopNav navs={navigationLinks} />
       </div>
     </div>
@@ -41,6 +41,7 @@ const TopMenu = (props) => {
 
 TopMenu.propTypes = {
   path: React.PropTypes.string.isRequired,
+  siteName: React.PropTypes.string.isRequired,
   fullscreen: React.PropTypes.bool.isRequired,
   handleToggleEditMode: React.PropTypes.func.isRequired,
   handleToggleFullscreen: React.PropTypes.func.isRequired,

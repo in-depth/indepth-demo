@@ -9,7 +9,10 @@ const Visit = (props) => {
     <div className={styles.main}>
       <VisitMuseumHeader
         inlineEditing={props.inlineEditing}
-        action={props.actions.toggleInlineEditing}
+        header={props.header}
+        subHeader={props.subHeader}
+        image={props.image}
+        action={props.actions.updateHeader}
       />
       <VisitPrimaryLinksList
         primaryLinks={props.primaryLinks}
@@ -30,6 +33,9 @@ Visit.propTypes = {
   inlineEditing: React.PropTypes.bool.isRequired,
   featuredLinks: React.PropTypes.array.isRequired,
   actions: React.PropTypes.object.isRequired,
+  header: React.PropTypes.string.isRequired,
+  subHeader: React.PropTypes.string.isRequired,
+  image: React.PropTypes.string.isRequired,
 }
 
 export default Visit
