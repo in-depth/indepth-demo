@@ -112,9 +112,9 @@ function renderFullPage(html, preloadedState) {
     `
 }
 
-const port = process.env.PORT || 3222
+const port = process.env.PORT || 3000
 const env = process.env.NODE_ENV || 'production'
-server.listen(port, '0.0.0.0', err => {
+server.listen(port, err => {
   if (err) {
     return console.error(err)
   }
