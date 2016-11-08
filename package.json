@@ -8,8 +8,8 @@
   },
   "scripts": {
     "preinstall": "npm run dist:clean && npm run dist:copy-static",
-    "postinstall": "npm run universal-webpack-prod && node_modules/.bin/webpack --config webpack.server.js",
-    "ssr-start-prod": "node .",
+    "postinstall": "npm run universal-webpack-prod",
+    "ssr-start-prod": "node_modules/.bin/webpack --config webpack.server.js && node .",
     "start": "node --harmony webpack.dev.js",
     "ssr-start": "npm run dist:clean && npm run dist:copy-static && npm run universal-webpack && npm run start-server",
     "universal-webpack": "NODE_ENV=production node --harmony webpack.universal.js",
