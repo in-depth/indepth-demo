@@ -24,7 +24,7 @@ const createAssetName = (asset) => {
 const CollectionItemAssets = (props) => {
   const assetTypes = Object.keys(props.assets)
   return (
-    <div className={styles.assets}>
+    <div className={styles.main}>
       {assetTypes.map(typeName =>
         <Link key={typeName} to={`/collection/${props.itemId}/${typeName}`}>
           <div className={styles.asset}>
@@ -36,8 +36,6 @@ const CollectionItemAssets = (props) => {
     </div>
   )
 }
-
-// <div key={typeName}><Link to={`/collection/${props.itemId}/${typeName}`}>{typeName}</Link></div>
 
 CollectionItemAssets.propTypes = {
   itemId: React.PropTypes.string,

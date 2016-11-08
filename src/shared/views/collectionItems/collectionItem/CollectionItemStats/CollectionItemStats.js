@@ -4,7 +4,7 @@ import styles from './CollectionItemStats.css'
 
 const CollectionItemStats = (props) => {
   return (
-    <div className={styles.collectionStats}>
+    <div className={styles.main}>
       <h1 className={styles.title}>{props.title}</h1>
       <div className={styles.stats}>
         <p><b>Date: </b>{props.date}</p>

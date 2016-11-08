@@ -1,27 +1,25 @@
+@import '../../../../styles/mixins.css';
 @value baseColor from '../../../../styles/colors.css';
 
-.assets {
+.main {
   display: flex;
   justify-content: space-around;
-  margin: 5px 0;
-  height: 80px;
+  @mixin fp width, 320, 500;
+  color: baseColor;
+  margin: 0 auto;
+  @mixin fp padding-bottom, 10, 60;
+}
+
+.main a {
+  font-size: 10px;
   color: baseColor;
 }
 
-.assets a {
-   font-size: 10px;
-   font-weight: lighter;
-   color: baseColor;
-   width: 100%;
-}
-
 .asset {
-  border: white solid 1px;
   width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #efeeee;
   flex-direction: column;
   height: 80px;
 }

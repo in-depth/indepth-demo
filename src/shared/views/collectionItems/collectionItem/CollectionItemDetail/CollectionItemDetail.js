@@ -4,7 +4,7 @@ import styles from './CollectionItemDetail.css'
 
 const CollectionItemDetail = (props) => {
   return (
-    <div className={styles.details}>
+    <div className={styles.main}>
       {props.fullDesc.map(desc => (
         <div key={desc.sectionid}>
           <h3>{desc.sectionTitle}</h3>

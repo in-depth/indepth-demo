@@ -1,4 +1,17 @@
-.header {
+@import '../../../../styles/mixins.css';
+@value lg from '../../../../styles/breakpoints.css';
+
+.main {
     text-align: center;
-    margin-top: 10px;
+    @mixin fp height, 300, 450;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    @mixin fp padding-top, 30, 80;
+
+    h1 {
+      @mixin fp font-size, 16, 24;
+      font-weight: 600;
+    }
 }

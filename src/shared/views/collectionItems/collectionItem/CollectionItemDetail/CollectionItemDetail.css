@@ -1,7 +1,13 @@
-.details {
-  padding: 10px 0;
-}
+.main {
+  padding: 0 10px 0;
 
-.details h3 {
-  margin: 0px;
+  h3 {
+    font-size: 1.34em;
+    margin: 0 0 1em;
+  }
+
+  p {
+    margin-bottom: 1.6em;
+    line-height: 1.6em;
+  }
 }
