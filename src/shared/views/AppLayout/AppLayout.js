@@ -17,6 +17,7 @@ const AppLayout = ({
   fullscreen,
   visitActions,
   fullscreenAction,
+  siteName,
 }) => {
   return (
     <div className={styles.appLayout}>
@@ -25,6 +26,7 @@ const AppLayout = ({
         handleToggleEditMode={visitActions.toggleInlineEditing}
         handleToggleFullscreen={fullscreenAction.toggleFullscreen}
         fullscreen={fullscreen}
+        siteName={siteName}
       />
       <main
         style={editModeStyle}
@@ -44,6 +46,7 @@ AppLayout.propTypes = {
   fullscreen: React.PropTypes.bool.isRequired,
   visitActions: React.PropTypes.object.isRequired,
   fullscreenAction: React.PropTypes.object.isRequired,
+  siteName: React.PropTypes.string.isRequired,
 }
 
 export default AppLayout

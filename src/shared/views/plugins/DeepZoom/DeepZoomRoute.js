@@ -1,7 +1,8 @@
 import React from 'react'
 import { connect } from 'react-redux'
 
-import DeepZoom from './DeepZoom'
+// import DeepZoom from './DeepZoom'
+import DeepZoom from './osd'
 
 import styles from './DeepZoom.css'
 
@@ -13,8 +14,8 @@ const DeepZoomRoute = (props) => {
   return (
     <div>
       <p className={styles.title}>Deep zoom images for <b>{props.title}</b></p>
-      {props.deepzoomAssets.map((url) =>
-        <DeepZoom key={url} url={url} />
+      {props.deepzoomAssets.map((url, i) =>
+        <DeepZoom key={i} url={url} />
       )}
     </div>
   )

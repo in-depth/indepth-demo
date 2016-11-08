@@ -8,6 +8,7 @@ import * as DemosActions from '../demos/DemosActions'
 const mapStateToProps = (state) => {
   return {
     fullscreen: state.demos.fullscreen,
+    siteName: state.visit.header,
   }
 }
 

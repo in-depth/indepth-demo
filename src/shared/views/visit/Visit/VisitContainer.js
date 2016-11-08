@@ -10,6 +10,9 @@ const mapStateToProps = (state, ownProps) => {
     primaryLinks: visit.primaryLinks,
     featuredLinks: visit.featuredLinks,
     inlineEditing: visit.inlineEditing,
+    header: visit.header,
+    subHeader: visit.subHeader,
+    image: visit.image,
   }
 }
 
