@@ -8,6 +8,7 @@ import styles from './CollectionItemsList.css'
 const CollectionItemsList = (props) => {
   return (
     <div className={styles.main}>
+      <div className={styles.head}><h1>{'Collection'}</h1></div>
       <div className={styles.sortMenu}>
         <div className={styles.sortOpts}>
           <span>{'View:'}</span>

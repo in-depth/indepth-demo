@@ -1,4 +1,5 @@
 @import '../../../../styles/mixins.css';
+@value accentGrey from '../../../../styles/colors.css';
 @value sm from '../../../../styles/breakpoints.css';
 
 .main {
@@ -9,8 +10,7 @@
 
 .contentBody {
   width: 100%;
-  min-height: 100%;
-  background: #f8f8f8;
+  background: accentGrey;
   display: flex;
   justify-content: center;
   align-items: center;

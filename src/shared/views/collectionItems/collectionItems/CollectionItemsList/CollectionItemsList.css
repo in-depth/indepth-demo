@@ -1,8 +1,25 @@
-@value baseColor from '../../../../styles/colors.css';
+@import '../../../../styles/mixins.css';
+@value baseColor, accentGrey from '../../../../styles/colors.css';
+@value lg from '../../../../styles/breakpoints.css';
 
 .main {
   width: 100%;
   height: 100%;
+}
+
+.head {
+  display: none;
+
+  h1 {
+    @mixin fp font-size, 20, 47;
+  }
+
+  @media lg {
+    display: flex;
+    height: 270px;
+    justify-content: center;
+    align-items: center;
+  }
 }
 
 .sortMenu {
@@ -12,6 +29,7 @@
   justify-content: flex-end;
   align-items: center;
   font-size: 12px;
+  background-color: accentGrey;
 }
 
 .sortOpts {
@@ -39,6 +57,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  background-color: accentGrey;
 }
 
 .cardsContainer {
@@ -47,6 +66,7 @@
   max-width: 950px;
   display: flex;
   justify-content: space-around;
+  align-content: flex-start;
   flex-wrap: wrap;
   padding: 12px;
 }
@@ -63,9 +83,10 @@
 .card {
   width: 100%;
   height: 100%;
+  box-shadow: none;
 
   p {
-    padding: 0;
+    padding: 1em 0;
     text-align: left;
   }
 }
