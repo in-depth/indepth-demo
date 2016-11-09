@@ -7,9 +7,7 @@
     "node": "7.0.0"
   },
   "scripts": {
-    "preinstall": "npm run dist:clean && npm run dist:copy-static",
-    "postinstall": "npm run prod-webpack",
-    "ssr-start-prod": "node_modules/.bin/webpack --config webpack.server.js && node .",
+    "ssr-start-prod": "npm run dist:clean && npm run dist:copy-static && npm run prod-webpack && node_modules/.bin/webpack --config webpack.server.js && node .",
     "start": "node --harmony webpack.dev.js",
     "ssr-start": "npm run dist:clean && npm run dist:copy-static && npm run universal-webpack && npm run start-server",
     "universal-webpack": "NODE_ENV=production node --harmony webpack.universal.js",
