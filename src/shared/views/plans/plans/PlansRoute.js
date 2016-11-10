@@ -19,7 +19,7 @@ const planTypes = [
     title: 'WHAT\'S NEW?',
     path: '/plan/whats-new',
     subtitle: 'Find out what is new in Te papa',
-    backgroundUrl: 'https://upload.wikimedia.org/wikipedia/commons/thumb/7/7d/Color_icon_green.svg/1024px-Color_icon_green.svg.png',
+    backgroundUrl: 'http://d3ffo1q6nkl964.cloudfront.net/images/detailed/1/modern-art.gif?t=1416319212',
   },
   {
     title: 'CHOOSE YOUR OWN ADVENTURE',
@@ -31,7 +31,7 @@ const planTypes = [
     title: 'WHAT PEOPLE ARE TALKING ABOUT',
     subtitle: 'Check out what objects, art and exhibitions people are talking about on social media',
     path: '/plan/whats-hot',
-    backgroundUrl: 'https://www.digitalgov.gov/files/2015/04/featured-301-x-212-Social-Network-Rach27-iStock-Thinkstock-457041031.jpg',
+    backgroundUrl: 'http://media.gettyimages.com/videos/young-students-talking-on-a-busy-street-video-id463827574?s=640x640',
   },
 ]
 
