@@ -1,12 +1,12 @@
-# Mobile Webapp Example - Museum in visitor expierncea
+# Mobile Webapp Example - Museum in visitor experience
 This is an example of how a mobile webapp could be used to create a visitor centric app for use in the museum sector.
-a
+
 It is released a demo of what is possible, and an example that museums can use to inform and create their own mobile webapps. 
 
 The code itself should be used as a reference only.
 
 # Demo
-A live demo of the last table release is available at [demo.indepth.io](demo.indepth.io). It is optomised for mobile and is best viewed on mobile.
+A live demo of the last table release is available at [demo.indepth.io](demo.indepth.io). It is optomized for mobile and is best viewed on mobile.
 
 # Running the example locally
 Requirements:
@@ -42,17 +42,19 @@ npm run static-start    -   Starts express server with client side only content 
   
 # Rationale
 We believe that the future is webapps, especially for one-time use apps such as those a museum visitor would use.
-This example has been developed to showcase some of the possibilities that are currently available (Especially on Android) and will soon be available on iOS.- Can be accessed with short urls, QR Codes, NFC, EddyStone beacons and move
+This example has been developed to showcase some of the possibilities that are currently available (Especially on Android) and will soon be available on iOS.
 
 
 # Why are webapps better?
 - No app store, no downloading and deleting apps
 - Instant access to revelent pages. User can go directly to the page of the item they are looking at rather than navigating through an app to find it.
 - Instant loading
+- Can be accessed with short urls, QR Codes, NFC, EddyStone beacons and more
 - Low barrier to entry, people are used to typing in URLs in their browser
 - Access to many hardware level APIs
 - Automatically cross platform, android, ios, android watches, google glass, tables, tizen, laptops and future proofed by default
 - Just works, forever. Pages from 1993 still work in 2016 and a webapp built in 2016 will still work in 2025.
+- It's javascript, the number one used web programming language
 
 # Contributors
 - [Nick Maskell](https://github.com/nickmask)
