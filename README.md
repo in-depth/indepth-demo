@@ -6,7 +6,7 @@ It is released a demo of what is possible, and an example that museums can use t
 The code itself should be used as a reference only.
 
 # Demo
-A live demo of the last table release is available at [demo.indepth.io](demo.indepth.io). It is optomized for mobile and is best viewed on mobile.
+A live demo of the last table release is available at [demo.indepth.io](https://demo.indepth.io). It is optomized for mobile and is best viewed on mobile.
 
 # Running the example locally
 Requirements:
