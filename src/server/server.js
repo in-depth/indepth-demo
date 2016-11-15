@@ -28,7 +28,7 @@ if (process.env.SSLONLY === 'true') {
 
 app.get('/static/sw.js', (req, res) => {
   res.set('Service-Worker-Allowed', '/demo')
-  return res.sendFile(path.resolve(__dirname, '../../dist/static/sw.js'))
+  return res.sendFile(path.resolve(__dirname, '../static/sw.js'))
 })
 
 // define the folder that will be used for static assets
