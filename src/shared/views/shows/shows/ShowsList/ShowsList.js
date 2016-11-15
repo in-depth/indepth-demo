@@ -16,7 +16,6 @@ const colorPicker = () => {
 }
 
 const ShowsList = (props) => {
-  console.log(props.shows[1].imageUrl)
   return (
     <div className={styles.ShowListFullPage}>
       <div className={styles.header}>
