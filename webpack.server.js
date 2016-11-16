@@ -10,15 +10,13 @@ const nodeModulesPath = path.resolve(__dirname, 'node_modules')
 const sourcePath = path.resolve(__dirname, 'src')
 
 const config = {
-  context: process.cwd(),
-
   target: 'node',
 
   externals: [nodeExternals({
     importType: 'commonjs',
     modulesDir: nodeModulesPath,
     modulesFromFile: false,
-    whitelist: [/\.scss$/, /^react-toolbox/],
+    whitelist: [/\.scss$/, /\.css$/, /react-toolbox/],
   })],
 
   entry: path.resolve(__dirname, 'src/server/server.js'),
@@ -37,7 +35,7 @@ const config = {
     loaders: [
       {
         test: /\.js$/,
-        include: sourcePath,
+        include: [sourcePath, /react-toolbox/],
         loader: 'babel-loader',
         query: {
           cacheDirectory: false,
@@ -55,12 +53,12 @@ const config = {
       },
       {
         test: /\.css$/,
-        include: sourcePath,
+        exclude: /node_modules/,
         loader: 'css?modules&importLoaders=1&localIdentName=[name]__[local]___[hash:base64:5]!postcss',
       },
       {
         test: /\.scss$/,
-        include: nodeModulesPath,
+        include: /react-toolbox/,
         loader: 'css?modules&importLoaders=1&localIdentName=[name]__[local]___[hash:base64:5]!postcss!sass',
       },
     ],
