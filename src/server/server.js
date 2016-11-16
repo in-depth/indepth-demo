@@ -16,7 +16,6 @@ import rootReducer from '../shared/views/rootReducer'
 
 const app = new Express()
 const server = new Server(app)
-console.log(process.cwd(), '<---------------------------------------------')
 
 if (process.env.SSLONLY === 'true') {
   app.use((req, res, next) => {
