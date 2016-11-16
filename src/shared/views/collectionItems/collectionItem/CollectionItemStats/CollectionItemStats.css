@@ -1,5 +1,7 @@
+@value sm from '../../../../styles/breakpoints.css';
+
 .main {
-  padding: 0 10px 30px;
+  padding-bottom: 20px;
 }
 
 .title {
@@ -16,5 +18,10 @@
     display: block;
     margin-bottom: 2em;
     line-height: 1.4em;
+  }
+  @media sm {
+    p {
+      margin-bottom: .8em;
+    }
   }
 }

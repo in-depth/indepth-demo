@@ -7,7 +7,6 @@ const CollectionItemStats = (props) => {
     <div className={styles.main}>
       <h1 className={styles.title}>{props.title}</h1>
       <div className={styles.stats}>
-        <p><b>Date: </b>{props.date}</p>
         <p><b>Type:</b> <span>{props.type}</span></p>
         <p><b>Sub Type:</b> <span>{props.subType}</span></p>
         <p><b>Classifications:</b> <span>{props.classifications.map(v => `${v}, `)}</span></p>

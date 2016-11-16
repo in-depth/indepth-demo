@@ -65,7 +65,6 @@ const config = {
       },
     ],
   },
-
   plugins: [
     new Webpack.DefinePlugin({ 'process.env': {
       NODE_ENV: JSON.stringify('production'),
@@ -82,7 +81,7 @@ const config = {
   postcss: () => postcssConfig,
 
   sassLoader: {
-    data: '@import "shared/styles/main.scss";',
+    data: '@import "shared/styles/main.qscss";',
     includePaths: [sourcePath],
   },
 }
