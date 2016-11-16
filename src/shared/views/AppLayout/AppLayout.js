@@ -4,13 +4,6 @@ import { TopMenu } from '../topMenu'
 
 import styles from './appLayout.css'
 
-const editModeStyle = { pointerEvents: 'auto' }
-
-const toggleAppLinks = (mode) => {
-  if (mode === true) editModeStyle.pointerEvents = 'none'
-  editModeStyle.pointerEvents = 'auto'
-}
-
 const AppLayout = ({
   location,
   children,
@@ -29,7 +22,6 @@ const AppLayout = ({
         siteName={siteName}
       />
       <main
-        style={editModeStyle}
         className={styles.content}
         id={'content'}
       >
