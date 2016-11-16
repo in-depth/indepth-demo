@@ -28,6 +28,7 @@ if (process.env.SSLONLY === 'true') {
 
 app.get('/static/sw.js', (req, res) => {
   res.set('Service-Worker-Allowed', '/demo')
+  console.log(process.cwd(),'<---------------------------------------------')
   return res.sendFile(path.resolve(__dirname, '../static/sw.js'))
 })
 
