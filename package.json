@@ -9,6 +9,7 @@
   "scripts": {
     "preinstall": "npm run dist:clean && npm run dist:copy-static",
     "postinstall": "npm run prod-webpack",
+    "ssr-start-full": "npm run dist:clean && npm run dist:copy-static && npm run prod-webpack && node_modules/.bin/webpack --config webpack.server.js && node .",
     "ssr-start-prod": "node_modules/.bin/webpack --config webpack.server.js && node .",
     "start": "node --harmony webpack.dev.js",
     "ssr-start": "npm run dist:clean && npm run dist:copy-static && npm run universal-webpack && npm run start-server",
