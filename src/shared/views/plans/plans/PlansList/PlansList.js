@@ -1,17 +1,30 @@
 import React from 'react'
-import { Link } from 'react-router'
-import { PlansCard } from '../index'
+import { PlanLink } from '../index'
 
 import styles from './plansList.css'
 
 const PlansList = (props) => {
   return (
-    <div className={styles.plans}>
-      {props.plans.map((plan) => (
-        <Link className={styles.link} key={plan.title} to={plan.path}>
-          <PlansCard image={plan.backgroundUrl} text={plan.subtitle} title={plan.title} />
-        </Link>
-      ))}
+    <div className={styles.main}>
+      <div className={styles.pageHeader}>
+        <h1>PLAN</h1>
+      </div>
+      <h2 className={styles.subHeader}>Pick a plan below to get a custom itinerary.</h2>
+      <div className={styles.gridWrapper}>
+        <div className={styles.grid}>
+          {props.plans.map((plan) => (
+            <div key={plan.title} className={styles.planWrapper}>
+              <PlanLink
+                image={plan.backgroundUrl}
+                subtitle={plan.subtitle}
+                title={plan.title}
+                backgroundUrl={plan.backgroundUrl}
+                path={plan.path}
+              />
+            </div>
+          ))}
+        </div>
+      </div>
     </div>
   )
 }

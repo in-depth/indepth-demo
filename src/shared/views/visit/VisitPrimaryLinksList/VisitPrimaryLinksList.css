@@ -1,9 +1,14 @@
-@import '../../../styles/colors';
+@value baseColor from '../../../styles/colors.css';
+@value lg from '../../../styles/breakpoints.css';
 
 .visitPrimaryLinks {
   display: flex;
   justify-content: space-around;
   height: 80px;
   margin: 5px 0;
-  color: var(--mainColor);
+  color: baseColor;
+
+  @media lg {
+    display: none;
+  }
 }

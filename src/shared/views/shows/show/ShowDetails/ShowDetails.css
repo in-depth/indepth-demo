@@ -1,11 +1,22 @@
-@import '../../../../styles/colors';
+@value accentGrey from '../../../../styles/colors.css';
+@value lg from '../../../../styles/breakpoints.css';
 
-.details {
-  background-color: var(--accentGrey);
+.detailsWrapper {
+  background-color: accentGrey;
   padding: 20px 20px;
   display: flex;
   flex-direction: column;
   justify-content: center;
+  align-items: center;
+  @media lg {
+    padding: 40px;
+  }
+}
+
+.details {
+  @media lg {
+    width: 900px;
+  }
 }
 
 .details svg {
@@ -23,9 +34,19 @@
 }
 
 .details div {
-  padding: 2px 0;
+  padding: 5px 0;
 }
 
 .description {
   padding: 20px 0;
+  @media lg {
+    display: flex;
+    justify-content: center;
+  }
+}
+
+.description p {
+  @media lg {
+    width: 900px;
+  }
 }

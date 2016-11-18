@@ -56,6 +56,14 @@ import styles from './VisitMuseumHeader.css'
 // const museumInfo = getMuseumInfo(baseUrl)
 
 
+// const getMuseumInfo = (baseUrl) => {
+//   // Get the baseurl / hostname to display correct museum
+//   let subdomain = ''
+//   if (typeof location !== 'undefined') {
+//     subdomain = location.hostname.split('.')[0].toLowerCase()
+//   } else if (baseUrl) {
+//     subdomain = baseUrl.split('.')[0].toLowerCase()
+
 class VisitMuseumHeader extends React.Component {
   constructor(props) {
     super(props)
@@ -77,7 +85,6 @@ class VisitMuseumHeader extends React.Component {
   pushToRedux() {
     this.props.action(this.state.header, this.state.subHeader)
   }
-
   render() {
     return (
       <div className={styles.museumHeader} style={{ backgroundImage: `url("${this.props.image}")` }} >
@@ -99,6 +106,17 @@ class VisitMuseumHeader extends React.Component {
                   onBlur={this.pushToRedux.bind(this)}
                   options={{ toolbar: { buttons: ['bold', 'italic', 'underline'] } }}
                 />
+                <div className={styles.arrowContainer}>
+                  <svg
+                    fill={'#ffffff'}
+                    viewBox={'0 0 24 24'}
+                    xmlns={'http://www.w3.org/2000/svg'}
+                    className={styles.downarrow}
+                  >
+                    <path d={'M16.59 8.59L12 13.17 7.41 8.59 6 10l6 6 6-6z'} />
+                    <path d={'M0 0h24v24H0z'} fill={'none'} />
+                  </svg>
+                </div>
               </div>
             </div>
             :
@@ -108,6 +126,17 @@ class VisitMuseumHeader extends React.Component {
               </h1>
               <div className={styles.museumTagline}>
                 {this.props.subHeader}
+              </div>
+              <div className={styles.arrowContainer}>
+                <svg
+                  fill={'#ffffff'}
+                  viewBox={'0 0 24 24'}
+                  xmlns={'http://www.w3.org/2000/svg'}
+                  className={styles.downarrow}
+                >
+                  <path d={'M16.59 8.59L12 13.17 7.41 8.59 6 10l6 6 6-6z'} />
+                  <path d={'M0 0h24v24H0z'} fill={'none'} />
+                </svg>
               </div>
             </div>
           }
@@ -125,3 +154,30 @@ VisitMuseumHeader.propTypes = {
 }
 
 export default withRouter(VisitMuseumHeader)
+
+// const VisitMuseumHeader = (props) => {
+//   const baseUrl = props.location.baseUrl ? props.location.baseUrl : ''
+//   const museumInfo = getMuseumInfo(baseUrl)
+//   return (
+//     <header
+//       className={styles.museumHeader}
+//       style={{ backgroundImage: `url("${museumInfo.image}")` }}
+//       onDoubleClick={props.action}
+//     >
+//       <div className={styles.overlay}>
+//         <h1 className={styles.museumName}>{museumInfo.name}</h1>
+//         <p className={styles.museumTagline}>{museumInfo.tagline}</p>
+        // <div className={styles.arrowContainer}>
+        //   <svg
+        //     fill={'#ffffff'}
+        //     viewBox={'0 0 24 24'}
+        //     xmlns={'http://www.w3.org/2000/svg'}
+        //     className={styles.downarrow}
+        //   >
+        //     <path d={'M16.59 8.59L12 13.17 7.41 8.59 6 10l6 6 6-6z'} />
+        //     <path d={'M0 0h24v24H0z'} fill={'none'} />
+        //   </svg>
+        // </div>
+//       </div>
+//     </header>
+//   )

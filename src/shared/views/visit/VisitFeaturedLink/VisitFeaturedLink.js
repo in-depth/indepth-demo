@@ -10,39 +10,40 @@ class VisitFeaturedLink extends React.Component {
     this.state = { title: '', index: this.props.index }
   }
 
-  handleChange() {
-    this.setState({ title: event.target.textContent })
-  }
+  handleChange() { this.setState({ title: event.target.textContent }) }
 
-  pushToRedux() {
-    if (this.state.title !== '') this.props.action(this.state.title, this.state.index)
-  }
+  pushToRedux() { if (this.state.title !== '') this.props.action(this.state.title, this.state.index) }
 
   render() {
     return (
       <div className={styles.wrapper}>
-        {this.props.inlineEditing ?
-          <div className={styles.featuredPath}>
-            <div className={styles.overlay}>
-              <h2 style={{ textDecoration: 'underline' }}>
-                <Editor
-                  text={this.props.featuredLink.title}
-                  onChange={this.handleChange.bind(this)}
-                  onBlur={this.pushToRedux.bind(this)}
-                  options={{ toolbar: { buttons: ['bold', 'italic', 'underline'] } }}
-                />
-              </h2>
+        <div
+          className={styles.content}
+          style={{ backgroundImage: `url(${this.props.featuredLink.backgroundUrl})` }}
+        >
+          {this.props.inlineEditing ?
+            <div className={styles.featuredPath}>
+              <div className={styles.overlay}>
+                <h2 style={{ textDecoration: 'underline' }}>
+                  <Editor
+                    text={this.props.featuredLink.title}
+                    onChange={this.handleChange.bind(this)}
+                    onBlur={this.pushToRedux.bind(this)}
+                    options={{ toolbar: { buttons: ['bold', 'italic', 'underline'] } }}
+                  />
+                </h2>
+              </div>
             </div>
-          </div>
-          :
-          <Link className={styles.featuredPath} to={this.props.featuredLink.path}>
-            <div className={styles.overlay}>
-              <h2>
-                {this.props.featuredLink.title}
-              </h2>
-            </div>
-          </Link>
-        }
+            :
+            <Link className={styles.featuredPath} to={this.props.featuredLink.path}>
+              <div className={styles.overlay}>
+                <h2>
+                  {this.props.featuredLink.title}
+                </h2>
+              </div>
+            </Link>
+          }
+        </div>
       </div>
     )
   }

@@ -43,3 +43,6 @@ jspm_packages
 
 # DS Store
 .DS_Store
+
+#Prod server build
+server/index.js

@@ -1,1 +1,44 @@
+@import '../../../../styles/mixins.css';
+@value accentGrey from '../../../../styles/colors.css';
+@value sm from '../../../../styles/breakpoints.css';
+@value lg from '../../../../styles/breakpoints.css';
 
+.main {
+  width: 100%;
+  height: 100%;
+  overflow-y: scroll;
+}
+
+.contentBody {
+  width: 100%;
+  background: accentGrey;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  @mixin fp padding, 20, 50;
+}
+
+.container {
+  width: 100%;
+  max-width: 900px;
+  min-height: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: baseline;
+  flex-wrap: wrap;
+
+  & > div:first-child {
+    width: 40%;
+    @media sm {
+      width: 100%;
+    }
+  }
+
+  & > div:last-child {
+    width: 60%;
+    @media sm {
+      width: 100%;
+    }
+  }
+}

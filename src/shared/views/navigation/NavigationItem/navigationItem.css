@@ -1,24 +1,33 @@
-.navigationItem {
+@import '../../../styles/mixins.css';
+
+.main {
+  width: 100%;
+  height: 100%;
+  border-right: 1.3px solid #ddd;
+
+  &:last-child {
+    border-right: none;
+  }
+}
+
+.navLink {
+  width: 100%;
+  height: 100%;
   display: flex;
   flex-direction: column;
+  justify-content: space-around;
   text-decoration: none;
   align-items: center;
-}
+  color: #fff;
 
-.title {
-  font-size: 10px;
-  padding-top: 2px;
-  color: white;
-  font-weight: lighter;
-}
+  span {
+    @mixin fp font-size, 9, 14;
+    font-weight: 600;
+  }
 
-
-.navigationItem svg {
-  display: flex;
-  justify-content: center;
-  width: 28px;
-  height: 28px;
-  fill: white;
+  svg {
+    fill: #fff;
+  }
 }
 
 .icon {
@@ -30,28 +39,4 @@
   font-size: 28px;
   color: white;
   max-width: 28px;
-}
-
-.navigationLink {
-  width: 100%;
-  max-width: 150px;
-  border-left: 1px solid #7db361;
-  border-right: 1px solid #7db361;
-  padding-top: 5px;
-  padding-bottom: 2px;
-}
-
-.navigationItem {
-  width: 100%;
-}
-
-.navigationLink a,
-.navigationLink a:active,
-.navigationLink a:visited {
-  color: #167bca;
-}
-
-.navigationLink a:hover,
-.navigationLink a:focus {
-  color: #004479;
 }

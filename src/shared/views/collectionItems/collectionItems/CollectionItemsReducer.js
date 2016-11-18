@@ -46,6 +46,7 @@ const collectionItemState = {
     APYPEBMF6X: {
       id: 'APYPEBMF6X',
       title: 'Portrait Of Paul Hugot',
+      date: '1923',
       image: {
         id: 'APYPEBMF6X-img',
         url: '/static/images/collection-items/portrait-of-paul-hugot.jpg',

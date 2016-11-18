@@ -1,53 +1,91 @@
-@import '../../../../styles/colors';
+@import '../../../../styles/mixins.css';
+@value baseColor, accentGrey from '../../../../styles/colors.css';
+@value lg from '../../../../styles/breakpoints.css';
 
-.collectionItem {
-  width: calc(100vw / 2 - 15px);
-  margin: 5px 0;
+.main {
+  width: 100%;
+  height: 100%;
 }
 
-.collectionItem > div {
-  background-size: contain;
+.head {
+  display: none;
+
+  h1 {
+    @mixin fp font-size, 20, 47;
+  }
+
+  @media lg {
+    display: flex;
+    height: 270px;
+    justify-content: center;
+    align-items: center;
+  }
 }
 
-.collectionItem h5 {
-  margin: 0;
-  font-size: 16px !important;
-  color: black;
-}
-
-.collectionItem p {
-  margin: 8px 0;
-  font-size: 11px;
-  padding: 0 0;
-}
-
-.cards {
-  display: flex;
-  justify-content: space-around;
-  flex-wrap: wrap;
-}
-
-.cardTitle {
-  padding: 15px !important;
-}
-
-.sort {
-  margin-top: 30px;
-  margin-bottom: 10px;
+.sortMenu {
+  width: 100%;
+  height: 70px;
   display: flex;
   justify-content: flex-end;
   align-items: center;
   font-size: 12px;
+  background-color: accentGrey;
 }
 
-.link {
+.sortOpts {
+  width: 260px;
   display: flex;
+  justify-content: space-around;
+  align-items: center;
+
+  span {
+    margin-left: 1em;
+  }
 }
 
 .sort a, .sort a:visited , .sort a:hover, .sort a:active {
-  color: var(--mainColor);;
+  color: baseColor;
 }
 
 .sort i {
-  color: var(--mainColor);;
+  color: baseColor;
+}
+
+.contentWrapper {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: accentGrey;
+}
+
+.cardsContainer {
+  height: 100%;
+  width: 100%;
+  max-width: 950px;
+  display: flex;
+  justify-content: space-around;
+  align-content: flex-start;
+  flex-wrap: wrap;
+  padding: 12px;
+}
+
+.cardLinkWrapper {
+  display: block;
+  width: 320px;
+  padding: 12px;
+  flex-grow: 1;
+  display: flex;
+  align-items: stretch;
+}
+
+.card {
+  width: 100%;
+  height: 100%;
+  box-shadow: none;
+
+  p {
+    padding: 1em 0;
+    text-align: left;
+  }
 }

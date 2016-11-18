@@ -4,9 +4,7 @@ import { ShowsListContainer } from './index'
 
 const ShowsRoute = () => {
   return (
-    <div>
-      <ShowsListContainer />
-    </div>
+    <ShowsListContainer />
   )
 }
 
