@@ -29,18 +29,24 @@ class Demo extends React.Component {
   render() {
     const { selected, demoFeatures } = this.state
     return (
-      <div className={styles.demoPage}>
-        <span className={styles.select}>Select demo feature:</span>
-        <Dropdown
-          auto
-          onChange={this.handleChange.bind(this)}
-          source={demoFeatures}
-          value={selected}
-        />
-        {demoFeatures[selected].component}
+      <div className={styles.main}>
+        <div className={styles.dropDownContainer}>
+          <span className={styles.select}>Select demo feature:</span>
+          <Dropdown
+            auto
+            onChange={this.handleChange.bind(this)}
+            source={demoFeatures}
+            value={selected}
+          />
+          {demoFeatures[selected].component}
+        </div>
       </div>
     )
   }
+}
+
+React.propTypes = {
+  actions: React.PropTypes.func.isRequired,
 }
 
 export default Demo

@@ -1,5 +1,3 @@
-:root {
-  --mainColor: #5CA039;
-  --textGrey: #757575;
-  --accentGrey: #efeeee
-}
+@value baseColor: #3D898A;
+@value textGrey: #757575;
+@value accentGrey: #F6F6F5;

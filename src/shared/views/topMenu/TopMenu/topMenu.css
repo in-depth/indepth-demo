@@ -1,11 +1,48 @@
-@import '../../../styles/colors';
+@import '../../../styles/mixins.css';
+@value baseColor from '../../../styles/colors.css';
+@value topMenuHeight from '../../../styles/vars.css';
+@value lg from '../../../styles/breakpoints.css';
 
-.topMenu {
-  background-color: var(--mainColor);
-  height: 50px;
-  display: flex;
-  align-items: center;
+.main {
   position: fixed;
   width: 100%;
+  height: topMenuHeight;
+  top: 0;
+  left: 0;
+  right: 0;
   box-shadow: 0 2px 5px 0 rgba(0,0,0,0.15);
+  z-index: 9;
+}
+
+.headMobile {
+  width: 100%;
+  height: 100%;
+  background-color: baseColor;
+  display: flex;
+  align-items: center;
+
+  @media lg {
+    display: none;
+  }
+}
+
+.headDesktop {
+  display: none;
+  width: 100%;
+  height: 100%;
+
+  @media lg {
+    display: block;
+    background-color: baseColor;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+.logo {
+  color: #fff;
+  @mixin fp font-size, 20, 40;
+  width: 30%;
+  margin: 0;
 }

@@ -6,12 +6,10 @@ import Icon from '../../../components/Icon/Icon'
 
 const NavigationItem = (props) => {
   return (
-    <li className={styles.navigationLink}>
-      <Link to={props.link}>
-        <div className={styles.navigationItem}>
-          <Icon icon={props.icon} />
-          <span className={styles.title}>{props.title}</span>
-        </div>
+    <li className={styles.main}>
+      <Link to={props.link} className={styles.navLink}>
+        <Icon icon={props.icon} />
+        <span>{props.title}</span>
       </Link>
     </li>
   )

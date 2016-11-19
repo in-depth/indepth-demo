@@ -6,7 +6,9 @@ const ShowHeader = (props) => {
   return (
     <div>
       <img className={styles.headerImage} alt={props.title} src={props.imageUrl} />
-      <h1 className={styles.title}>{props.title}</h1>
+      <div className={styles.titleWrapper}>
+        <h1 className={styles.title}>{props.title}</h1>
+      </div>
     </div>
   )
 }

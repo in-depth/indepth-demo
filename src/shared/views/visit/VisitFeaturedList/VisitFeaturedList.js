@@ -6,26 +6,24 @@ import styles from './visitFeaturedList.css'
 
 const VisitFeaturedList = (props) => {
   return (
-    <div>
-      {props.featuredLinks.map((featuredLink, index) => (
-        <div
-          key={featuredLink.title}
-          className={styles.featuredLink}
-          style={{ backgroundImage: `url(${featuredLink.backgroundUrl})` }}
-        >
+    <div className={styles.main}>
+      <aside className={styles.featuredJumbotron}>
+        <h1>{'FEATURED'}</h1>
+      </aside>
+      <section className={styles.featuredContainer}>
+        {props.featuredLinks.map((featuredLink, i) => (
           <VisitFeaturedLink
-            key={index}
+            key={i}
             inlineEditing={props.inlineEditing}
             featuredLink={featuredLink}
-            index={index}
+            index={i}
             action={props.action}
           />
-        </div>
-    ))}
+        ))}
+      </section>
     </div>
   )
 }
-
 
 VisitFeaturedList.propTypes = {
   featuredLinks: React.PropTypes.array.isRequired,

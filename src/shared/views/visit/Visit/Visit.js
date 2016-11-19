@@ -1,12 +1,12 @@
 import React from 'react'
 
-import { VisitMuseumHeader, VisitPrimaryLinksList, VisitFeaturedList } from '../index'
+import { VisitMuseumHeader, VisitFeaturedList, VisitPrimaryLinksList } from '../index'
 
 import styles from './Visit.css'
 
 const Visit = (props) => {
   return (
-    <div>
+    <div className={styles.main}>
       <VisitMuseumHeader
         inlineEditing={props.inlineEditing}
         header={props.header}
@@ -14,13 +14,11 @@ const Visit = (props) => {
         image={props.image}
         action={props.actions.updateHeader}
       />
-      <div>
-        <VisitPrimaryLinksList
-          primaryLinks={props.primaryLinks}
-          inlineEditing={props.inlineEditing}
-          action={props.actions.updatePrimaryLinks}
-        />
-      </div>
+      <VisitPrimaryLinksList
+        primaryLinks={props.primaryLinks}
+        inlineEditing={props.inlineEditing}
+        action={props.actions.updatePrimaryLinks}
+      />
       <VisitFeaturedList
         inlineEditing={props.inlineEditing}
         featuredLinks={props.featuredLinks}

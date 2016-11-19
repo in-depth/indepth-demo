@@ -1,0 +1,44 @@
+@import '../../../styles/mixins.css';
+
+.main {
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  margin: 0;
+
+  ul {
+    width: 100%;
+    height: 100%;
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+    align-content: center;
+  }
+}
+
+.navMain {
+  height: 100%;
+  @mixin fp width, 90, 190;
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+}
+
+.navLink {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: #fff;
+
+  span {
+    font-weight: 600;
+    margin-left: 13px;
+  }
+
+  svg {
+    fill: #fff;
+  }
+}
