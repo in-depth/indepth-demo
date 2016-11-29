@@ -1,4 +1,10 @@
 {
-  "name": "Push Notifications",
-  "gcm_sender_id": "1077932027195"
+  "name": "Indepth Demo",
+  "short_name": "Indepth",
+  "gcm_sender_id": "1077932027195",
+  "start_url": "/",
+  "theme_color": "#3D898A",
+  "background_color": "#3D898A",
+  "display": "fullscreen",
+  "orientation": "portrait"
 }
